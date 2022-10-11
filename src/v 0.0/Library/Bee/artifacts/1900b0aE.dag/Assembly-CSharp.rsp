@@ -379,6 +379,7 @@
 "Assets/Scripts/DeleteSelection.cs"
 "Assets/Scripts/GlobalVariables.cs"
 "Assets/Scripts/PlaceTheTower.cs"
+"Assets/Scripts/SceneChanger.cs"
 "Assets/Scripts/SelectTower.cs"
 -langversion:9.0
 
