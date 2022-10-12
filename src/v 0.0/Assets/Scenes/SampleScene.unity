@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 118638882}
   - component: {fileID: 118638881}
   m_Layer: 0
-  m_Name: Tower place_2 (2)
+  m_Name: Tower place_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -241,12 +241,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118638880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 160.5, y: 68.8, z: 0}
+  m_LocalPosition: {x: 170, y: 76, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 0.8664}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &349391442
 GameObject:
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 349391447}
   - component: {fileID: 349391448}
   m_Layer: 0
-  m_Name: Tower place
+  m_Name: Tower place_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,12 +327,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349391442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -170.8, y: -40, z: 0}
+  m_LocalPosition: {x: -170, y: -40, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 0.9214}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &349391447
 BoxCollider2D:
@@ -583,7 +583,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &655850999
 GameObject:
@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 655851001}
   - component: {fileID: 655851000}
   m_Layer: 0
-  m_Name: Tower place_2 (1)
+  m_Name: Tower place_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -703,12 +703,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655850999}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 89.2, y: 68.2, z: 0}
+  m_LocalPosition: {x: 100, y: 76, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 0.8664}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &820363684
 GameObject:
@@ -768,7 +768,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 148270225d103214dbc2d72dbd3967b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 723597eb12eb646448309e1a77369ad0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -786,13 +786,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820363684}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.6654, y: -7.8847, z: 0}
   m_LocalScale: {x: 34.577057, y: 34.61891, z: 13.806886}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &856075675
 GameObject:
@@ -1120,7 +1120,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &899666448
 GameObject:
@@ -1135,7 +1135,7 @@ GameObject:
   - component: {fileID: 899666450}
   - component: {fileID: 899666449}
   m_Layer: 0
-  m_Name: Tower place_2 (4)
+  m_Name: Tower place_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1240,7 +1240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899666448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1, y: -43.7, z: 0}
+  m_LocalPosition: {x: -30, y: -40, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 0.8664}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1260,7 +1260,7 @@ GameObject:
   - component: {fileID: 1403030464}
   - component: {fileID: 1403030465}
   m_Layer: 0
-  m_Name: Tower place_2
+  m_Name: Tower place_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1326,12 +1326,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403030459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.5, y: 67.5, z: 0}
+  m_LocalPosition: {x: 30, y: 76, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 0.8664}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1403030464
 BoxCollider2D:
@@ -1408,7 +1408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -22.100006, y: 203.4}
+  m_AnchoredPosition: {x: -22.099976, y: 203.4}
   m_SizeDelta: {x: 2.4349, y: 2.4771}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1418336743
@@ -1759,7 +1759,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1773335176
 MonoBehaviour:
@@ -1896,7 +1896,7 @@ RectTransform:
   - {fileID: 870899861}
   - {fileID: 856075676}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2000,7 +2000,7 @@ GameObject:
   - component: {fileID: 2134707180}
   - component: {fileID: 2134707179}
   m_Layer: 0
-  m_Name: Tower place_2 (3)
+  m_Name: Tower place_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2105,7 +2105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134707178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -94, y: -42.4, z: 0}
+  m_LocalPosition: {x: -100, y: -40, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 0.8664}
   m_ConstrainProportionsScale: 0
   m_Children: []
