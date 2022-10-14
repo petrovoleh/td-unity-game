@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:src/v 0.0/Library/PackageCache/com.unity.2d.psdimporter@6.0.5/Tests.meta
 fileFormatVersion: 2
 guid: ef286a7cdaafc8141b7eaa37314b76cf
 folderAsset: yes
@@ -8,3 +9,13 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+========
+fileFormatVersion: 2
+guid: a1d7068dd95acae4982f310c40f16a20
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>>> master:src/v 0.0/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.1/Tests.meta

@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+fileFormatVersion: 2
+<<<<<<<< HEAD:src/v 0.0/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.1/Samples~/Scenes and Extras/Scenes/RoboHero/Scripts/Hero.cs.meta
+guid: 70e39391513e23343b58ac38c13e8c65
+timeCreated: 1481899075
+========
+guid: 43a7a92da0ad89c40b5a39ed87329536
+timeCreated: 1495006553
+>>>>>>>> master:src/v 0.0/Library/PackageCache/com.unity.2d.psdimporter@6.0.5/Editor/PSDPlugin/PDNWrapper/BitmapLayer.cs.meta
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+=======
 fileFormatVersion: 2
 guid: 70e39391513e23343b58ac38c13e8c65
 timeCreated: 1481899075
@@ -10,3 +29,4 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+>>>>>>> master

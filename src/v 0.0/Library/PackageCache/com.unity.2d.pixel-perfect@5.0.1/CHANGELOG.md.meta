@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+fileFormatVersion: 2
+guid: 772e7eacafea1ef459a7de1a683f4776
+TextScriptImporter:
+=======
+<<<<<<<< HEAD:src/v 0.0/Library/PackageCache/com.unity.burst@1.6.6/Runtime/Editor/Unity.Burst.ForEditor.asmref.meta
+fileFormatVersion: 2
+guid: 268a64be2367b3248a24f317d458861a
+AssemblyDefinitionReferenceImporter:
+>>>>>>> master
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+<<<<<<< HEAD
+=======
+========
 fileFormatVersion: 2
 guid: 772e7eacafea1ef459a7de1a683f4776
 TextScriptImporter:
@@ -5,3 +22,5 @@ TextScriptImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+>>>>>>>> master:src/v 0.0/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.1/CHANGELOG.md.meta
+>>>>>>> master

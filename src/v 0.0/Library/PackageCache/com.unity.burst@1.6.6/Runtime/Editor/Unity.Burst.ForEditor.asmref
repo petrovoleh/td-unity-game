@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 {
     "reference": "Unity.Burst"
+=======
+{
+    "reference": "Unity.Burst"
+>>>>>>> master
 }

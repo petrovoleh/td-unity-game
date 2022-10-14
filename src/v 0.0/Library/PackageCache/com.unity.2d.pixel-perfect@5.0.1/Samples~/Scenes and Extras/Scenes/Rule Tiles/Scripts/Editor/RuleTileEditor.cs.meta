@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:src/v 0.0/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.1/Samples~/Scenes and Extras/Scenes/Rule Tiles/Scripts/Editor/RuleTileEditor.cs.meta
 fileFormatVersion: 2
 guid: 3e71affbe222bd547ab7959462d8ea0d
 timeCreated: 1499789806
@@ -11,3 +13,25 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+========
+fileFormatVersion: 2
+guid: e2681bc983b426e4e97502d23e3d66b4
+=======
+fileFormatVersion: 2
+guid: 3e71affbe222bd547ab7959462d8ea0d
+timeCreated: 1499789806
+licenseType: Pro
+>>>>>>> master
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+<<<<<<< HEAD
+>>>>>>>> master:src/v 0.0/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.1/Runtime/PixelPerfectCameraInternal.cs.meta
+=======
+>>>>>>> master

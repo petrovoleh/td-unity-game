@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+fileFormatVersion: 2
+<<<<<<<< HEAD:src/v 0.0/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.1/Samples~/Scenes and Extras/Scenes.meta
+guid: fbf6a109fe5bd4794b76e23184357943
+========
+guid: 482ac420eb7aa3b4186fee474c058820
+>>>>>>>> master:src/v 0.0/Library/PackageCache/com.unity.2d.spriteshape@7.0.6/Samples~/Extras/Scenes.meta
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+=======
 fileFormatVersion: 2
 guid: fbf6a109fe5bd4794b76e23184357943
 folderAsset: yes
@@ -6,3 +20,4 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+>>>>>>> master

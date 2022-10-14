@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:src/v 0.0/Library/PackageCache/com.unity.2d.sprite@1.0.0/package.json.meta
 guid: 7dc5f1e5d04ac8549ac21802071e983b
+========
+guid: 6bd185401d1a755408d5a59cec274444
+>>>>>>>> master:src/v 0.0/Library/PackageCache/com.unity.feature.2d@1.0.0/package.json.meta
 PackageManifestImporter:
   externalObjects: {}
   userData: 
