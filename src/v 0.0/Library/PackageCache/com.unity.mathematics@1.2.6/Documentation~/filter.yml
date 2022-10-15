@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 apiRules:
   - exclude:
       uidRegex: Tests$
@@ -11,18 +10,4 @@ apiRules:
       type: Namespace
   - exclude:
       uidRegex: Unity\.IL2CPP\.CompilerServices$
-=======
-apiRules:
-  - exclude:
-      uidRegex: Tests$
-      type: Namespace
-  - exclude:
-      uidRegex: ^Unity\..*\.Tests\..*$
-      type: Namespace
-  - exclude:
-      uidRegex: Unity\.Mathematics\.Shaders$
-      type: Namespace
-  - exclude:
-      uidRegex: Unity\.IL2CPP\.CompilerServices$
->>>>>>> master
       type: Namespace

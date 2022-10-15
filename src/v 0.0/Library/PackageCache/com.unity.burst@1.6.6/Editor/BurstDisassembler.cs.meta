@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 fileFormatVersion: 2
 guid: 3f95fb45824f373fad673bef04ad4f0b
 MonoImporter:
@@ -10,16 +9,3 @@ MonoImporter:
   userData:
   assetBundleName:
   assetBundleVariant:
-=======
-fileFormatVersion: 2
-guid: 3f95fb45824f373fad673bef04ad4f0b
-MonoImporter:
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
-  icon: {instanceID: 0}
-  externalObjects: {}
-  userData:
-  assetBundleName:
-  assetBundleVariant:
->>>>>>> master

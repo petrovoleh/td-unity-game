@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 fileFormatVersion: 2
 guid: 261453cec30598747b9877ec58ba32fd
 TextScriptImporter:
@@ -6,23 +5,3 @@ TextScriptImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-=======
-<<<<<<<< HEAD:src/v 0.0/Assets/TextMesh Pro/Sprites/EmojiOne.json.meta
-fileFormatVersion: 2
-guid: 8f05276190cf498a8153f6cbe761d4e6
-timeCreated: 1480316860
-licenseType: Pro
-TextScriptImporter:
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-========
-fileFormatVersion: 2
-guid: 261453cec30598747b9877ec58ba32fd
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
->>>>>>>> master:src/v 0.0/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.1/README.md.meta
->>>>>>> master

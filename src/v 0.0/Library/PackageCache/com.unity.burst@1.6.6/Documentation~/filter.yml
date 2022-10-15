@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 apiRules:
   - exclude:
       uidRegex: ^Global Namespace.*
       type: Namespace
-=======
-apiRules:
-  - exclude:
-      uidRegex: ^Global Namespace.*
-      type: Namespace
->>>>>>> master

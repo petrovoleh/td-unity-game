@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 fileFormatVersion: 2
 guid: d131a2d0c5c33464b90253c59096277f
 TextScriptImporter:
@@ -6,12 +5,3 @@ TextScriptImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-=======
-fileFormatVersion: 2
-guid: d131a2d0c5c33464b90253c59096277f
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
->>>>>>> master

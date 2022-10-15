@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 {
     "displayName": "Pipe Rule Tile",
     "interactiveImport": "false",
     "description": "An example implementation of a Rule Tile with rules matching four-way orthogonal neighbors.",
-=======
-{
-    "displayName": "Pipe Rule Tile",
-    "interactiveImport": "false",
-    "description": "An example implementation of a Rule Tile with rules matching four-way orthogonal neighbors.",
->>>>>>> master
 }

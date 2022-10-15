@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 * [Overview](index.md)
 * [Scriptable Brushes](Brushes.md)
  * [GameObject Brush](GameObjectBrush.md)
@@ -13,19 +12,3 @@
  * [Grid Information](GridInformation.md)
  * [Custom Rules for Rule Tile](CustomRulesForRuleTile.md)
  * [Contributors](Contributors.md)
-=======
-* [Overview](index.md)
-* [Scriptable Brushes](Brushes.md)
- * [GameObject Brush](GameObjectBrush.md)
- * [Group Brush](GroupBrush.md)
- * [Line Brush](LineBrush.md)
- * [Random Brush](RandomBrush.md)
-* [Scriptable Tiles](Tiles.md)
- * [Animated Tile](AnimatedTile.md)
- * [Rule Tile](RuleTile.md)
- * [Rule Override Tile](RuleOverrideTile.md)
-* [Other](Other.md)
- * [Grid Information](GridInformation.md)
- * [Custom Rules for Rule Tile](CustomRulesForRuleTile.md)
- * [Contributors](Contributors.md)
->>>>>>> master

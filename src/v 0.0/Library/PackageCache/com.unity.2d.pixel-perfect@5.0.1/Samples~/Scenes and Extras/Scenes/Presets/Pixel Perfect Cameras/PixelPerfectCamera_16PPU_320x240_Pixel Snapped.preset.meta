@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/v 0.0/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.1/Samples~/Scenes and Extras/Scenes/Presets/Pixel Perfect Cameras/PixelPerfectCamera_16PPU_320x240_Pixel Snapped.preset.meta
 fileFormatVersion: 2
 guid: 063aa59e0522c4256bbd33abac84b6b0
 NativeFormatImporter:
@@ -8,23 +6,3 @@ NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-========
-fileFormatVersion: 2
-guid: 08002d404144b40bf842342dda8fa3e4
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
->>>>>>>> master:src/v 0.0/Library/PackageCache/com.unity.2d.tilemap.extras@2.2.3/Samples~/DungeonRuleTile/Tiles/Dungeon.asset.meta
-=======
-fileFormatVersion: 2
-guid: 063aa59e0522c4256bbd33abac84b6b0
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 2655988077585873504
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
->>>>>>> master

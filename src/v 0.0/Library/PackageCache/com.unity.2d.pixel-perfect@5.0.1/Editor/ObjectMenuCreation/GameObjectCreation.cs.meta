@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-fileFormatVersion: 2
-guid: fae3565ddb08f4977a823f5fb7e23f1e
-=======
-<<<<<<<< HEAD:src/v 0.0/Library/PackageCache/com.unity.2d.path@5.0.2/Editor/EditablePath/ISnapping.cs.meta
-fileFormatVersion: 2
-guid: f15c4dfafb6d6d544ab56d8cfca74d07
-timeCreated: 1505113416
-licenseType: Pro
->>>>>>> master
-MonoImporter:
-  externalObjects: {}
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
-  icon: {instanceID: 0}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-<<<<<<< HEAD
-=======
-========
 fileFormatVersion: 2
 guid: fae3565ddb08f4977a823f5fb7e23f1e
 MonoImporter:
@@ -31,5 +9,3 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
->>>>>>>> master:src/v 0.0/Library/PackageCache/com.unity.2d.pixel-perfect@5.0.1/Editor/ObjectMenuCreation/GameObjectCreation.cs.meta
->>>>>>> master
