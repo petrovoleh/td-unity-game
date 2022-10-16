@@ -5,13 +5,11 @@ using UnityEngine;
 public class EnemyMoving : MonoBehaviour
 {
     float movespeed = 0.2f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+
+    void Destroying(){
+        Destroy(gameObject);
+    }
     void Update()
     {
         if (transform.position.x>-250 && transform.position.y>22)
@@ -26,5 +24,6 @@ public class EnemyMoving : MonoBehaviour
             transform.position = new Vector3(transform.position.x - movespeed, transform.position.y); 
         else if (transform.position.y>-300)
             transform.position = new Vector3(transform.position.x, transform.position.y - movespeed);
+        else Destroying();
     }
 }

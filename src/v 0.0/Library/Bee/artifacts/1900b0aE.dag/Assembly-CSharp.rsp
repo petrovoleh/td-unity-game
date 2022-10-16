@@ -382,6 +382,7 @@
 "Assets/Scripts/PlaceTheTower.cs"
 "Assets/Scripts/SceneChanger.cs"
 "Assets/Scripts/SelectTower.cs"
+"Assets/Scripts/SpawnEnemies.cs"
 -langversion:9.0
 
 /deterministic
