@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMoving : MonoBehaviour
 {
-    float movespeed = 0.2f;
+    public float movespeed = 0.2f;
 
 
     void Destroying(){
