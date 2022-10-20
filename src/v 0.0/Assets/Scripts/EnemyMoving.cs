@@ -5,10 +5,10 @@ using UnityEngine;
 public class EnemyMoving : MonoBehaviour
 {
     public float movespeed = 0.2f;
-
-
+    
     void Destroying(){
-        GlobalVariables.playerHP -= 1;
+        if (GlobalVariables.playerHP > 0)
+            GlobalVariables.playerHP -= 1;
         Destroy(gameObject);
     }
     void Update()
