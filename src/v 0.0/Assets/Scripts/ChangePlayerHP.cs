@@ -7,11 +7,13 @@ public class ChangePlayerHP : MonoBehaviour
 {
     
     public GameObject LoseTheGameScreen;
+    public GameObject SpawnEnemies;
     public Text hp;
     void Defeat()
     {
         LoseTheGameScreen.SetActive(true);
-     // GlobalVariables.playerHP = 0;
+        SpawnEnemies.SetActive(false);
+
     }
     // Update is called once per frame
     void Update()
