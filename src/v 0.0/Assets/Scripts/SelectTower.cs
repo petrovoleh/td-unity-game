@@ -8,11 +8,16 @@ public class SelectTower : MonoBehaviour
 
     private void OnMouseDown()
     {
-        GlobalVariables.selectedTowerPlace = this.gameObject;
-        Debug.Log(GlobalVariables.selectedTowerPlace);
-        GameObject SelectedClone = Instantiate(Selected);
-        SelectedClone.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0);
-        //Destroy(gameObject);
+        if (PauseMenu.GameIsPaused == false)
+        {
+            GlobalVariables.selectedTowerPlace = this.gameObject;
+            Debug.Log(GlobalVariables.selectedTowerPlace);
+            GameObject SelectedClone = Instantiate(Selected);
+            SelectedClone.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0);
+            //Destroy(gameObject);
+        }
+       
+        
     } 
 
     
