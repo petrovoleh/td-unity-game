@@ -199,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e198f6a435cb54aa93db2aaeda87b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileType: Projectile
-  projectileSpeed: 3
+  projectileType: LightningBolt
+  projectileSpeed: 500
+  damage: 1
   attackCooldown: 1.5

@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    private bool fastForward = false;
+    [SerializeField]
+    private Sprite[] fastForwardSprites;
+    [SerializeField]
+    private Image fastForwardButton;
     
     public static GameManager Instance;
 
@@ -57,7 +62,7 @@ public class GameManager : MonoBehaviour
     }*/
     void Start()
     {
-        Currency = 5;
+        Currency = 30;
     }
 
     private void Awake()
@@ -88,7 +93,7 @@ public class GameManager : MonoBehaviour
             {
                 Enemy enemy = Pool.GetObject("Skeleton").GetComponent<Enemy>();
                 enemy.Spawn();
-                yield return new WaitForSeconds(1.5f);
+                yield return new WaitForSeconds(1f);
 
             }
         }
@@ -109,7 +114,7 @@ public class GameManager : MonoBehaviour
             enemyCount = 3;
             for (int e = 0; e < 3; e++)
             {
-                Enemy enemy = Pool.GetObject("Spider").GetComponent<Enemy>();
+                Enemy enemy = Pool.GetObject("Wolf").GetComponent<Enemy>();
                 enemy.Spawn();
                 yield return new WaitForSeconds(1.5f);
 
@@ -163,7 +168,25 @@ public class GameManager : MonoBehaviour
 
         if(!WaveActive && enemyCount <= 0)
         {
+            Currency += 10;
             waveBtn.SetActive(true);
         }
+    }
+
+    public void FastForward()
+    {
+        if(fastForward == false)
+        {
+            fastForwardButton.sprite = fastForwardSprites[1];
+            Time.timeScale = 2f;
+            fastForward = true;
+        }
+        else if (fastForward == true)
+        {
+            fastForwardButton.sprite = fastForwardSprites[0];
+            Time.timeScale = 1f;
+            fastForward = false;
+        }
+
     }
 }

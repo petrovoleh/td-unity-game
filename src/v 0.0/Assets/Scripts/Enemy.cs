@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour
     
     public void Spawn()
     {
-        transform.position = new Vector3(350, 135);
+        transform.position = new Vector3(350, 145);
     }
 
     public void TakeDamage(int damage)

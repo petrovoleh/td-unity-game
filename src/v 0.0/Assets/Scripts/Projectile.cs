@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
 
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
-        else if(target = null)
+        else if(target == null)
         {
             Destroy(gameObject);
         }
