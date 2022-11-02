@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ChangePlayerHP : MonoBehaviour
 {
-    
     public GameObject LoseTheGameScreen;
     public GameObject SpawnEnemies;
     public Text hp;

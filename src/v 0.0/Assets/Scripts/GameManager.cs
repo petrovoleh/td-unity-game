@@ -143,7 +143,103 @@ public class GameManager : MonoBehaviour
 
             }
         }
+        if (wave == 4)
+        {
+            enemyCount = 6;
+            for (int e = 0; e < 3; e++)
+            {
+                
+                Enemy enemy = Pool.GetObject("Wolf").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1.5f);
+                enemy = Pool.GetObject("Zombie").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1.5f);
 
+            }
+        }
+        if (wave == 5)
+        {
+            enemyCount = 9;
+            for (int e = 0; e < 3; e++)
+            {
+                Enemy enemy = Pool.GetObject("Skeleton").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1f);
+                enemy = Pool.GetObject("Zombie").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1.5f);
+                enemy = Pool.GetObject("Wolf").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1.5f);
+
+            }
+        }
+        if (wave == 6)
+        {
+            enemyCount = 15;
+            for (int e = 0; e < 5; e++)
+            {
+                Enemy enemy = Pool.GetObject("Skeleton").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1f);
+                enemy = Pool.GetObject("Zombie").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1.5f);
+                enemy = Pool.GetObject("Wolf").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1.5f);
+            }
+        }
+        if (wave == 7)
+        {
+            enemyCount = 16;
+            for (int e = 0; e < 8; e++)
+            {
+                Enemy enemy = Pool.GetObject("Zombie").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1.5f);
+                enemy = Pool.GetObject("Wolf").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1.5f);
+            }
+        }
+        if (wave == 8)
+        {
+            enemyCount = 20;
+            for (int e = 0; e < 10; e++)
+            {
+                Enemy enemy = Pool.GetObject("Skeleton").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1.5f);
+                enemy = Pool.GetObject("Wolf").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1.5f);
+            }
+        }
+        if (wave == 9)
+        {
+            enemyCount = 16;
+            for (int e = 0; e < 16; e++)
+            {
+                Enemy enemy = Pool.GetObject("Wolf").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1.5f);
+            }
+        }
+        if (wave == 10)
+        {
+            enemyCount = 40;
+            for (int e = 0; e < 20; e++)
+            {
+                Enemy enemy = Pool.GetObject("Zombie").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1.5f);
+                enemy = Pool.GetObject("Wolf").GetComponent<Enemy>();
+                enemy.Spawn();
+                yield return new WaitForSeconds(1.5f);
+            }
+        }
         /*
         for (int i = 0; i < wave; i++)
         {
