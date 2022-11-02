@@ -18,9 +18,9 @@ public class ChangePlayerHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GlobalVariables.playerHP == 0)
+        if (GameManager.Instance.PlayerHP == 0)
            Defeat();
-        hp.text =  GlobalVariables.playerHP.ToString();
+        hp.text = GameManager.Instance.PlayerHP.ToString();
     }
     
 }

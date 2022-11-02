@@ -13,6 +13,7 @@ public class DeleteSelection : MonoBehaviour
     }
     void OnMouseExit()
     {
+        
         not_in_object=true;
         
     }

@@ -15,6 +15,16 @@ public class GameManager : MonoBehaviour
 
     public ObjectPool Pool { get; set; }
 
+    //Currency Variables
+    [SerializeField]
+    private int currency;
+
+    [SerializeField]
+    private int roundEndingCurrency;
+
+    [SerializeField]
+    private Text currencyTxt;
+
     public int Currency
     {
         get
@@ -27,11 +37,24 @@ public class GameManager : MonoBehaviour
             this.currencyTxt.text = value.ToString();
         }
     }
-    private int currency;
 
+    //Player Health Variables
     [SerializeField]
-    private Text currencyTxt;
+    private int playerHP = 20;
 
+    public int PlayerHP
+    {
+        get
+        {
+            return playerHP;
+        }
+        set
+        {
+            playerHP = value;
+        }
+    }
+
+    // Wave Variables
     public bool WaveActive
     {
         get 
@@ -45,7 +68,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Text waveTxt;
 
-    [SerializeField]
+    [HideInInspector]
     public int enemyCount;
 
     [SerializeField]
@@ -62,7 +85,7 @@ public class GameManager : MonoBehaviour
     }*/
     void Start()
     {
-        Currency = 30;
+        Currency = currency;
     }
 
     private void Awake()
@@ -168,7 +191,7 @@ public class GameManager : MonoBehaviour
 
         if(!WaveActive && enemyCount <= 0)
         {
-            Currency += 10;
+            Currency += roundEndingCurrency;
             waveBtn.SetActive(true);
         }
     }

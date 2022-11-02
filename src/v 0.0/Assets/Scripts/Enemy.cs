@@ -20,8 +20,8 @@ public class Enemy : MonoBehaviour
     void Destroying()
     {
         GameManager.Instance.RemoveMonster(this);
-        if (GlobalVariables.playerHP > 0)
-            GlobalVariables.playerHP -= 1;
+        if (GameManager.Instance.PlayerHP > 0)
+            GameManager.Instance.PlayerHP -= 1;
         Destroy(gameObject);
     }
     void Update()
