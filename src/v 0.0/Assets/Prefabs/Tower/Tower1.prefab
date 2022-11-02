@@ -117,7 +117,7 @@ MonoBehaviour:
   projectileType: FireBolt
   projectileSpeed: 500
   damage: 1
-  attackCooldown: 1.5
+  attackCooldown: 1.25
 --- !u!1 &2706758977530459666
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,8 @@ public class ChangePlayerHP : MonoBehaviour
     public Text hp;
     void Defeat()
     {
+        Time.timeScale = 0f;
+        PauseMenu.GameIsPaused = true;
         LoseTheGameScreen.SetActive(true);
     }
     // Update is called once per frame

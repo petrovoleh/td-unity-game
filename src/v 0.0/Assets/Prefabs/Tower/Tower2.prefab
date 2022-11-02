@@ -202,4 +202,4 @@ MonoBehaviour:
   projectileType: LightningBolt
   projectileSpeed: 500
   damage: 1
-  attackCooldown: 1.5
+  attackCooldown: 0.75
