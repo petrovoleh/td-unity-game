@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     
     void Destroying()
     {
+        GameManager.Instance.enemyCount--;
         GameManager.Instance.RemoveMonster(this);
         if (GameManager.Instance.PlayerHP > 0)
             GameManager.Instance.PlayerHP -= 1;
@@ -37,6 +38,7 @@ public class Enemy : MonoBehaviour
             else
             {
                 Destroying();
+                GameManager.Instance.activateWaveBtn();
             }
         }
         /*if (transform.position.x>-250 && transform.position.y>22)

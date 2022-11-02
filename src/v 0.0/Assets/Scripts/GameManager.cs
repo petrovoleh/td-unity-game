@@ -73,7 +73,14 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject waveBtn;
-
+    public void activateWaveBtn(){
+        Debug.Log(enemyCount);
+        if(!WaveActive && enemyCount <= 0)
+        {
+            Currency += roundEndingCurrency;
+            waveBtn.SetActive(true);
+        }
+    }
     public List<Enemy> activeMonsters = new List<Enemy>();
 
     /*private Tower selectedTower;
