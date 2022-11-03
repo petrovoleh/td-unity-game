@@ -729,6 +729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Maps
+  optionsUI: {fileID: 0}
 --- !u!4 &440492630
 Transform:
   m_ObjectHideFlags: 0
@@ -909,7 +910,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1999325877}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainMenuButtons, Assembly-CSharp
         m_MethodName: OptionsBack
         m_Mode: 1
         m_Arguments:
@@ -1177,8 +1178,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 440492629}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+      - m_Target: {fileID: 1999325877}
+        m_TargetAssemblyTypeName: MainMenuButtons, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -1916,7 +1917,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1999325877}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_TargetAssemblyTypeName: MainMenuButtons, Assembly-CSharp
         m_MethodName: Options
         m_Mode: 1
         m_Arguments:
@@ -2166,10 +2167,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1999325872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e808f197b4e708a418831571c4b5d808, type: 3}
+  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
+  sceneName: 
   optionsUI: {fileID: 495167597}
 --- !u!1 &2051975260
 GameObject:

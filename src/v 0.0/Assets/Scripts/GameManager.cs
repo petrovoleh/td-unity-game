@@ -119,78 +119,55 @@ public class GameManager : MonoBehaviour
         }
         
     }
+
+    private IEnumerator WaveGenerator(int count, string[] names, float delay){
+            for (int e = 0; e < count/names.Length; e++)
+            {
+                for (int f = 0; f < names.Length; f++){
+                    Enemy enemy = Pool.GetObject(names[f]).GetComponent<Enemy>();
+                    enemy.Spawn(); activeMonsters.Add(enemy);
+                    yield return new WaitForSeconds(delay);
+                }
+            }
+    }
+    
     private IEnumerator SpawnWave()
     {
         if (wave == 1)
         {
             enemyCount = 5;
-            for (int e = 0; e < 5; e++)
-            {
-                Enemy enemy = Pool.GetObject("Skeleton").GetComponent<Enemy>();
-                enemy.Spawn(); activeMonsters.Add(enemy);
-                yield return new WaitForSeconds(1f);
-
-            }
+            string[] mobs =  {"Skeleton"};
+            StartCoroutine(WaveGenerator(5,mobs, 1f));
         }
         if (wave == 2)
         {
             enemyCount = 5;
-            for (int e = 0; e < 5; e++)
-            {
-                Enemy enemy = Pool.GetObject("Zombie").GetComponent<Enemy>();
-                enemy.Spawn(); activeMonsters.Add(enemy);
-                yield return new WaitForSeconds(1.5f);
-
-            }
+            string[] mobs =  {"Zombie"};
+            StartCoroutine(WaveGenerator(5, mobs, 1.5f));
         }
 
         if (wave == 3)
         {
             enemyCount = 4;
-            for (int e = 0; e < 4; e++)
-            {
-                Enemy enemy = Pool.GetObject("Wolf").GetComponent<Enemy>();
-                enemy.Spawn(); activeMonsters.Add(enemy);
-                yield return new WaitForSeconds(1.5f);
-
-            }
+            string[] mobs =  {"Wolf"};
+            StartCoroutine(WaveGenerator(4, mobs, 1.5f));
         }
         if (wave == 4)
         {
             enemyCount = 8;
-            for (int e = 0; e < 4; e++)
-            {
-                
-                Enemy enemy = Pool.GetObject("Wolf").GetComponent<Enemy>();
-                enemy.Spawn(); activeMonsters.Add(enemy);
-                yield return new WaitForSeconds(0.5f);
-                enemy = Pool.GetObject("Zombie").GetComponent<Enemy>();
-                enemy.Spawn(); activeMonsters.Add(enemy);
-                yield return new WaitForSeconds(0.5f);
+            string[] mobs =  {"Wolf","Zombie"};
+            StartCoroutine(WaveGenerator(8, mobs, 0.5f));
 
-            }
         }
         if (wave == 5)
         {
             enemyCount = 16;
-            for (int e = 0; e < 3; e++)
-            {
-                Enemy enemy = Pool.GetObject("Skeleton").GetComponent<Enemy>();
-                enemy.Spawn(); activeMonsters.Add(enemy);
-                yield return new WaitForSeconds(1f);
-                
-                enemy = Pool.GetObject("Spider").GetComponent<Enemy>();
-                enemy.Spawn(); activeMonsters.Add(enemy);
-                yield return new WaitForSeconds(1f);
-            }
+            string[] mobs = {"Skeleton","Spider"};
+            StartCoroutine(WaveGenerator(6, mobs, 1f));
             yield return new WaitForSeconds(3f);
-            for (int e = 0; e < 10; e++)
-            {
-                Enemy enemy = Pool.GetObject("RedSlime").GetComponent<Enemy>();
-                enemy.Spawn(); activeMonsters.Add(enemy);
-                yield return new WaitForSeconds(0.2f);
-            }
-            
+            string[] mobs2 = {"RedSlime"};
+            StartCoroutine(WaveGenerator(10, mobs2, 0.2f));
+
         }
         if (wave == 6)
         {
@@ -220,34 +197,19 @@ public class GameManager : MonoBehaviour
         if (wave == 7)
         {
             enemyCount = 16;
-            for (int e = 0; e < 8; e++)
-            {
-                Enemy enemy = Pool.GetObject("GreenSlime").GetComponent<Enemy>();
-                enemy.Spawn(); activeMonsters.Add(enemy);
-                yield return new WaitForSeconds(0.5f);
-            }
-            for (int e = 0; e < 8; e++)
-            {
-                Enemy enemy = Pool.GetObject("YellowSlime").GetComponent<Enemy>();
-                enemy.Spawn(); activeMonsters.Add(enemy);
-                yield return new WaitForSeconds(0.5f);
-            }
+            string[] mobs = {"GreenSlime"};
+            StartCoroutine(WaveGenerator(8, mobs, 0.5f));
+            string[] mobs2 = {"YellowSlime"};
+            StartCoroutine(WaveGenerator(10, mobs2, 0.5f));
+            
         }
         if (wave == 8)
         {
             enemyCount = 15;
-            for (int e = 0; e < 5; e++)
-            {
-                Enemy enemy = Pool.GetObject("Spider").GetComponent<Enemy>();
-                enemy.Spawn(); activeMonsters.Add(enemy);
-                yield return new WaitForSeconds(0.25f);
-            }
-            for (int e = 0; e < 10; e++)
-            {
-                Enemy enemy = Pool.GetObject("YellowSlime").GetComponent<Enemy>();
-                enemy.Spawn(); activeMonsters.Add(enemy);
-                yield return new WaitForSeconds(1f);
-            }
+            string[] mobs =  {"Spider"};
+            StartCoroutine(WaveGenerator(5, mobs, 0.25f));
+            string[] mobs2 = {"YellowSlime"};
+            StartCoroutine(WaveGenerator(10, mobs2, 1f));
         }
         if (wave == 9)
         {

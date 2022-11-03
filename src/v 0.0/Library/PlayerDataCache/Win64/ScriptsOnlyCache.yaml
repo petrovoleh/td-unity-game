@@ -14,7 +14,6 @@ ScriptsOnlyBuild:
     - Projectile
     - SceneChanger
     - SelectTower
-    - SpawnEnemies
     - Tower
     - Waypoints
     Unity.2D.Animation.Editor.dll:
@@ -96,9 +95,15 @@ ScriptsOnlyBuild:
     fullTypeName: SceneChanger
     methodName: ChangeScene
   - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: OptionsBack
+  - assembly: Assembly-CSharp
     fullTypeName: SceneChanger
     methodName: QuitGame
   - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Options
+  - assembly: Assembly-CSharp
     fullTypeName: PageChanger
     methodName: NextPage
   - assembly: Assembly-CSharp
@@ -119,12 +124,27 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: PageChanger
     methodName: LastPage
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: OptionsBack
   - assembly: Assembly-CSharp
     fullTypeName: GameManager
     methodName: StartWave
   - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
+    methodName: Exit
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Restart
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Exit
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
     methodName: PauseGame
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: Restart
   - assembly: Assembly-CSharp
     fullTypeName: PauseMenu
     methodName: Options
@@ -181,8 +201,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3482}
     - Class: 114
       Script: {instanceID: 3800}
-    - Class: 114
-      Script: {instanceID: 4764}
     - Class: 114
       Script: {instanceID: 5932}
     - Class: 114
@@ -255,6 +273,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2856}
     - Class: 114
+      Script: {instanceID: 3038}
+    - Class: 114
       Script: {instanceID: 3122}
     - Class: 114
       Script: {instanceID: 3482}
@@ -265,11 +285,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6016}
     - Class: 114
+      Script: {instanceID: 6358}
+    - Class: 114
       Script: {instanceID: 6756}
     - Class: 114
       Script: {instanceID: 6958}
     - Class: 114
       Script: {instanceID: 7376}
+    - Class: 114
+      Script: {instanceID: 7814}
     - Class: 114
       Script: {instanceID: 8970}
     - Class: 115
@@ -520,7 +544,7 @@ ScriptsOnlyBuild:
     className: RuleOverrideTile
   - hash:
       serializedVersion: 2
-      Hash: c8c5e65e9fb858572516474d6e2102bc
+      Hash: 61cf6cf785112d580245abdc4e34624e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PauseMenu
@@ -1174,7 +1198,7 @@ ScriptsOnlyBuild:
     className: UnityOnScrollRectValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 7c67ee9b617c877323846da8e7cad8d3
+      Hash: 80f21e05f16ba9f1d057b5c5837e0511
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1228,7 +1252,7 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
-      Hash: dbe5f34ee1133d7a57000610f01830b6
+      Hash: dd6bdebebe87bcb048e62fe06107ffe9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChangePlayerHP
@@ -1357,4 +1381,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Maps.unity
   - Assets/Scenes/Game.unity
-  playerPath: E:/Games/v 0.0.exe
+  playerPath: "C:/Users/olegp/OneDrive/\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B/GitHub/td-game/src/v
+    0.0/Builds/v 0.0.exe"
