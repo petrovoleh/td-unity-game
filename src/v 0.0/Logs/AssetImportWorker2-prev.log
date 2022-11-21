@@ -16,7 +16,11 @@ C:/Users/Nojus/Documents/GitHub/td-game/src/v 0.0
 Logs/AssetImportWorker2.log
 -srvPort
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 61403
+=======
+60333
+>>>>>>> Stashed changes
 =======
 60333
 >>>>>>> Stashed changes
@@ -52,7 +56,11 @@ C:/Users/Nojus/Documents/GitHub/td-game/src/v 0.0
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 144.50 ms, found 4 plugins.
+=======
+Refreshing native plugins compatible for Editor in 106.85 ms, found 4 plugins.
+>>>>>>> Stashed changes
 =======
 Refreshing native plugins compatible for Editor in 106.85 ms, found 4 plugins.
 >>>>>>> Stashed changes
@@ -72,6 +80,7 @@ Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Manage
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/MonoBleedingEdge/etc'
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56108
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -86,6 +95,8 @@ Domain Reload Profiling:
 	ReloadAssembly (4659ms)
 		BeginReloadAssembly (3441ms)
 =======
+=======
+>>>>>>> Stashed changes
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56816
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -99,12 +110,16 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (695ms)
 		BeginReloadAssembly (85ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 		EndReloadAssembly (807ms)
 			LoadAssemblies (3439ms)
@@ -121,6 +136,8 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (145ms)
 				ProcessInitializeOnLoadMethodAttributes (44ms)
 =======
+=======
+>>>>>>> Stashed changes
 		EndReloadAssembly (492ms)
 			LoadAssemblies (82ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
@@ -135,6 +152,9 @@ Domain Reload Profiling:
 				BeforeProcessingInitializeOnLoad (2ms)
 				ProcessInitializeOnLoadAttributes (148ms)
 				ProcessInitializeOnLoadMethodAttributes (46ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -143,7 +163,11 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Registered in 0.007930 seconds.
+=======
+Registered in 0.015559 seconds.
+>>>>>>> Stashed changes
 =======
 Registered in 0.015559 seconds.
 >>>>>>> Stashed changes
@@ -152,9 +176,12 @@ Symbol file LoadedFromMemory doesn't match image C:\Users\Nojus\Documents\GitHub
 Symbol file LoadedFromMemory doesn't match image C:\Users\Nojus\Documents\GitHub\td-game\src\v 0.0\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 97.79 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 =======
+=======
+>>>>>>> Stashed changes
 Refreshing native plugins compatible for Editor in 103.67 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -245,5 +272,9 @@ Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Ico
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
+<<<<<<< Updated upstream
+Exiting without the bug reporter. Application will terminate with return code 0
+>>>>>>> Stashed changes
+=======
 Exiting without the bug reporter. Application will terminate with return code 0
 >>>>>>> Stashed changes

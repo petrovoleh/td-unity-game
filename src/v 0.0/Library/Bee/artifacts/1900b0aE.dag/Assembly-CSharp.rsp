@@ -381,9 +381,12 @@
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/GameManager.cs"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 "Assets/Scripts/GlobalVariables.cs"
 "Assets/Scripts/LevelManager.cs"
 "Assets/Scripts/MainMenuButtons.cs"
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 "Assets/Scripts/ObjectPool.cs"

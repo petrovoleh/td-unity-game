@@ -6,6 +6,7 @@
 { "pid": "Unity", "ph":"M", "name": "process_sort_index", "args": {"sort_index": -100} },
 { "pid": "Unity", "tid": 1, "ph":"M", "name": "thread_name", "args": {"name": ""} },
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 { "pid": "Unity", "tid": 1,"ts": 1.66745943265827E+15,"dur": 47144336, "ph":"X", "name": "Build player"},
 { "pid": "Unity", "tid": 1,"ts": 1.66745943270637E+15,"dur": 1932885, "ph":"X", "name": "Preprocess Player"},
 { "pid": "Unity", "tid": 1,"ts": 1.66745943467555E+15,"dur": 1350, "ph":"X", "name": "Prepare For Build"},
@@ -2326,6 +2327,47 @@
 { "pid": 0, "tid": 1, "ts": 1667430115669992, "dur": 9910, "ph": "X", "name": "Finish", "args": {} },
 { "pid": 0, "tid": 1, "ts": 1667430115683917, "dur": 872, "ph": "X", "name": "", "args": {} },
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+=======
+{ "pid": "Unity", "tid": 1,"ts": 1.66743010177419E+15,"dur": 26629489, "ph":"X", "name": "Build player"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743010180685E+15,"dur": 420244, "ph":"X", "name": "Preprocess Player"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743010224807E+15,"dur": 14990091, "ph":"X", "name": "ProducePlayerScriptAssemblies"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743010331528E+15,"dur": 13922727, "ph":"X", "name": "Prebuild Cleanup and Recompile"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743010334001E+15,"dur": 12432055, "ph":"X", "name": "Compile scripts"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743011577208E+15,"dur": 1465925, "ph":"X", "name": "Generate and validate platform script types"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743011723838E+15,"dur": 11965, "ph":"X", "name": "Verify Build setup"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743011725036E+15,"dur": 151791, "ph":"X", "name": "Prepare assets for target platform"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743011746482E+15,"dur": 697426, "ph":"X", "name": "Building scenes"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743011746488E+15,"dur": 115234, "ph":"X", "name": "Building scene Assets/Scenes/MainMenu.unity"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743011758012E+15,"dur": 155751, "ph":"X", "name": "Building scene Assets/Scenes/Maps.unity"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743011773587E+15,"dur": 426374, "ph":"X", "name": "Building scene Assets/Scenes/Game.unity"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743011816278E+15,"dur": 8075127, "ph":"X", "name": "Build scripts DLLs"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743011850481E+15,"dur": 2022175, "ph":"X", "name": "GetReferencedAssemblies"},
+{ "pid": "Unity", "tid": 1,"ts": 1.6674301205862E+15,"dur": 5641711, "ph":"X", "name": "burst"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743012634351E+15,"dur": 212151, "ph":"X", "name": "Build GlobalGameManagers file"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743012663186E+15,"dur": 104280, "ph":"X", "name": "Writing asset files"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743012663225E+15,"dur": 16898, "ph":"X", "name": "Packaging assets - globalgamemanagers.assets"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743012664917E+15,"dur": 13900, "ph":"X", "name": "Packaging assets - resources.assets"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743012666307E+15,"dur": 18413, "ph":"X", "name": "Packaging assets - sharedassets0.assets"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743012668149E+15,"dur": 7539, "ph":"X", "name": "Packaging assets - sharedassets1.assets"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743012668904E+15,"dur": 34146, "ph":"X", "name": "Packaging assets - sharedassets2.assets"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743012673615E+15,"dur": 158122, "ph":"X", "name": "Building Resources/unity_builtin_extra"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743012689849E+15,"dur": 157292, "ph":"X", "name": "Write data build dirty tracking information"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743012705807E+15,"dur": 1287225, "ph":"X", "name": "Postprocess built player"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743012706644E+15,"dur": 33731, "ph":"X", "name": "Setup incremental player build"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743012710018E+15,"dur": 1179374, "ph":"X", "name": "Incremental player build"},
+{ "pid": "Unity", "tid": 1,"ts": 1.66743012828085E+15,"dur": 18057, "ph":"X", "name": "Report output files"},
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1667430103477225, "dur": 12202677, "ph": "X", "name": "Build ScriptAssemblies", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667430103478337, "dur": 44849, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667430103523331, "dur": 109133, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667430103632487, "dur": 993055, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667430104625545, "dur": 11044429, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667430115669992, "dur": 9910, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1667430115683917, "dur": 872, "ph": "X", "name": "", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+>>>>>>> Stashed changes
 ,{ "pid":12345, "tid":0, "ts":1667430103573789, "dur":1806, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
 ,{ "pid":12345, "tid":0, "ts":1667430103575604, "dur":17968, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
 ,{ "pid":12345, "tid":0, "ts":1667430103593625, "dur":40, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
@@ -4515,6 +4557,9 @@
 "meta_command_line_args": "C:\\Program Files\\Unity\\Hub\\Editor\\2021.3.10f1\\Editor\\Unity.exe -projectpath C:\\Users\\Nojus\\Documents\\GitHub\\td-game\\src\\v 0.0 -useHub -hubIPC -cloudEnvironment production -licensingIpc LicenseClient-Atp28i983lTOU2y-Llp_f -hubSessionId f480f470-5ad1-11ed-a554-23baa4970942 -accessToken 4A_r1rz-cmpI9lyMwVaWvaC6p2UqNN6079ok-fqkdXY005f",
 "meta_user_name": "Nojus",
 "meta_os_version": "Microsoft Windows NT 10.0.19043.0",
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 "meta_cpu_count": "12"
 }

@@ -92,6 +92,9 @@
 -s="C:\Users\Nojus\Documents\GitHub\td-game\src\v 0.0\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc"
 -s="C:\Users\Nojus\Documents\GitHub\td-game\src\v 0.0\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime"
 -s="C:\Users\Nojus\Documents\GitHub\td-game\src\v 0.0\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 -s="C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Data\Managed\UnityEngine"
 -s="C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Data\NetStandard\ref\2.1.0"
@@ -99,8 +102,11 @@
 -s="C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Data\NetStandard\Extensions\2.0.0"
 -s="C:\Program Files\Unity\Hub\Editor\2021.3.10f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 -o="C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\v 0.0\Library\BuildPlayerData\Player"
 =======
+=======
+>>>>>>> Stashed changes
 -o="C:\Users\Nojus\Documents\GitHub\td-game\src\v 0.0\Library\BuildPlayerData\Player"
 >>>>>>> Stashed changes
 -rn="RuntimeInitializeOnLoads.json"

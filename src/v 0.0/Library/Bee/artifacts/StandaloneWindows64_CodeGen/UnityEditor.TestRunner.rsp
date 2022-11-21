@@ -201,10 +201,13 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll"
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
@@ -334,7 +337,11 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Linq.dll"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 -r:"C:/Users/olegp/OneDrive/Документы/GitHub/td-game/src/v 0.0/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+=======
+-r:"C:/Users/Nojus/Documents/GitHub/td-game/src/v 0.0/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+>>>>>>> Stashed changes
 =======
 -r:"C:/Users/Nojus/Documents/GitHub/td-game/src/v 0.0/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 >>>>>>> Stashed changes

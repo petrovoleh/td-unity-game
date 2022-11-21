@@ -298,7 +298,11 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 -r:"C:/Users/olegp/OneDrive/Документы/GitHub/td-game/src/v 0.0/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+=======
+-r:"C:/Users/Nojus/Documents/GitHub/td-game/src/v 0.0/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+>>>>>>> Stashed changes
 =======
 -r:"C:/Users/Nojus/Documents/GitHub/td-game/src/v 0.0/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 >>>>>>> Stashed changes
