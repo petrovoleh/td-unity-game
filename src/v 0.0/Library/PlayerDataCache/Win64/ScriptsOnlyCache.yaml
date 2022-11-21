@@ -1382,8 +1382,12 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Game.unity
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   playerPath: "C:/Users/olegp/OneDrive/\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B/GitHub/td-game/src/v
     0.0/Builds/v 0.0.exe"
+=======
+  playerPath: C:/Users/Nojus/Desktop/Monsters And Mages/v 0.0.exe
+>>>>>>> Stashed changes
 =======
   playerPath: C:/Users/Nojus/Desktop/Monsters And Mages/v 0.0.exe
 >>>>>>> Stashed changes
