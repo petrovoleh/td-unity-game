@@ -16,13 +16,13 @@ public class PlaceTheTower : MonoBehaviour
 
     private void OnMouseDown()
     {      
-        if(price <= GameManager.Instance.Currency && GlobalVariables.selectedTowerPlace != null && PauseMenu.GameIsPaused == false)
+        if(price <= GameManager.Instance.Currency && GameManager.Instance.SelectedTowerPlace != null && PauseMenu.GameIsPaused == false)
         {
             GameManager.Instance.Currency -= price;
             Debug.Log("OnMouseDown");
             GameObject TowerClone = Instantiate(Tower1);
-            TowerClone.transform.position = new Vector3(GlobalVariables.selectedTowerPlace.transform.position.x, GlobalVariables.selectedTowerPlace.transform.position.y, 0);
-            Destroy(GlobalVariables.selectedTowerPlace);
+            TowerClone.transform.position = new Vector3(GameManager.Instance.SelectedTowerPlace.transform.position.x, GameManager.Instance.SelectedTowerPlace.transform.position.y, 0);
+            Destroy(GameManager.Instance.SelectedTowerPlace);
         }
         
     } 

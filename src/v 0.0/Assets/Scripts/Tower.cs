@@ -10,8 +10,36 @@ public class Tower : MonoBehaviour
     [SerializeField]
     private float projectileSpeed;
 
+    //Tower/Projectile Damage
     [SerializeField]
     private int damage;
+    public  int Damage
+    {
+        get
+        {
+            return damage;
+        }
+
+        set
+        {
+            this.damage = value;
+        }
+    }
+    //Tower/Projectile SplashRange for damage
+    [SerializeField]
+    private int splashRange;
+    public int SplashRange
+    {
+        get
+        {
+            return splashRange;
+        }
+
+        set
+        {
+            this.splashRange = value;
+        }
+    }
 
     public float ProjectileSpeed
     {
@@ -25,18 +53,7 @@ public class Tower : MonoBehaviour
         get { return target; }
     }
 
-    public int Damage
-    {
-        get
-        {
-            return damage;
-        }
-
-        set
-        {
-            this.damage = value;
-        }
-    }
+    
 
     private Queue<Enemy> enemies = new Queue<Enemy>();
 
@@ -126,4 +143,5 @@ public class Tower : MonoBehaviour
             target = null;
         }
     }
+    
 }

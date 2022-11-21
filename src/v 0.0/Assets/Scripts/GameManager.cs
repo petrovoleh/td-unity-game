@@ -57,6 +57,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private GameObject selectedTowerPlace;
+    public GameObject SelectedTowerPlace
+    {
+        get
+        {
+            return selectedTowerPlace;
+        }
+        set
+        {
+            selectedTowerPlace = value;
+        }
+    }
+
     // Wave Variables
     public bool WaveActive
     {
@@ -342,4 +355,6 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    
 }

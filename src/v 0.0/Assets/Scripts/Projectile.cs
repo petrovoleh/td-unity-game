@@ -49,13 +49,28 @@ public class Projectile : MonoBehaviour
         if(other.tag == "Monster")
         {
 
-            if(target.gameObject == other.gameObject)
+            if(target.gameObject == other.gameObject && parent.SplashRange == 0)
             {
-                GameManager.Instance.Currency += 1;
+                
                 target.TakeDamage(parent.Damage);
                 Destroy(gameObject);
             }
-            
+            if (parent.SplashRange > 0)
+            {
+
+                var hitColliders = Physics2D.OverlapCircleAll(transform.position, parent.SplashRange);
+                foreach(var hitCollider in hitColliders)
+                {
+                    var enemy = hitCollider.GetComponent<Enemy>();
+                    if(enemy)
+                    {
+                        enemy.TakeDamage(parent.Damage);
+                        Destroy(gameObject);
+                    }
+                }
+      
+            }
+
         }
     }
 }

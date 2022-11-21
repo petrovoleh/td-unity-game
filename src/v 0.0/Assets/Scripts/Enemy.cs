@@ -63,7 +63,15 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        for(; damage > 0; damage--)
+        {
+            GameManager.Instance.Currency += 1;
+            health--;
+            if (health <= 0) { break; }
+                
+        }
+        //GameManager.Instance.Currency += 1;
+        //health -= damage;
 
         if(health <= 0)
         {
@@ -76,4 +84,5 @@ public class Enemy : MonoBehaviour
         }
     }
     
+
 }

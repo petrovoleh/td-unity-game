@@ -380,9 +380,12 @@
 "Assets/Scripts/DeleteSelection.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/GameManager.cs"
+<<<<<<< Updated upstream
 "Assets/Scripts/GlobalVariables.cs"
 "Assets/Scripts/LevelManager.cs"
 "Assets/Scripts/MainMenuButtons.cs"
+=======
+>>>>>>> Stashed changes
 "Assets/Scripts/ObjectPool.cs"
 "Assets/Scripts/PageChanger.cs"
 "Assets/Scripts/PauseMenu.cs"

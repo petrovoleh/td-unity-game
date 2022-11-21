@@ -10,8 +10,8 @@ public class SelectTower : MonoBehaviour
     {
         if (PauseMenu.GameIsPaused == false)
         {
-            GlobalVariables.selectedTowerPlace = this.gameObject;
-            Debug.Log(GlobalVariables.selectedTowerPlace);
+            GameManager.Instance.SelectedTowerPlace = this.gameObject;
+            Debug.Log(GameManager.Instance.SelectedTowerPlace);
             GameObject SelectedClone = Instantiate(Selected);
             SelectedClone.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, 0);
             //Destroy(gameObject);

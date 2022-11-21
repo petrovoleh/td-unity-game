@@ -116,8 +116,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileType: RocketBolt
   projectileSpeed: 500
-  damage: 2
-  attackCooldown: 2
+  damage: 1
+  splashRange: 30
+  attackCooldown: 1.25
 --- !u!1 &7619306793180283987
 GameObject:
   m_ObjectHideFlags: 0

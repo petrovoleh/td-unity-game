@@ -20,7 +20,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
@@ -1381,5 +1380,9 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Maps.unity
   - Assets/Scenes/Game.unity
+<<<<<<< Updated upstream
   playerPath: "C:/Users/olegp/OneDrive/\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B/GitHub/td-game/src/v
     0.0/Builds/v 0.0.exe"
+=======
+  playerPath: C:/Users/Nojus/Desktop/Monsters And Mages/v 0.0.exe
+>>>>>>> Stashed changes
