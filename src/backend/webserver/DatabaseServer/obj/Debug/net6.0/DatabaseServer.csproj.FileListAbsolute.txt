@@ -1,0 +1,5 @@
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\DatabaseServer\obj\Debug\net6.0\DatabaseServer.csproj.AssemblyReference.cache
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\DatabaseServer\obj\Debug\net6.0\DatabaseServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\DatabaseServer\obj\Debug\net6.0\DatabaseServer.AssemblyInfoInputs.cache
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\DatabaseServer\obj\Debug\net6.0\DatabaseServer.AssemblyInfo.cs
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\DatabaseServer\obj\Debug\net6.0\DatabaseServer.csproj.CoreCompileInputs.cache
