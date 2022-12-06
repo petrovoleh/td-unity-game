@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "8X8BGeNyPqr/VzDRovqPzk6iZ9UHff542jF9i1ySiMhBwl0wL+W3mvmMM6CdUGAVvBYBBsAeIOq3YFfRB330DQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\DatabaseServer\\DatabaseServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\olegp\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\olegp\\.nuget\\packages\\npgsql\\7.0.0\\npgsql.7.0.0.nupkg.sha512",
+    "C:\\Users\\olegp\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

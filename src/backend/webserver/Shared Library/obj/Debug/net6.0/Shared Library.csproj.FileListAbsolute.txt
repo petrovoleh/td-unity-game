@@ -10,3 +10,15 @@ C:\Users\olegp\RiderProjects\GameServer\Shared Library\obj\Debug\net6.0\Shared L
 C:\Users\olegp\RiderProjects\GameServer\Shared Library\obj\Debug\net6.0\refint\Shared Library.dll
 C:\Users\olegp\RiderProjects\GameServer\Shared Library\obj\Debug\net6.0\Shared Library.pdb
 C:\Users\olegp\RiderProjects\GameServer\Shared Library\obj\Debug\net6.0\ref\Shared Library.dll
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\Shared Library\bin\Debug\net6.0\Shared Library.deps.json
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\Shared Library\bin\Debug\net6.0\Shared Library.dll
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\Shared Library\bin\Debug\net6.0\Shared Library.pdb
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\Shared Library\obj\Debug\net6.0\Shared Library.csproj.AssemblyReference.cache
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\Shared Library\obj\Debug\net6.0\Shared Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\Shared Library\obj\Debug\net6.0\Shared Library.AssemblyInfoInputs.cache
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\Shared Library\obj\Debug\net6.0\Shared Library.AssemblyInfo.cs
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\Shared Library\obj\Debug\net6.0\Shared Library.csproj.CoreCompileInputs.cache
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\Shared Library\obj\Debug\net6.0\Shared Library.dll
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\Shared Library\obj\Debug\net6.0\refint\Shared Library.dll
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\Shared Library\obj\Debug\net6.0\Shared Library.pdb
+C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\backend\webserver\Shared Library\obj\Debug\net6.0\ref\Shared Library.dll

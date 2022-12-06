@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xzYlmePmXKoORafHlRBygzJeXExuTzErT2mJhytEcIDeDdhPx2Vi04gNst3++UTDXpkpoV7EeWpN4XuZjnjaHA==",
+  "dgSpecHash": "O3/wQJOfThLteCVwNIXBu3OyEPgU4lGNVd+XFTZDSGuOdV9iQQAE7cF4aBQScngahnMIfKMMWXcIKkk5N7uH+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\olegp\\RiderProjects\\GameServer\\Shared Library\\Shared Library.csproj",
+  "projectFilePath": "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\Shared Library\\Shared Library.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
