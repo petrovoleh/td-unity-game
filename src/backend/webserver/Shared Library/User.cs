@@ -1,6 +1,6 @@
 namespace WebApi.Entities;
 
-using System.Text.Json.Serialization;
+//using System.Text.Json.Serialization;
 
 public class User
 {
@@ -9,5 +9,6 @@ public class User
     public DateTime RegDate;
     
 
-    [JsonIgnore] public string Password;
+    //[JsonIgnore] public string Password;
+    public string Password;
 }

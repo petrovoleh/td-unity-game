@@ -15,7 +15,8 @@ public class MainMenuButtons : MonoBehaviour
         }*/
    
     public string sceneName;
-     public GameObject optionsUI;
+    public GameObject optionsUI;
+    public GameObject loginUI;
     public void ChangeScene()
     {
         SceneManager.LoadScene(sceneName);
@@ -31,6 +32,15 @@ public class MainMenuButtons : MonoBehaviour
 
     public void OptionsBack(){
         optionsUI.SetActive(false);
+    
+    }
+    public void Login()
+    {
+        loginUI.SetActive(true);
+    }
+
+    public void LoginBack(){
+        loginUI.SetActive(false);
     
     }
 }

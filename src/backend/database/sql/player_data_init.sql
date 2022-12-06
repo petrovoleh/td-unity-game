@@ -4,6 +4,7 @@ CREATE TABLE Player
     password VARCHAR(30),
     level FLOAT,
     reg_date DATE
+    JWTkey VARCHAR(60),
 );
 
 CREATE TABLE Completed_map
