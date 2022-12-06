@@ -53,22 +53,38 @@
     <UnityVersion>2021.3.10f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Tower.cs" />
-    <Compile Include="Assets\Scripts\ObjectPool.cs" />
-    <Compile Include="Assets\Scripts\GlobalVariables.cs" />
-    <Compile Include="Assets\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\Scripts\DeleteSelection.cs" />
-    <Compile Include="Assets\Scripts\Waypoints.cs" />
-    <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
-    <Compile Include="Assets\Scripts\PlaceTheTower.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\SelectTower.cs" />
-    <Compile Include="Assets\Scripts\PageChanger.cs" />
-    <Compile Include="Assets\Scripts\LevelManager.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\ChangePlayerHP.cs" />
-    <Compile Include="Assets\Scripts\Projectile.cs" />
-    <Compile Include="Assets\Scripts\SceneChanger.cs" />
+    <Compile Include="Assets\Scripts\Game\Debuffs\Debuff.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\Tower.cs" />
+    <Compile Include="Assets\Scripts\Game\ObjectPool.cs" />
+    <Compile Include="Assets\Scripts\Game\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Game\Waypoints.cs" />
+    <Compile Include="Assets\Scripts\Game\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Debuffs\PoisonDebuff.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\GooTower.cs" />
+    <Compile Include="Assets\Scripts\Game\Debuffs\NoDebuff.cs" />
+    <Compile Include="Assets\Scripts\Game\SpawnEnemies.cs" />
+    <Compile Include="Assets\Scripts\Game\SceneChanger.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\ElectroTower.cs" />
+    <Compile Include="Assets\Scripts\Game\Singleton.cs" />
+    <Compile Include="Assets\Scripts\Game\Point.cs" />
+    <Compile Include="Assets\Scripts\Game\Hover.cs" />
+    <Compile Include="Assets\Scripts\Game\PlaceTheTower.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\FrostTower.cs" />
+    <Compile Include="Assets\Scripts\Database\SertificateWhore.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\TowerUpgrade.cs" />
+    <Compile Include="Assets\Scripts\Game\Debuffs\FrostDebuff.cs" />
+    <Compile Include="Assets\Scripts\Game\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Game\Debuffs\FireDebuff.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\FireTower.cs" />
+    <Compile Include="Assets\Scripts\Game\PageChanger.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\BombTower.cs" />
+    <Compile Include="Assets\Scripts\Game\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Game\TileScript.cs" />
+    <Compile Include="Assets\Scripts\Game\ChangePlayerHP.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Game\MainMenuButtons.cs" />
+    <Compile Include="Assets\Scripts\Database\HttpClient.cs" />
+    <Compile Include="Assets\Scripts\Game\TowerBtn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -85,7 +101,9 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\DLLs\SharedLibrary.dll" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Resources\Map1.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
@@ -342,6 +360,9 @@
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="SharedLibrary">
+      <HintPath>Assets\DLLs\SharedLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
