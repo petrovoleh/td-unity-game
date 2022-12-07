@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 15523376}
   - component: {fileID: 15523375}
   m_Layer: 5
-  m_Name: InputField (TMP) (1)
+  m_Name: Password Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1037,7 +1037,7 @@ GameObject:
   - component: {fileID: 287569010}
   - component: {fileID: 287569009}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: Login Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1670,7 +1670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &564232976
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1749,7 +1749,7 @@ GameObject:
   - component: {fileID: 575642598}
   - component: {fileID: 575642597}
   m_Layer: 5
-  m_Name: Register
+  m_Name: Login
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1823,7 +1823,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Register
+  m_Text: Login
 --- !u!222 &575642599
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4514,7 +4514,7 @@ GameObject:
   - component: {fileID: 1613262538}
   - component: {fileID: 1613262537}
   m_Layer: 5
-  m_Name: InputField (TMP) (1)
+  m_Name: Password Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6256,7 +6256,7 @@ GameObject:
   - component: {fileID: 1968604311}
   - component: {fileID: 1968604310}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: Login Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7548,7 +7548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2068897605
 RectTransform:
   m_ObjectHideFlags: 0
