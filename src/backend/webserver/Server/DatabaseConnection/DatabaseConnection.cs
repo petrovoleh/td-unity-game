@@ -1,7 +1,7 @@
+namespace Server.DatabaseConnection;
+
 using Npgsql;
 using SharedLibrary;
-using WebApi.Entities;
-
 public class DatabaseConnection
 {
     private const string host = "Host=193.219.91.103;Port=7172;Username=webserver;Password=password123;Database=playersdata";

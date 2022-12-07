@@ -1,11 +1,7 @@
-namespace WebApi.Helpers;
-
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using WebApi.Services;
-
 public class JwtMiddleware
 {
     private readonly RequestDelegate _next;

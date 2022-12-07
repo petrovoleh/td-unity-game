@@ -1,9 +1,4 @@
-﻿namespace WebApi.Controllers;
-
-using Microsoft.AspNetCore.Mvc;
-using Helpers;
-using Models;
-using Services;
+﻿using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("[controller]")]

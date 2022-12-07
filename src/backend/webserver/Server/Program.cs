@@ -30,8 +30,6 @@
 // app.Run();
 
 using Newtonsoft.Json.Serialization;
-using WebApi.Helpers;
-using WebApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,7 +1,3 @@
-namespace WebApi.Models;
-
-using WebApi.Entities;
-
 public class AuthenticateResponse
 {
     public string Username { get; set; }

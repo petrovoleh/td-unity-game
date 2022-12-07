@@ -1,4 +1,3 @@
-namespace WebApi.Entities;
 
 //using System.Text.Json.Serialization;
 

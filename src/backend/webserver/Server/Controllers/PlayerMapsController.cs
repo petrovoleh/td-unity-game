@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SharedLibrary;
-
-namespace Server.Controllers;
+using Server.DatabaseConnection;
 
 [ApiController]
 [Route("[controller]")]
