@@ -6,23 +6,18 @@ using Server.DatabaseConnection;
 [Route("[controller]")]
 public class PlayerMapsController : ControllerBase
 {
-    private DatabaseConnection database;
-    public PlayerMapsController()
-    {
-        database = new DatabaseConnection();
-    }
-    
+    [Authorize]
     [HttpGet("{username}")]
-    public async Task<Completed_maps> Get([FromRoute] string username)
+    public async Task<BeatenMaps> Get([FromRoute] string username)
     {
-        Completed_maps maps = await database.GetPlayerProgress(username);
-        Console.WriteLine("player maps data was downloaded");
+        BeatenMaps maps = await DatabaseConnection.GetPlayerProgress(username);
+        Console.WriteLine(username +" maps data was downloaded");
       
         return maps;
     }
 
     [HttpPost]
-    public Completed_maps Post(Completed_maps maps)
+    public BeatenMaps Post(BeatenMaps maps)
     {
         Console.WriteLine("Player maps was posted");
         return maps;

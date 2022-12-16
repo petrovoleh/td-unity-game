@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using SharedLibrary;
 
 public interface IUserService
 {
@@ -14,7 +15,6 @@ public interface IUserService
 
 public class UserService : IUserService
 {
-    // users hardcoded for simplicity, store in a db with hashed passwords in production applications
     private List<User> _users = DatabaseConnection.GetUserData().Result;
 
 

@@ -1,33 +1,3 @@
-// using Newtonsoft.Json.Serialization;
-// using WebApi.Helpers;
-// using WebApi.Services;
-//
-// var builder = WebApplication.CreateBuilder(args);
-//
-// builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
-// // Add services to the container.
-//
-// builder.Services.AddControllers().AddNewtonsoftJson(o =>
-// {
-//     o.SerializerSettings.ContractResolver = new DefaultContractResolver();
-// });
-//
-// builder.Services.AddScoped<IUserService, UserService>();
-// var app = builder.Build();
-//
-// // Configure the HTTP request pipeline.
-// if (app.Environment.IsDevelopment())
-// {
-//     
-// }
-//
-// app.UseHttpsRedirection();
-//
-// app.UseAuthorization();
-//
-// app.MapControllers();
-//
-// app.Run();
 
 using Newtonsoft.Json.Serialization;
 
@@ -69,4 +39,13 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-app.Run("http://localhost:4000");
+app.Run();
+
+
+//
+// var builder = WebApplication.CreateBuilder(args);
+// var app = builder.Build();
+//
+// app.MapGet("/", () => "Hello World!");
+//
+// app.Run();
