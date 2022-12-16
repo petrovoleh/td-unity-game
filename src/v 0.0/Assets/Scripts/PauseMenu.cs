@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public string sceneName;
 
     public static bool GameIsPaused = false;
 
@@ -52,4 +53,15 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
+<<<<<<< Updated upstream:src/v 0.0/Assets/Scripts/PauseMenu.cs
+=======
+
+    public void OptionsBack(){
+        optionsUI.SetActive(false);
+    
+    }
+    public void Restart(){
+        SceneManager.LoadScene("Map1");
+    }
+>>>>>>> Stashed changes:src/v 0.0/Assets/Scripts/Game/PauseMenu.cs
 }

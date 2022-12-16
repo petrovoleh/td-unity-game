@@ -53,6 +53,7 @@
     <UnityVersion>2021.3.10f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Compile Include="Assets\Scripts\Tower.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\GlobalVariables.cs" />
@@ -69,6 +70,46 @@
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\PageChanger.cs" />
+=======
+    <Compile Include="Assets\Scripts\Game\Debuffs\Debuff.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\Tower.cs" />
+    <Compile Include="Assets\Scripts\Game\ObjectPool.cs" />
+    <Compile Include="Assets\Scripts\Game\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Game\Waypoints.cs" />
+    <Compile Include="Assets\Scripts\Game\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Debuffs\PoisonDebuff.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\GooTower.cs" />
+    <Compile Include="Assets\Scripts\Game\Debuffs\NoDebuff.cs" />
+    <Compile Include="Assets\Scripts\Game\SpawnEnemies.cs" />
+    <Compile Include="Assets\Scripts\Game\SceneChanger.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\ElectroTower.cs" />
+    <Compile Include="Assets\Scripts\Game\Singleton.cs" />
+    <Compile Include="Assets\Scripts\Game\Point.cs" />
+    <Compile Include="Assets\Scripts\Game\Hover.cs" />
+    <Compile Include="Assets\Scripts\Game\PlaceTheTower.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\FrostTower.cs" />
+    <Compile Include="Assets\Scripts\Database\SertificateWhore.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\TowerUpgrade.cs" />
+    <Compile Include="Assets\Scripts\Game\Debuffs\FrostDebuff.cs" />
+    <Compile Include="Assets\Scripts\Game\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Game\Debuffs\FireDebuff.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\FireTower.cs" />
+    <Compile Include="Assets\Scripts\Game\PageChanger.cs" />
+    <Compile Include="Assets\Scripts\Game\Towers\BombTower.cs" />
+    <Compile Include="Assets\Scripts\Game\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Game\TileScript.cs" />
+    <Compile Include="Assets\Scripts\Game\ChangePlayerHP.cs" />
+    <Compile Include="Assets\Scripts\Game\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Game\MainMenuButtons.cs" />
+    <Compile Include="Assets\Scripts\Database\HttpClient.cs" />
+    <Compile Include="Assets\Scripts\Game\TowerBtn.cs" />
+    <Compile Include="Assets\Scripts\ISaveable.cs" />
+    <Compile Include="Assets\Scripts\SaveableEntity.cs" />
+    <Compile Include="Assets\Scripts\SaveLoadSystem.cs" />
+    <Compile Include="Assets\Scripts\SaveableObject.cs" />
+    <Compile Include="Assets\Scripts\SpecificObject.cs" />
+    <Compile Include="Assets\Scripts\SaveGameManager.cs" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -77,6 +118,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Resources\Map2.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
