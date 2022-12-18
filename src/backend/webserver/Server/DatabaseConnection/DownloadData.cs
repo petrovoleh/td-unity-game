@@ -5,26 +5,10 @@ using SharedLibrary;
 public class DatabaseConnection
 {
     private const string host = "Host=193.219.91.103;Port=7172;Username=webserver;Password=password123;Database=playersdata";
-    private NpgsqlConnection connection;
-
-    // public DatabaseConnection()
-    // {
-    //     //try to connect
-    //     try
-    //     {
-    //         connection = new NpgsqlConnection(host);
-    //         connection.Open();
-    //         Console.WriteLine("connected");
-    //     }
-    //     catch (Exception e)
-    //     {
-    //         Console.WriteLine("server is not available");
-    //         Environment.Exit(404);
-    //     }
-    // }
-    public static async Task<BeatenMaps> GetPlayerProgress(string username)
+    
+    public static async Task<PlayerProgress> GetPlayerProgress(string username)
     {
-        var maps = new BeatenMaps();
+        var maps = new PlayerProgress();
         string command = $"SELECT * FROM beaten_map WHERE username = '{username}'";
         await using var dataSource = NpgsqlDataSource.Create(host);
         await using (var cmd = dataSource.CreateCommand(command))

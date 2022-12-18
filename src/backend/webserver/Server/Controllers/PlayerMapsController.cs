@@ -8,18 +8,18 @@ public class PlayerMapsController : ControllerBase
 {
     [Authorize]
     [HttpGet("{username}")]
-    public async Task<BeatenMaps> Get([FromRoute] string username)
+    public async Task<PlayerProgress> Get([FromRoute] string username)
     {
-        BeatenMaps maps = await DatabaseConnection.GetPlayerProgress(username);
-        Console.WriteLine(username +" maps data was downloaded");
-      
-        return maps;
+        PlayerProgress progress = await DatabaseConnection.GetPlayerProgress(username);
+        return progress;
     }
-
+    
+    [Authorize]
     [HttpPost]
-    public BeatenMaps Post(BeatenMaps maps)
+    public int Post(PlayerProgress maps)
     {
-        Console.WriteLine("Player maps was posted");
-        return maps;
+        PostData.PostProgress(maps);
+        Console.WriteLine("Player progress was posted");
+        return 1;
     }
 }

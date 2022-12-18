@@ -5,22 +5,19 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using SharedLibrary;
-public class Login : MonoBehaviour
+public class Register : MonoBehaviour
 {
     public GameObject inputLogin;
     public GameObject inputPassword;
-    public async void login(){ //async
+    public async void register(){ 
         string login =inputLogin.GetComponent<Text>().text;
         string password =inputPassword.GetComponent<Text>().text;
         User user = new User();
         user.Password = password;
         user.Username = login;
-        User user_tmp = await HttpClient.Get<User>("https://localhost:4000/users/authenticate", user);
-        Debug.Log("user logged in");
+        User user_tmp = await HttpClient.Get<User>("https://localhost:4000/users/register", user);
+        Debug.Log("user registred");
         user.Token = user_tmp.Token;
-        BeatenMaps maps = await HttpClient.GetAuth<BeatenMaps>("https://localhost:4000/playermaps/player2",user.Token);
-        
-        Save(maps);
         Save(user);
     }
 

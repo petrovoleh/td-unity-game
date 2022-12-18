@@ -14,8 +14,9 @@ public class Challenge
 
 }
 [Serializable]
-public class BeatenMaps
+public class PlayerProgress
 {
+    public string username;
     public List<Map> maps;
     public List<Challenge> challenges;
 }

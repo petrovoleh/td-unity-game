@@ -21,7 +21,12 @@ public class UsersController : ControllerBase
 
         return Ok(response);
     }
-
+    [HttpPost("register")]
+    public IActionResult Register(AuthenticateRequest model)
+    {
+        var users = _userService.Register(model);
+        return Ok(users);
+    }
     [Authorize]
     [HttpGet]
     public IActionResult GetAll()
@@ -29,4 +34,6 @@ public class UsersController : ControllerBase
         var users = _userService.GetAll();
         return Ok(users);
     }
+    
+    
 }
