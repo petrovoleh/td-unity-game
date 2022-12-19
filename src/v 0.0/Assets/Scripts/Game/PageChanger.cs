@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PageChanger : MonoBehaviour
 {
@@ -16,5 +17,9 @@ public class PageChanger : MonoBehaviour
     {
         lastPage.SetActive(true);
         page.SetActive(false);
+    }
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

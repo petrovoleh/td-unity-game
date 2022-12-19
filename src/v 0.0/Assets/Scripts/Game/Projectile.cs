@@ -56,7 +56,7 @@ public class Projectile : MonoBehaviour
             if(target.gameObject == other.gameObject && parent.SplashRange == 0)
             {
                 
-                target.TakeDamage(parent.Damage);
+                target.TakeDamage(parent.Damage, parent.AttackType);
                 Destroy(gameObject);
                 ApplyDebuff();
             }
@@ -69,7 +69,7 @@ public class Projectile : MonoBehaviour
                     var enemy = hitCollider.GetComponent<Enemy>();
                     if(enemy)
                     {
-                        enemy.TakeDamage(parent.Damage);
+                        enemy.TakeDamage(parent.Damage, parent.AttackType);
                         Destroy(gameObject);
                         ApplyDebuff();
                     }

@@ -114,8 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759a0bc46e337154a8dff6712ac310e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackType: Explosive
   mySpriteRenderer: {fileID: 5489151111760721395}
-  attackType: Ranged
+  attackRangeType: Ranged
   projectileType: RocketBolt
   projectileSpeed: 500
   damage: 1

@@ -25,7 +25,7 @@ public class FireDebuff : Debuff
             {
                 timeSinceTick = 0;
 
-                target.TakeDamage(tickDamage);
+                target.TakeDamage(tickDamage, "Normal");
             }
         }
 

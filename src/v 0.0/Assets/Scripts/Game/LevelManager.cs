@@ -8,7 +8,18 @@ public class LevelManager : Singleton<LevelManager>
     private GameObject[] tilePrefabs;
 
     [SerializeField]
+    private GameObject waypointPrefabs;
+
+    [SerializeField]
     private string mapNumber;
+
+    public string MapNumber 
+    { 
+        get
+        {
+            return mapNumber;
+        }
+    }
 
     [SerializeField]
     private Transform background;
@@ -54,9 +65,12 @@ public class LevelManager : Singleton<LevelManager>
             for (int x = 0; x < mapX; x++)//x possition of tiles
             {
                 PlaceTile(newTiles[x].ToString(), x, y, worldStart);
+
             }
         }
     }
+
+
     private void PlaceTile(string tileType, int x, int y, Vector3 worldStart)
     {
         //parses the tiletype to an int, so that we can use it as an int when we create a tile
@@ -64,6 +78,14 @@ public class LevelManager : Singleton<LevelManager>
 
         //Creates a new tile and makes reference to that tile in the newTile variable
         TileScript newTile = Instantiate(tilePrefabs[tileIndex]).GetComponent<TileScript>();
+
+        /* //failed atempt at making waypoints automatic
+        if (tileIndex == 2)
+        {
+            Vector3 waypointSpawnPosition = new Vector3(25, -30, 0);
+            GameObject newObject = Instantiate(waypointPrefabs, waypointSpawnPosition, Quaternion.identity, newTile.transform);
+            Waypoints.Instance.AddWaypoints(newObject);
+        }*/
 
         //Uses the new tile variable to change the position of the tile
         newTile.Setup(new Point(x, y), new Vector3(worldStart.x + (TileSize * x), worldStart.y - (TileSize * y), 0), background);

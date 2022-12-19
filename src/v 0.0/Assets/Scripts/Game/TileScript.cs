@@ -9,6 +9,10 @@ public class TileScript : MonoBehaviour
 
     public bool IsEmpty { get; set; }
 
+    public enum TileType { Tile, Path};
+    [SerializeField]
+    private TileType tileType;
+
     private Tower myTower;
 
     private Color32 fullColor = new Color32(255, 64, 64, 255);
@@ -35,6 +39,7 @@ public class TileScript : MonoBehaviour
         transform.position = worldPos;
         transform.SetParent(parent);
         LevelManager.Instance.Tiles.Add(gridPos, this);
+        
     }
 
     private void OnMouseOver()
@@ -42,17 +47,20 @@ public class TileScript : MonoBehaviour
 
         if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.ClickedBtn != null)
         {
-            if (IsEmpty)//colors the tile green if the is no tower on tile
+            if (tileType == TileType.Tile)
             {
-                ColorTile(emptyColor);
-            }
-            if (!IsEmpty)//colors the tile red when the tile has already a tower
-            {
-                ColorTile(fullColor);
-            }
-            else if (Input.GetMouseButtonDown(0))//places a tower if there is no other towers on the tile
-            {
-                PlaceTower();
+                if (IsEmpty)//colors the tile green if the is no tower on tile
+                {
+                    ColorTile(emptyColor);
+                }
+                if (!IsEmpty)//colors the tile red when the tile has already a tower
+                {
+                    ColorTile(fullColor);
+                }
+                else if (Input.GetMouseButtonDown(0))//places a tower if there is no other towers on the tile
+                {
+                    PlaceTower();
+                }
             }
         }
         else if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.ClickedBtn == null && Input.GetMouseButtonDown(0))
@@ -75,20 +83,20 @@ public class TileScript : MonoBehaviour
 
     private void PlaceTower()
     {
-        
-        GameObject tower = (GameObject)Instantiate(GameManager.Instance.ClickedBtn.TowerPrefab, transform.position, Quaternion.identity);
 
-        tower.transform.SetParent(transform);
+            GameObject tower = (GameObject)Instantiate(GameManager.Instance.ClickedBtn.TowerPrefab, transform.position, Quaternion.identity);
 
-        this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();
+            tower.transform.SetParent(transform);
 
-        IsEmpty = false;
+            this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();
 
-        myTower.Price = GameManager.Instance.ClickedBtn.Price;
+            IsEmpty = false;
 
-        ColorTile(Color.white);
+            myTower.Price = GameManager.Instance.ClickedBtn.Price;
 
-        GameManager.Instance.BuyTower();
+            ColorTile(Color.white);
+
+            GameManager.Instance.BuyTower();
 
     }
 

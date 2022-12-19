@@ -40,7 +40,7 @@ public class PoisonDebuff : Debuff
             {
                 timeSinceTick = 0;
 
-                target.TakeDamage(tickDamage);
+                target.TakeDamage(tickDamage, "Normal");
             }
         }
 
@@ -49,7 +49,9 @@ public class PoisonDebuff : Debuff
 
     public override void Remove()
     {
-        target.Movespeed = target.MaxSpeed;
-        base.Remove();
+        if(target != null)
+        {
+            target.Movespeed = target.MaxSpeed;
+        }
     }
 }

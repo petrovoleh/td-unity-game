@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public delegate void CurrencyChanged();
 
-public class GameManager : Singleton<GameManager>
+public class GameManager : Singleton<GameManager>, ISaveable
 {
+    [SerializeField]
+    private float spawnpointX;
+    public float SpawnpointX { get { return spawnpointX; } }
+    [SerializeField]
+    private float spawnpointY;
+    public float SpawnpointY { get { return spawnpointY; }  }
 
     public event CurrencyChanged Changed;
 
@@ -20,6 +27,9 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField]
     private GameObject WinningTheGameScreen;
+
+    [SerializeField]
+    private GameObject CancelBtn;
 
     public TowerBtn ClickedBtn { get; set; }
 
@@ -50,7 +60,7 @@ public class GameManager : Singleton<GameManager>
 
     //Player Health Variables
     [SerializeField]
-    private int playerHP = 20;
+    private int playerHP;
 
     public int PlayerHP
     {
@@ -128,6 +138,8 @@ public class GameManager : Singleton<GameManager>
     void Update()
     {
         HandleEscape();
+        waveTxt.text = string.Format("Wave: {0}/20", wave);
+        currencyTxt.text = currency.ToString();
     }
 
     private void Awake()
@@ -141,7 +153,7 @@ public class GameManager : Singleton<GameManager>
         {
             wave++;
 
-            waveTxt.text = string.Format("Wave: {0}/10", wave);
+            waveTxt.text = string.Format("Wave: {0}/20", wave);
             StartCoroutine(SpawnWave());
 
             waveBtn.SetActive(false);
@@ -152,51 +164,79 @@ public class GameManager : Singleton<GameManager>
     
     public void DeselectTower()
     {
-        if(selectedTower != null)
+        if (PauseMenu.GameIsPaused == false)
         {
-            selectedTower.Select();
-        }
-        upgradePanel.SetActive(false);
+            if (selectedTower != null)
+            {
+                selectedTower.Select();
+            }
+            upgradePanel.SetActive(false);
 
-        selectedTower = null;
+            selectedTower = null;
+        }   
 
     }
     
     public void SelectTower(Tower tower)
     {
-        if(selectedTower != null)
+        if (PauseMenu.GameIsPaused == false)
         {
+            if (selectedTower != null)
+            {
+                selectedTower.Select();
+            }
+
+            selectedTower = tower;
+
             selectedTower.Select();
+
+            sellText.text = " + " + (selectedTower.Price / 2).ToString();
+
+            upgradePanel.SetActive(true);
         }
-        
-        selectedTower = tower;
-
-        selectedTower.Select();
-
-        sellText.text = " + " + (selectedTower.Price / 2).ToString();
-        
-        upgradePanel.SetActive(true);
+            
     }
 
     public void PickTower(TowerBtn towerBtn)
     {
-        if(Currency >= towerBtn.Price)
+        if (PauseMenu.GameIsPaused == false)
         {
-            this.ClickedBtn = towerBtn;
-            Hover.Instance.Activate(towerBtn.Sprite);
-        }
-        
+            Hover.Instance.Deactivate();
+            if (Currency >= towerBtn.Price)
+            {
+                this.ClickedBtn = towerBtn;
+                if(towerBtn.name == "ElectroWizard Button")
+                {
+                    Hover.Instance.SniperActivate(towerBtn.Sprite);
+                }
+                else
+                {
+                    Hover.Instance.Activate(towerBtn.Sprite);
+                }
+
+                CancelBtn.SetActive(true);
+            }
+        } 
+    }
+    public void CancelPicking()
+    {
+        Hover.Instance.Deactivate();
+        CancelBtn.SetActive(false);
     }
 
     public void BuyTower()
     {
-        if(Currency >= ClickedBtn.Price)
+        if (PauseMenu.GameIsPaused == false)
         {
-            Currency -= ClickedBtn.Price;
+            if (Currency >= ClickedBtn.Price)
+            {
+                Currency -= ClickedBtn.Price;
 
-            Hover.Instance.Deactivate();
+                Hover.Instance.Deactivate();
+                CancelBtn.SetActive(false);
+            }
         }
-        
+
     }
     
     public void OnCurrencyChanged()
@@ -209,16 +249,20 @@ public class GameManager : Singleton<GameManager>
     
     public void SellTower()
     {
-        if(selectedTower != null)
+        if (PauseMenu.GameIsPaused == false)
         {
-            Currency += selectedTower.Price / 2;
+            if (selectedTower != null)
+            {
+                Currency += selectedTower.Price / 2;
 
-            selectedTower.GetComponentInParent<TileScript>().IsEmpty = true;
+                selectedTower.GetComponentInParent<TileScript>().IsEmpty = true;
 
-            Destroy(selectedTower.transform.parent.gameObject);
+                Destroy(selectedTower.transform.parent.gameObject);
 
-            DeselectTower();
+                DeselectTower();
+            }
         }
+            
     }
      
 
@@ -230,52 +274,161 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    private IEnumerator WaveGenerator(int count, string[] names, float delay){
-            for (int e = 0; e < count/names.Length; e++)
-            {
-                for (int f = 0; f < names.Length; f++){
-                    Enemy enemy = Pool.GetObject(names[f]).GetComponent<Enemy>();
-                    enemy.Spawn(); activeMonsters.Add(enemy);
-                    yield return new WaitForSeconds(delay);
-                }
-            }
+    public IEnumerator SlimeKingDamagedSpawn()
+    {
+        int monsterIndex = UnityEngine.Random.Range(0, 5);
+
+        string type = string.Empty;
+
+        switch (monsterIndex)
+        {
+            case 0:
+                type = "RedSlime";
+                break;
+            case 1:
+                type = "BlueSlime";
+                break;
+            case 2:
+                type = "GreenSlime";
+                break;
+            case 3:
+                type = "PurpleSlime";
+                break;
+            case 4:
+                type = "YellowSlime";
+                break;
+        }
+        
+        Enemy enemy = Pool.GetObject(type).GetComponent<Enemy>();
+        enemy.Spawn();
+        activeMonsters.Add(enemy);
+        yield return new WaitForSeconds(0.5f);
     }
-    
+
+    public void RemoveMonster(Enemy enemy)
+    {
+        activeMonsters.Remove(enemy);
+
+        if(!WaveActive && enemyCount <= 0 && activeMonsters.Count == 0)
+        {
+            if(wave == 20)
+            {
+                Time.timeScale = 0f;
+                PauseMenu.GameIsPaused = true;
+                WinningTheGameScreen.SetActive(true);
+            }
+            else 
+            {
+                Currency += roundEndingCurrency;
+                waveBtn.SetActive(true);
+                //SaveGameManager.Instance.Save();
+            }
+            
+        }
+    }
+
+    public void FastForward()
+    {
+        if(fastForward == false)
+        {
+            fastForwardButton.sprite = fastForwardSprites[1];
+            Time.timeScale = 2f;
+            fastForward = true;
+        }
+        else if (fastForward == true)
+        {
+            fastForwardButton.sprite = fastForwardSprites[0];
+            Time.timeScale = 1f;
+            fastForward = false;
+        }
+
+    }
+
+    public object SaveState()
+    {
+        Debug.Log("wave " + wave);
+        return new SaveData()
+        {
+            wave = this.wave,
+            playerHP = this.playerHP,
+            currency = this.currency
+        };
+    }
+
+    public void LoadState(object state)
+    {
+        var saveData = (SaveData)state;
+        Debug.Log("wave " + wave);
+        wave = saveData.wave;
+        playerHP = saveData.playerHP;
+        currency = saveData.currency;
+    }
+
+    [Serializable]
+    private struct SaveData
+    {
+        public int wave;
+        public int playerHP;
+        public int currency;
+    }
+
+    private IEnumerator WaveGenerator(int count, string[] names, float delay)
+    {
+        for (int e = 0; e < count / names.Length; e++)
+        {
+            for (int f = 0; f < names.Length; f++)
+            {
+                Enemy enemy = Pool.GetObject(names[f]).GetComponent<Enemy>();
+                enemy.Spawn(); activeMonsters.Add(enemy);
+                yield return new WaitForSeconds(delay);
+            }
+        }
+    }
+
     private IEnumerator SpawnWave()
     {
         if (wave == 1)
         {
             enemyCount = 5;
-            string[] mobs =  {"Skeleton"};
-            StartCoroutine(WaveGenerator(5,mobs, 1f));
+            string[] mobs = { "RedSlime" };
+            StartCoroutine(WaveGenerator(5, mobs, 1f));
         }
         if (wave == 2)
         {
             enemyCount = 5;
-            string[] mobs =  {"Zombie"};
+            string[] mobs = { "BlueSlime" };
             StartCoroutine(WaveGenerator(5, mobs, 1.5f));
         }
 
         if (wave == 3)
         {
-            enemyCount = 4;
-            string[] mobs =  {"Wolf"};
-            StartCoroutine(WaveGenerator(4, mobs, 1.5f));
+            enemyCount = 6;
+            for (int e = 0; e < 3; e++)
+            {
+                Enemy enemy = Pool.GetObject("BlueSlime").GetComponent<Enemy>();
+                enemy.Spawn(); activeMonsters.Add(enemy);
+                yield return new WaitForSeconds(1f);
+                enemy = Pool.GetObject("RedSlime").GetComponent<Enemy>();
+                enemy.Spawn(); activeMonsters.Add(enemy);
+                yield return new WaitForSeconds(1f);
+
+            }
         }
+
         if (wave == 4)
         {
             enemyCount = 8;
-            string[] mobs =  {"Wolf","Zombie"};
+            string[] mobs = { "GreenSlime", "BlueSlime" };
             StartCoroutine(WaveGenerator(8, mobs, 0.5f));
 
         }
         if (wave == 5)
         {
             enemyCount = 16;
-            string[] mobs = {"Skeleton","Spider"};
+            string[] mobs = { "RedSlime", "Spider" };
             StartCoroutine(WaveGenerator(6, mobs, 1f));
             yield return new WaitForSeconds(3f);
-            string[] mobs2 = {"RedSlime"};
+            string[] mobs2 = { "RedSlime" };
             StartCoroutine(WaveGenerator(10, mobs2, 0.2f));
 
         }
@@ -299,32 +452,32 @@ public class GameManager : Singleton<GameManager>
                 enemy = Pool.GetObject("GreenSlime").GetComponent<Enemy>();
                 enemy.Spawn(); activeMonsters.Add(enemy);
                 yield return new WaitForSeconds(1f);
-                enemy = Pool.GetObject("YellowSlime").GetComponent<Enemy>();
+                enemy = Pool.GetObject("PurpleSlime").GetComponent<Enemy>();
                 enemy.Spawn(); activeMonsters.Add(enemy);
                 yield return new WaitForSeconds(1f);
             }
         }
         if (wave == 7)
         {
-            enemyCount = 16;
-            string[] mobs = {"GreenSlime"};
-            StartCoroutine(WaveGenerator(8, mobs, 0.5f));
-            string[] mobs2 = {"YellowSlime"};
-            StartCoroutine(WaveGenerator(10, mobs2, 0.5f));
-            
+            enemyCount = 8;
+            string[] mobs = { "GreenSlime" };
+            StartCoroutine(WaveGenerator(4, mobs, 0.5f));
+            string[] mobs2 = { "PurpleSlime" };
+            StartCoroutine(WaveGenerator(4, mobs2, 0.5f));
+
         }
         if (wave == 8)
         {
-            enemyCount = 15;
-            string[] mobs =  {"Spider"};
+            enemyCount = 11;
+            string[] mobs = { "Goblin" };
             StartCoroutine(WaveGenerator(5, mobs, 0.25f));
-            string[] mobs2 = {"YellowSlime"};
-            StartCoroutine(WaveGenerator(10, mobs2, 1f));
+            string[] mobs2 = { "PurpleSlime" };
+            StartCoroutine(WaveGenerator(6, mobs2, 1f));
         }
         if (wave == 9)
         {
-            enemyCount = 24;
-            for (int e = 0; e < 8; e++)
+            enemyCount = 18;
+            for (int e = 0; e < 6; e++)
             {
                 Enemy enemy = Pool.GetObject("PurpleSlime").GetComponent<Enemy>();
                 enemy.Spawn(); activeMonsters.Add(enemy);
@@ -339,119 +492,185 @@ public class GameManager : Singleton<GameManager>
         }
         if (wave == 10)
         {
-            enemyCount = 31;
+            enemyCount = 1;
 
             Enemy enemy = Pool.GetObject("SlimeKing").GetComponent<Enemy>();
             enemy.Spawn(); activeMonsters.Add(enemy);
             yield return new WaitForSeconds(1.5f);
-            for (int e = 0; e < 30; e++)
+        }
+
+        if (wave == 11)
+        {
+            enemyCount = 11;
+
+            for (int e = 0; e < 5; e++)
             {
-                int monsterIndex = Random.Range(0, 5);
+                Enemy enemy = Pool.GetObject("Goblin").GetComponent<Enemy>();
+                enemy.Spawn(); activeMonsters.Add(enemy);
+                yield return new WaitForSeconds(1f);
+                
+                enemy = Pool.GetObject("YellowSlime").GetComponent<Enemy>();
+                enemy.Spawn(); activeMonsters.Add(enemy);
+                yield return new WaitForSeconds(0.25f); 
+            }
 
-                string type = string.Empty;
+            string[] mobs = { "Murloc" };
+            StartCoroutine(WaveGenerator(4, mobs, 0.5f));
 
-                switch (monsterIndex)
-                {
-                    case 0:
-                        type = "RedSlime";
-                        break;
-                    case 1:
-                        type = "BlueSlime";
-                        break;
-                    case 2:
-                        type = "GreenSlime";
-                        break;
-                    case 3:
-                        type = "PurpleSlime";
-                        break;
-                    case 4:
-                        type = "YellowSlime";
-                        break;
-                }
-                enemy = Pool.GetObject(type).GetComponent<Enemy>();
-                enemy.Spawn();
-                activeMonsters.Add(enemy);
-                yield return new WaitForSeconds(0.5f);
+        }
+
+        if (wave == 12)
+        {
+            enemyCount = 12;
+            for (int e = 0; e < 6; e++)
+            {
+                Enemy enemy = Pool.GetObject("PurpleSlime").GetComponent<Enemy>();
+                enemy.Spawn(); activeMonsters.Add(enemy);
+                yield return new WaitForSeconds(1f);
+                enemy = Pool.GetObject("OrangeSlime").GetComponent<Enemy>();
+                enemy.Spawn(); activeMonsters.Add(enemy);
+                yield return new WaitForSeconds(0.25f);;
             }
         }
-        /*
-        for (int i = 0; i < wave; i++)
+
+        if (wave == 13)
         {
-            int monsterIndex = Random.Range(0, 5);
-
-            string type = string.Empty;
-
-            switch (monsterIndex)
+            enemyCount = 20;
+            for (int e = 0; e < 10; e++)
             {
-                case 0:
-                    type = "Skeleton";
-                    break;
-                case 1:
-                    type = "Zombie";
-                    break;
-                case 2:
-                    type = "Spider";
-                    break;
-                case 3:
-                    type = "Murloc";
-                    break;
-                case 4:
-                    type = "Goblin";
-                    break;
+                Enemy enemy = Pool.GetObject("Murloc").GetComponent<Enemy>();
+                enemy.Spawn(); activeMonsters.Add(enemy);
+                yield return new WaitForSeconds(0.1f);
+                enemy = Pool.GetObject("Goblin").GetComponent<Enemy>();
+                enemy.Spawn(); activeMonsters.Add(enemy);
+                yield return new WaitForSeconds(0.25f); ;
             }
-            Enemy enemy = Pool.GetObject(type).GetComponent<Enemy>();
+        }
 
-            enemy.Spawn();
-
-              could be used for difficulty levels or increasing difficulty while playing
-            if(wave % 3 == 0)
+        if (wave == 14)
+        {
+            enemyCount = 8;
+            for (int e = 0; e < 8; e++)
             {
-                health += 5;
+                Enemy enemy = Pool.GetObject("HobGoblin").GetComponent<Enemy>();
+                enemy.Spawn(); activeMonsters.Add(enemy);
+                yield return new WaitForSeconds(0.25f); ;
             }
-            
+        }
 
-            activeMonsters.Add(enemy);
+        if (wave == 15)
+        {
+            enemyCount = 7;
+
+            Enemy enemy = Pool.GetObject("SlimeKing").GetComponent<Enemy>();
+            enemy.Spawn(); activeMonsters.Add(enemy);
             yield return new WaitForSeconds(1.5f);
-    }*/
 
-    }
-    public void RemoveMonster(Enemy enemy)
-    {
-        activeMonsters.Remove(enemy);
-
-        if(!WaveActive && enemyCount <= 0 && activeMonsters.Count == 0)
-        {
-            if(wave == 10)
+            for (int e = 0; e < 6; e++)
             {
-                Time.timeScale = 0f;
-                PauseMenu.GameIsPaused = true;
-                WinningTheGameScreen.SetActive(true);
+                enemy = Pool.GetObject("OrangeSlime").GetComponent<Enemy>();
+                enemy.Spawn(); activeMonsters.Add(enemy);
+                yield return new WaitForSeconds(0.25f);
             }
-            else 
+        }
+
+        if (wave == 16)
+        {
+            enemyCount = 1;
+
+            string[] mobs = { "Ogre" };
+            StartCoroutine(WaveGenerator(6, mobs, 1f));  
+  
+        }
+
+        if (wave == 17)
+        {
+            enemyCount = 1;
+
+            string[] mobs = { "Murloc" };
+            StartCoroutine(WaveGenerator(6, mobs, 1f));
+
+        }
+
+        if (wave == 18)
+        {
+            enemyCount = 12;
+
+            for (int e = 0; e < 6; e++)
             {
-                Currency += roundEndingCurrency;
-                waveBtn.SetActive(true);
+                Enemy enemy = Pool.GetObject("Ogre").GetComponent<Enemy>();
+                enemy.Spawn(); activeMonsters.Add(enemy);
+                yield return new WaitForSeconds(2f);
+
             }
-            
+            for (int e = 0; e < 6; e++)
+            {
+                Enemy enemy = Pool.GetObject("Murloc").GetComponent<Enemy>();
+                enemy.Spawn(); activeMonsters.Add(enemy);
+                yield return new WaitForSeconds(1f);
+            }
+
+        }
+        if (wave == 19)
+        {
+            enemyCount = 1;
+
+            string[] mobs = { "SlimeKing" };
+            StartCoroutine(WaveGenerator(2, mobs, 4f));
+
+        }
+        if (wave == 20)
+        {
+            enemyCount = 1;
+
+            Enemy enemy = Pool.GetObject("GoblinKing").GetComponent<Enemy>();
+            enemy.Spawn(); activeMonsters.Add(enemy);
+            yield return new WaitForSeconds(1.5f);
+        }
+
+        if (wave == 26)
+        {
+            enemyCount = 1;
+
+            Enemy enemy = Pool.GetObject("Golem").GetComponent<Enemy>();
+            enemy.Spawn(); activeMonsters.Add(enemy);
+            yield return new WaitForSeconds(1.5f);
+        }
+
+        if (wave == 30)
+        {
+            enemyCount = 1;
+
+            Enemy enemy = Pool.GetObject("GolemLord").GetComponent<Enemy>();
+            enemy.Spawn(); activeMonsters.Add(enemy);
+            yield return new WaitForSeconds(1.5f);
+        }
+
+        if (wave == 33)
+        {
+            enemyCount = 1;
+
+            Enemy enemy = Pool.GetObject("Ghost").GetComponent<Enemy>();
+            enemy.Spawn(); activeMonsters.Add(enemy);
+            yield return new WaitForSeconds(1.5f);
+        }
+
+        if (wave == 40)
+        {
+            enemyCount = 1;
+
+            Enemy enemy = Pool.GetObject("Dracula").GetComponent<Enemy>();
+            enemy.Spawn(); activeMonsters.Add(enemy);
+            yield return new WaitForSeconds(1.5f);
+        }
+
+        if (wave == 50)
+        {
+            enemyCount = 1;
+
+            Enemy enemy = Pool.GetObject("Dragon").GetComponent<Enemy>();
+            enemy.Spawn(); activeMonsters.Add(enemy);
+            yield return new WaitForSeconds(1.5f);
         }
     }
-
-    public void FastForward()
-    {
-        if(fastForward == false)
-        {
-            fastForwardButton.sprite = fastForwardSprites[1];
-            Time.timeScale = 2f;
-            fastForward = true;
-        }
-        else if (fastForward == true)
-        {
-            fastForwardButton.sprite = fastForwardSprites[0];
-            Time.timeScale = 1f;
-            fastForward = false;
-        }
-
-    }
-
-    
 }

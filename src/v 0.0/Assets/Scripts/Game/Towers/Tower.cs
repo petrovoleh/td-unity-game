@@ -1,16 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using System;
 
 public abstract class Tower : MonoBehaviour
 {
+    
+    [SerializeField]
+    private string attackType;
+    public string AttackType { 
+        get 
+        { 
+            return attackType; 
+        }
+    }
+
+    public enum TowerTargetType
+    {
+        First, Last, Strongest, Weakest, Closest
+    }
+    public TowerTargetType towerTargetType;
+
     [SerializeField]
     private SpriteRenderer mySpriteRenderer;
+
+    [SerializeField]
+    private SpriteRenderer myRangeRenderer;
 
     public int Price { get; set; }
 
     [SerializeField]
-    private string attackType;
+    private string attackRangeType;
 
     [SerializeField]
     private string projectileType;
@@ -88,6 +109,15 @@ public abstract class Tower : MonoBehaviour
     [SerializeField]
     private float attackCooldown;
 
+
+
+
+    [SerializeField]
+    private CircleCollider2D attackRadius;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -100,15 +130,14 @@ public abstract class Tower : MonoBehaviour
     }
     void Update()
     {
+        
         Attack();
     }
-
-
 
     private void Attack()
     {
 
-        if(!canAttack)
+        if (!canAttack)
         {
             attackTimer += Time.deltaTime;
 
@@ -118,18 +147,18 @@ public abstract class Tower : MonoBehaviour
                 attackTimer = 0;
             }
         }
-
-        if(target == null && enemies.Count > 0)
+        
+        if (target == null && enemies.Count > 0)
         {
             target = enemies.Dequeue();
 
         }
         if(target != null)
         {
-            if(canAttack)
+            
+            if (canAttack)
             {
                 Shoot();
-
                 canAttack = false;
             }
         }
@@ -145,7 +174,7 @@ public abstract class Tower : MonoBehaviour
 
     private void Shoot()
     {
-        if (attackType == "Ranged")
+        if (attackRangeType == "Ranged")
         {
             Projectile projectile = GameManager.Instance.Pool.GetObject(projectileType).GetComponent<Projectile>();
 
@@ -153,19 +182,21 @@ public abstract class Tower : MonoBehaviour
 
             projectile.Initialize(this);
         }
-        else if(attackType == "Melee")
+        else if(attackRangeType == "Melee")
         {
-
+            myRangeRenderer.enabled = !myRangeRenderer.enabled;
             var hitColliders = Physics2D.OverlapCircleAll(transform.position, SplashRange);
             foreach (var hitCollider in hitColliders)
             {
                 var enemy = hitCollider.GetComponent<Enemy>();
                 if (enemy)
                 {
-                    enemy.TakeDamage(Damage);
+                    enemy.TakeDamage(Damage, AttackType);
                     
                 }
             }
+            StartCoroutine(ExecuteAfterTime(0.2f));
+            
         }
 
     }
@@ -185,5 +216,13 @@ public abstract class Tower : MonoBehaviour
         }
     }
     public abstract Debuff GetDebuff();
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        myRangeRenderer.enabled = !myRangeRenderer.enabled;
+    }
+
+
    
 }

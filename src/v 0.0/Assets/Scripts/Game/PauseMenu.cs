@@ -61,6 +61,6 @@ public class PauseMenu : MonoBehaviour
     
     }
     public void Restart(){
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(LevelManager.Instance.MapNumber);
     }
 }

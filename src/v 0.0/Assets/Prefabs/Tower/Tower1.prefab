@@ -114,8 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b552861a1464e84a9c260a0169d6f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackType: Normal
   mySpriteRenderer: {fileID: 1485178802}
-  attackType: Ranged
+  attackRangeType: Ranged
   projectileType: FireBolt
   projectileSpeed: 500
   damage: 1

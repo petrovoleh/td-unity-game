@@ -13,7 +13,7 @@ public class TowerBtn : MonoBehaviour
         get
         {
             return price;
-        } 
+        }
     }
     [SerializeField]
     private Text priceTxt;
@@ -45,6 +45,10 @@ public class TowerBtn : MonoBehaviour
         GameManager.Instance.Changed += new CurrencyChanged(PriceCheck);
     }
 
+    void Update()
+    {
+        PriceCheck();
+    }
     private void PriceCheck()
     {
         if(price <= GameManager.Instance.Currency)
