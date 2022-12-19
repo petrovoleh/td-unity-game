@@ -4,17 +4,18 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using SharedLibrary;
 
 public interface IUserService
 {
     AuthenticateResponse Authenticate(AuthenticateRequest model);
+    AuthenticateResponse Register(AuthenticateRequest model);
     IEnumerable<User> GetAll();
     User GetById(string username);
 }
 
 public class UserService : IUserService
 {
-    // users hardcoded for simplicity, store in a db with hashed passwords in production applications
     private List<User> _users = DatabaseConnection.GetUserData().Result;
 
 
@@ -37,7 +38,23 @@ public class UserService : IUserService
 
         return new AuthenticateResponse(user, token);
     }
+    public AuthenticateResponse Register(AuthenticateRequest model)
+    {
+        var user = _users.SingleOrDefault(x => x.Username == model.Username);
 
+        // return null if user not found
+        if (user != null) return null;
+        user = new User();
+        user.Username = model.Username;
+        user.Password = model.Password;
+        
+        Console.WriteLine(user.Username);
+        PostData.PostUserData(user);
+        // authentication successful so generate jwt token
+        var token = generateJwtToken(user);
+
+        return new AuthenticateResponse(user, token);
+    }
     public IEnumerable<User> GetAll()
     {
         return _users;

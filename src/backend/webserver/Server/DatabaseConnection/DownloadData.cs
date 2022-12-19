@@ -5,37 +5,35 @@ using SharedLibrary;
 public class DatabaseConnection
 {
     private const string host = "Host=193.219.91.103;Port=7172;Username=webserver;Password=password123;Database=playersdata";
-    private NpgsqlConnection connection;
-
-    public DatabaseConnection()
+    
+    public static async Task<PlayerProgress> GetPlayerProgress(string username)
     {
-        //try to connect
-        try
-        {
-            connection = new NpgsqlConnection(host);
-            connection.Open();
-            Console.WriteLine("connected");
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("server is not available");
-            Environment.Exit(404);
-        }
-    }
-    public async Task<Completed_maps> GetPlayerProgress(string username)
-    {
-        var maps = new Completed_maps();
-        string command = $"SELECT * FROM completed_map WHERE username = '{username}'";
+        var maps = new PlayerProgress();
+        string command = $"SELECT * FROM beaten_map WHERE username = '{username}'";
         await using var dataSource = NpgsqlDataSource.Create(host);
         await using (var cmd = dataSource.CreateCommand(command))
         await using (var reader = await cmd.ExecuteReaderAsync())
         {
-            maps.map = new List<Map>();
+            maps.maps = new List<Map>();
 
             int count = 0;
             while (await reader.ReadAsync())
             {
-                maps.map.Add(new Map(){Map_id = reader.GetInt32(1),Medals = reader.GetString(2),Difficulty = reader.GetInt32(3)});
+                maps.maps.Add(new Map(){Map_id = reader.GetInt32(1),Difficulty = reader.GetInt32(2)});
+                count++;
+            }
+        }
+        
+        command = $"SELECT * FROM completed_challenge WHERE username = '{username}'";
+        await using (var cmd = dataSource.CreateCommand(command))
+        await using (var reader = await cmd.ExecuteReaderAsync())
+        {
+            maps.challenges = new List<Challenge>();
+
+            int count = 0;
+            while (await reader.ReadAsync())
+            {
+                maps.challenges.Add(new Challenge(){Challenge_id = reader.GetInt32(1),Difficulty = reader.GetInt32(2)});
                 count++;
             }
         }
@@ -53,7 +51,7 @@ public class DatabaseConnection
             int count = 0;
             while (await reader.ReadAsync())
             {
-                users.Add(new User(){Username = reader.GetString(0), Password=reader.GetString(1), Level = reader.GetFloat(2), RegDate = reader.GetDateTime(3)});
+                users.Add(new User(){Username = reader.GetString(0), Password=reader.GetString(1)});
                 count++;
             }
         }
