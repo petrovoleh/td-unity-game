@@ -10,7 +10,7 @@ public class PlayerMapsController : ControllerBase
     [HttpGet("{username}")]
     public async Task<PlayerProgress> Get([FromRoute] string username)
     {
-        PlayerProgress progress = await DatabaseConnection.GetPlayerProgress(username);
+        PlayerProgress progress = await DownloadData.GetPlayerProgress(username);
         return progress;
     }
     

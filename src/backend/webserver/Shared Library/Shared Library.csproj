@@ -5,8 +5,10 @@
         <RootNamespace>Shared_Library</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        
-        <PostBuildEvent>copy "Shared Library.dll" "C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\v 0.0\Assets\DLLs\SharedLibrary.dll"</PostBuildEvent>
+
+        <!--
+        <PostBuildEvent>copy "Shared Library.dll" "C:\Users\olegp\OneDrive\Документы\GitHub\td-game\src\v 0.0\Assets\DLLs\SharedLibrary.dll"</PostBuildEvent> 
+        -->
     </PropertyGroup>
 
 </Project>

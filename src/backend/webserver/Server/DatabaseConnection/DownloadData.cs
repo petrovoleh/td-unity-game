@@ -2,7 +2,7 @@ namespace Server.DatabaseConnection;
 
 using Npgsql;
 using SharedLibrary;
-public class DatabaseConnection
+public class DownloadData
 {
     private const string host = "Host=193.219.91.103;Port=7172;Username=webserver;Password=password123;Database=playersdata";
     

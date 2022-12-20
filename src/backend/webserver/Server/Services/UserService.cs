@@ -16,7 +16,7 @@ public interface IUserService
 
 public class UserService : IUserService
 {
-    private List<User> _users = DatabaseConnection.GetUserData().Result;
+    private List<User> _users = DownloadData.GetUserData().Result;
 
 
     private readonly AppSettings _appSettings;
