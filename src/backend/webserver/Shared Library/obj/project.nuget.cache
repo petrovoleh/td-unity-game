@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sPO+KzcFGRYX1DRxhEpaC0381eVlMs4f9RJLwVJ1zvMct9PleHwtN3PCr3Egk/wwkzeOT4ZiNwSHK7pTPSgIog==",
+  "dgSpecHash": "O3/wQJOfThLteCVwNIXBu3OyEPgU4lGNVd+XFTZDSGuOdV9iQQAE7cF4aBQScngahnMIfKMMWXcIKkk5N7uH+w==",
   "success": true,
-  "projectFilePath": "/home/oleh/Documents/GitHub/td-game/src/backend/webserver/Shared Library/Shared Library.csproj",
+  "projectFilePath": "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\Shared Library\\Shared Library.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

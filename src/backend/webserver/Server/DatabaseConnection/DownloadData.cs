@@ -4,8 +4,9 @@ using Npgsql;
 using SharedLibrary;
 public class DownloadData
 {
-    private const string host = "Host=193.219.91.103;Port=7172;Username=webserver;Password=password123;Database=playersdata";
-    
+    //private const string host = "Host=193.219.91.103;Port=7172;Username=webserver;Password=password123;Database=playersdata";
+    private const string host = "Host=10.0.0.186;Username=webserver;Password=password123;Database=playersdata";
+
     public static async Task<PlayerProgress> GetPlayerProgress(string username)
     {
         var maps = new PlayerProgress();

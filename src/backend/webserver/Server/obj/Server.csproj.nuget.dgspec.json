@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/home/oleh/Documents/GitHub/td-game/src/backend/webserver/Server/Server.csproj": {}
+    "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\Server\\Server.csproj": {}
   },
   "projects": {
-    "/home/oleh/Documents/GitHub/td-game/src/backend/webserver/Server/Server.csproj": {
+    "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/oleh/Documents/GitHub/td-game/src/backend/webserver/Server/Server.csproj",
+        "projectUniqueName": "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "/home/oleh/Documents/GitHub/td-game/src/backend/webserver/Server/Server.csproj",
-        "packagesPath": "/home/oleh/.nuget/packages/",
-        "outputPath": "/home/oleh/Documents/GitHub/td-game/src/backend/webserver/Server/obj/",
+        "projectPath": "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\Server\\Server.csproj",
+        "packagesPath": "C:\\Users\\olegp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\Server\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/oleh/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\olegp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/oleh/Documents/GitHub/td-game/src/backend/webserver/Shared Library/Shared Library.csproj": {
-                "projectPath": "/home/oleh/Documents/GitHub/td-game/src/backend/webserver/Shared Library/Shared Library.csproj"
+              "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\Shared Library\\Shared Library.csproj": {
+                "projectPath": "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\Shared Library\\Shared Library.csproj"
               }
             }
           }
@@ -77,26 +83,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.111/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/oleh/Documents/GitHub/td-game/src/backend/webserver/Shared Library/Shared Library.csproj": {
+    "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\Shared Library\\Shared Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/oleh/Documents/GitHub/td-game/src/backend/webserver/Shared Library/Shared Library.csproj",
+        "projectUniqueName": "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\Shared Library\\Shared Library.csproj",
         "projectName": "Shared Library",
-        "projectPath": "/home/oleh/Documents/GitHub/td-game/src/backend/webserver/Shared Library/Shared Library.csproj",
-        "packagesPath": "/home/oleh/.nuget/packages/",
-        "outputPath": "/home/oleh/Documents/GitHub/td-game/src/backend/webserver/Shared Library/obj/",
+        "projectPath": "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\Shared Library\\Shared Library.csproj",
+        "packagesPath": "C:\\Users\\olegp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\olegp\\OneDrive\\Документы\\GitHub\\td-game\\src\\backend\\webserver\\Shared Library\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/oleh/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\olegp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -129,7 +141,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.111/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

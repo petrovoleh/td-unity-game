@@ -15,10 +15,10 @@ public class Login : MonoBehaviour
         User user = new User();
         user.Password = password;
         user.Username = login;
-        User user_tmp = await HttpClient.Get<User>("https://localhost:4000/users/authenticate", user);
+        User user_tmp = await HttpClient.Get<User>("http://193.219.91.103:5756/users/authenticate", user);
         Debug.Log("user logged in");
         user.Token = user_tmp.Token;
-        string loginLink = "https://localhost:4000/playermaps/"+user.Username;
+        string loginLink = "http://193.219.91.103:5756/playermaps/"+user.Username;
         PlayerProgress maps = await HttpClient.GetAuth<PlayerProgress>(loginLink,user.Token);
         
         Save(maps,"progress.json");
