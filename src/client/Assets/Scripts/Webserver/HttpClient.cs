@@ -9,34 +9,27 @@ using System.Text;
 namespace _Scripts {
     public static class HttpClient
     {
-        public static async Task<T> Get<T>(string endpoint, object payload) {
-            var getRequest = CreateRequest(endpoint, RequestType.POST, payload);
-            getRequest.certificateHandler = new CertificateWhore();
-            getRequest.SendWebRequest();
+        public static async Task<T> Post<T>(string endpoint, object payload, string token = null) {
+            var postRequest = CreateRequest(endpoint, RequestType.POST, payload);
+            if (token != null)
+                postRequest.SetRequestHeader("Authorization", token);
+            postRequest.SendWebRequest();
 
-            while (!getRequest.isDone) await Task.Delay(10);
-            return  JsonUtility.FromJson<T>(getRequest.downloadHandler.text);
+            while (!postRequest.isDone) await Task.Delay(10);
+            return  JsonUtility.FromJson<T>(postRequest.downloadHandler.text);
         }
 
-        public static async Task<T> GetAuth<T>(string endpoint, string token) {
+        public static async Task<T> Get<T>(string endpoint, string token) {
             var getRequest = CreateRequest(endpoint);
-            
             getRequest.SetRequestHeader("Authorization", token);
             getRequest.SendWebRequest();
             while (!getRequest.isDone) await Task.Delay(10);
             return  JsonUtility.FromJson<T>(getRequest.downloadHandler.text);
         }
-        public static async Task<T> Post<T>(string endpoint, object payload){
-            var postRequest = CreateRequest(endpoint, RequestType.POST, payload);
-            postRequest.SendWebRequest();
-            //postRequest.certificateHandler = new CertificateWhore();
-            while (!postRequest.isDone) await Task.Delay(10);
-            return  JsonUtility.FromJson<T>(postRequest.downloadHandler.text);
-        }
 
         private static UnityWebRequest CreateRequest(string path, RequestType type = RequestType.GET, object data = null){
             var request = new UnityWebRequest(path, type.ToString());
-            //request.certificateHandler = new CertificateWhore();
+            request.certificateHandler = new CertificateWhore();
             if (data != null) {
                 var bodyRaw = Encoding.UTF8.GetBytes(JsonUtility.ToJson(data));
                 request.uploadHandler = new UploadHandlerRaw(bodyRaw);

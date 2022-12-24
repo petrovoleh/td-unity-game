@@ -22,9 +22,4 @@ public class PlayerMapsController : ControllerBase
         Console.WriteLine("Player progress was posted");
         return 1;
     }
-    [HttpGet]
-        public string GetAll()
-        {
-            return "Hello world";
-        }
 }
