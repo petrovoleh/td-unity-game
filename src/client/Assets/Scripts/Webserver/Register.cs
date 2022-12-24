@@ -15,7 +15,7 @@ public class Register : MonoBehaviour
         User user = new User();
         user.Password = password;
         user.Username = login;
-        User user_tmp = await HttpClient.Get<User>("http://193.219.91.103:5756/users/register", user);
+        User user_tmp = await HttpClient.Post<User>("https://localhost:4000/users/register", user);
         Debug.Log("user registred");
         user.Token = user_tmp.Token;
         Save(user);

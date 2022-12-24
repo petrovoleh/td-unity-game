@@ -27,13 +27,13 @@ public class UsersController : ControllerBase
         var users = _userService.Register(model);
         return Ok(users);
     }
-    [Authorize]
-    [HttpGet]
-    public IActionResult GetAll()
-    {
-        var users = _userService.GetAll();
-        return Ok(users);
-    }
+    // [Authorize]
+    // [HttpGet]
+    // public IActionResult GetAll()
+    // {
+    //     var users = _userService.GetAll();
+    //     return Ok(users);
+    // }
     
     
 }
