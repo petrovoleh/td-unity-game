@@ -1,18 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using SharedLibrary;
+using System;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static User user;
     void Start()
     {
-        
+        ReadFromFile("logindata.json");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ReadFromFile(string fileName)
     {
+        string path = GetFilePath(fileName);
+        try {
+            using FileStream fs = File.OpenRead(path);
+            using var sr = new StreamReader(fs);
+            string line;
+
+            while ((line = sr.ReadLine()) != null)
+            {
+                user = JsonUtility.FromJson<User>(line);
+            }
+        }
+        catch ( Exception e ) {
+            Debug.Log("file does not exist");
+            return;
+        }
         
+        Debug.Log(user.Username);
+    }
+
+
+    private string GetFilePath(string fileName)
+    {
+        return Application.persistentDataPath + "/" + fileName;
     }
 }
