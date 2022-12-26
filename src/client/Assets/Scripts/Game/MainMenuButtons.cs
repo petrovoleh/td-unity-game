@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,6 +20,7 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject loginUI;
     public GameObject registerMenu;
     public GameObject loginMenu;
+    public GameObject loggedUser;
     public void ChangeScene()
     {
         SceneManager.LoadScene(sceneName);
@@ -38,12 +40,23 @@ public class MainMenuButtons : MonoBehaviour
     }
     public void Login()
     {
-        loginUI.SetActive(true);
+        if(MenuManager.user == null)
+            loginUI.SetActive(true);
+        else
+            loggedUser.SetActive(true);
     }
 
     public void LoginBack(){
         loginUI.SetActive(false);
-    
+    }
+    public void LoggedUserBack(){
+        loggedUser.SetActive(false);
+    }
+    public void SignOut(){
+        MenuManager.user = null;
+        loggedUser.SetActive(false);
+        File.Delete(Application.persistentDataPath + "/logindata.json");
+        loginUI.SetActive(true);
     }
 
     public void LoginMenu()

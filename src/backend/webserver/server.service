@@ -1,0 +1,15 @@
+[Unit]
+Description=Webserver
+[Service]
+WorkingDirectory=/home/olpe8731/td-game/src/backend/webserver/Server/bin/Release/net6.0/
+ExecStart=/usr/bin/dotnet /home/olpe8731/td-game/src/backend/webserver/Server/bin/Release/net6.0/Server.dll
+Restart=always
+# Restart service after 10 seconds if the dotnet service crashes:
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=dotnet-webserver
+User=root
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+[Install]
+WantedBy=multi-user.target
