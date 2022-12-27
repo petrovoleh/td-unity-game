@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 using SharedLibrary;
 public class Register : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class Register : MonoBehaviour
 
     public GameObject LogInputLogin;
     public GameObject LogInputPassword;
+    public GameObject loggedUser;
+    public GameObject registerMenu;
+    public GameObject loginMenu;
+    public Text registerText;
+    public Text loginText;
     public async void login(){ //async
         string login =LogInputLogin.GetComponent<Text>().text;
         string password =LogInputPassword.GetComponent<Text>().text;
@@ -21,33 +27,44 @@ public class Register : MonoBehaviour
 
         int err = validateInput(login);
         if (err == 1 || err == 2){
-            Debug.Log("login must be between 6 and 20 characters");
+            loginText.text ="login must be between 6 and 20 characters";
             return;
         }
         if (err == 3){
-            Debug.Log("login contains unsupported characters");
+            loginText.text ="login contains unsupported characters";
             return;
         }
         err = validateInput(password);
         if (err == 1 || err == 2){
-            Debug.Log("password must be between 6 and 20 characters");
+            loginText.text ="password must be between 6 and 20 characters";
             return;
         }
         if (err == 3){
-            Debug.Log("password contains unsupported characters");
+            loginText.text ="password contains unsupported characters";
             return;
         }
-        User user_tmp;
-
-        user_tmp = await HttpClient.Post<User>("http://193.219.91.103:5756/users/authenticate", user);
+        try{
+        User user_tmp = await HttpClient.Post<User>("http://193.219.91.103:5756/users/authenticate", user);
 
         Debug.Log("user logged in");
         user.Token = user_tmp.Token;
         string loginLink = "http://193.219.91.103:5756/playermaps/"+user.Username;
         PlayerProgress maps = await HttpClient.Get<PlayerProgress>(loginLink,user.Token);
         
-        Save(maps,"progress.json");
-        Save(user,"logindata.json");
+        save(maps,"progress.json");
+        save(user,"logindata.json");
+
+        }
+        catch (Exception){
+            Debug.Log("user has not been registred");
+            loginText.text = "no internet connection or no user with the given username could be found";
+            return;
+        }
+
+        MenuManager.user=user;
+        loginMenu.SetActive(false);
+        loggedUser.GetComponent<UpdateText>().updateText();
+        loggedUser.SetActive(true);
     }
 
     public async void register(){ 
@@ -60,28 +77,40 @@ public class Register : MonoBehaviour
 
         int err = validateInput(login);
         if (err == 1 || err == 2){
-            Debug.Log("login must be between 6 and 20 characters");
+            registerText.text = "login must be between 6 and 20 characters";
             return;
         }
         if (err == 3){
-            Debug.Log("login contains unsupported characters");
+            registerText.text = "login contains unsupported characters";
             return;
         }
         err = validateInput(password);
         if (err == 1 || err == 2){
-            Debug.Log("password must be between 6 and 20 characters");
+            registerText.text = "password must be between 6 and 20 characters";
             return;
         }
         if (err == 3){
-            Debug.Log("password contains unsupported characters");
+            registerText.text = "password contains unsupported characters";
             return;
         }
 
-
-        User user_tmp = await HttpClient.Post<User>("http://193.219.91.103:5756/users/register", user);
+        try{
+            User user_tmp = await HttpClient.Post<User>("http://193.219.91.103:5756/users/register", user);
+            user.Token = user_tmp.Token;
+            save(user,"logindata.json");
+        }
+        catch (Exception){
+            Debug.Log("user has not been registred");
+            registerText.text = "no internet connection";
+            return;
+        }
+        
         Debug.Log("user registred");
-        user.Token = user_tmp.Token;
-        Save(user,"logindata.json");
+        MenuManager.user=user;
+
+        registerMenu.SetActive(false);
+        loggedUser.GetComponent<UpdateText>().updateText();
+        loggedUser.SetActive(true);
     }
 
     private int validateInput(string input){
@@ -97,16 +126,16 @@ public class Register : MonoBehaviour
         return 0;
     }
 
-   public void Save(object obj, string fileName)
+   public void save(object obj, string fileName)
     {
         string json = JsonUtility.ToJson(obj);
-        WriteToFile(fileName, json);
+        writeToFile(fileName, json);
     }
 
 
-    private void WriteToFile(string fileName, string json)
+    private void writeToFile(string fileName, string json)
     {
-        string path = GetFilePath(fileName);
+        string path = getFilePath(fileName);
         FileStream fileStream = new FileStream(path, FileMode.Create);
 
         using (StreamWriter writer = new StreamWriter(fileStream))
@@ -116,7 +145,7 @@ public class Register : MonoBehaviour
     }
 
 
-    private string GetFilePath(string fileName)
+    private string getFilePath(string fileName)
     {
         return Application.persistentDataPath + "/" + fileName;
     }

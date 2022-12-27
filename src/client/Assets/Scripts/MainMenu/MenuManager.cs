@@ -26,7 +26,7 @@ public class MenuManager : MonoBehaviour
                 user = JsonUtility.FromJson<User>(line);
             }
         }
-        catch ( Exception e ) {
+        catch (Exception) {
             Debug.Log("file does not exist");
             return;
         }
