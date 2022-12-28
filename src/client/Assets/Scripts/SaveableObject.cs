@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum ObjectType { Towers, Grass, Sand, Waypoints, GameManager}
+enum ObjectType { FireTower, Grass, Sand, Waypoints, GameManager}
 public abstract class SaveableObject : MonoBehaviour
 {
     protected string save;

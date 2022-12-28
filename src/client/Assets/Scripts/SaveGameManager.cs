@@ -54,7 +54,7 @@ public class SaveGameManager : MonoBehaviour
             GameObject tmp = null;
             switch (value[0])
             {
-                case "Tower":
+                case "FireTower":
                     tmp = Instantiate(Resources.Load("Tower1(Clone)") as GameObject);
                     break;
                 case "Grass":

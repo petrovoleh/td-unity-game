@@ -86,7 +86,7 @@ public class TileScript : MonoBehaviour
 
             GameObject tower = (GameObject)Instantiate(GameManager.Instance.ClickedBtn.TowerPrefab, transform.position, Quaternion.identity);
 
-            tower.transform.SetParent(transform);
+            //tower.transform.SetParent(transform);
 
             this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();
 

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FDAD142C-E6CD-5701-746F-E49E16F87ABC}</ProjectGuid>
+    <ProjectGuid>{A2859A56-AB4A-51F9-60BB-1B6FC96E8C70}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,13 +61,16 @@
     <Compile Include="Assets\Scripts\Game\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy.cs" />
     <Compile Include="Assets\Scripts\Game\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Webserver\Register.cs" />
     <Compile Include="Assets\Scripts\Game\Waypoints.cs" />
+    <Compile Include="Assets\Scripts\Webserver\PostProgress.cs" />
     <Compile Include="Assets\Scripts\Game\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Game\Debuffs\PoisonDebuff.cs" />
     <Compile Include="Assets\Scripts\Game\Towers\GooTower.cs" />
     <Compile Include="Assets\Scripts\Game\Debuffs\NoDebuff.cs" />
     <Compile Include="Assets\Scripts\Game\SpawnEnemies.cs" />
     <Compile Include="Assets\Scripts\Game\SceneChanger.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Game\Towers\ElectroTower.cs" />
     <Compile Include="Assets\Scripts\SaveLoadSystem.cs" />
     <Compile Include="Assets\Scripts\Game\Singleton.cs" />
@@ -75,10 +78,11 @@
     <Compile Include="Assets\Scripts\Game\Hover.cs" />
     <Compile Include="Assets\Scripts\Game\PlaceTheTower.cs" />
     <Compile Include="Assets\Scripts\Game\Towers\FrostTower.cs" />
-    <Compile Include="Assets\Scripts\Database\SertificateWhore.cs" />
+    <Compile Include="Assets\Scripts\Webserver\SertificateWhore.cs" />
     <Compile Include="Assets\Scripts\Game\Towers\TowerUpgrade.cs" />
     <Compile Include="Assets\Scripts\Game\FullScreen.cs" />
     <Compile Include="Assets\Scripts\Game\Debuffs\FrostDebuff.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\UpdateText.cs" />
     <Compile Include="Assets\Scripts\ISaveable.cs" />
     <Compile Include="Assets\Scripts\Game\Debuffs\FireDebuff.cs" />
     <Compile Include="Assets\Scripts\Game\Towers\FireTower.cs" />
@@ -89,8 +93,8 @@
     <Compile Include="Assets\Scripts\Game\ChangePlayerHP.cs" />
     <Compile Include="Assets\Scripts\SaveableEntity.cs" />
     <Compile Include="Assets\Scripts\Game\Projectile.cs" />
-    <Compile Include="Assets\Scripts\Game\MainMenuButtons.cs" />
-    <Compile Include="Assets\Scripts\Database\HttpClient.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\MainMenuButtons.cs" />
+    <Compile Include="Assets\Scripts\Webserver\HttpClient.cs" />
     <Compile Include="Assets\Scripts\Game\TowerBtn.cs" />
   </ItemGroup>
   <ItemGroup>
