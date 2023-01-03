@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public delegate void CurrencyChanged();
 
@@ -130,6 +131,16 @@ public class GameManager : Singleton<GameManager>, ISaveable
 
     void Start()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        string sceneName = currentScene.name;
+
+        if(sceneName == "LoadMap")
+        {
+            SaveGameManager.Instance.Load();
+            SaveLoadSystem.Instance.Load();
+        }
+        
         Time.timeScale = 1f;
         PauseMenu.GameIsPaused = false;
         Currency = currency;
@@ -257,6 +268,9 @@ public class GameManager : Singleton<GameManager>, ISaveable
 
                 selectedTower.GetComponentInParent<TileScript>().IsEmpty = true;
 
+                selectedTower.GetComponentInParent<SpecificObject>().ObjectType = "Grass";
+                //Destroy(selectedTower.transform.parent.gameObject);
+
                 Destroy(selectedTower.transform.parent.gameObject);
 
                 DeselectTower();
@@ -321,7 +335,8 @@ public class GameManager : Singleton<GameManager>, ISaveable
             {
                 Currency += roundEndingCurrency;
                 waveBtn.SetActive(true);
-                //SaveGameManager.Instance.Save();
+                SaveGameManager.Instance.Save();
+                SaveLoadSystem.Instance.Save();
             }
             
         }

@@ -193,7 +193,7 @@ MonoBehaviour:
   fastForwardButton: {fileID: 2077966241}
   WinningTheGameScreen: {fileID: 1136816419}
   CancelBtn: {fileID: 1757114745}
-  currency: 100
+  currency: 10000
   roundEndingCurrency: 10
   currencyTxt: {fileID: 655562718}
   playerHP: 20
@@ -7034,7 +7034,7 @@ MonoBehaviour:
   tilePrefabs:
   - {fileID: 3058864630683052840, guid: 5e14767ce2bd91c40bd53a24cc8207be, type: 3}
   - {fileID: 3304755994919624723, guid: c4c16bd4750c3614997cd02e938eebba, type: 3}
-  mapNumber: Map1
+  mapNumber: '-'
   background: {fileID: 0}
 --- !u!1 &2067001353
 GameObject:

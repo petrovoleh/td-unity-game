@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7088490461769532068}
   - component: {fileID: -5896345661987882712}
   - component: {fileID: 6780003629445232011}
+  - component: {fileID: -3082518204011911620}
   m_Layer: 0
   m_Name: Sand
   m_TagString: Untagged
@@ -98,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9950dc3cac67565448ab561265777755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEmpty: 0
   tileType: 1
 --- !u!61 &6780003629445232011
 BoxCollider2D:
@@ -125,3 +127,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 50, y: 50}
   m_EdgeRadius: 0
+--- !u!114 &-3082518204011911620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3304755994919624723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1595c6fb3a1401b45ac5b9a5fc9d45da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectType: Sand
