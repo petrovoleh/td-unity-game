@@ -8,12 +8,14 @@ using System;
 public class MenuManager : MonoBehaviour
 {
     public static User user;
+    //public static PlayerProgress progress;
     void Start()
     {
-        ReadFromFile("logindata.json");
+        ReadFromFile<User>("logindata.json", user);
+    //  ReadFromFile<PlayerProgress>("progress.json", progress);
     }
 
-    private void ReadFromFile(string fileName)
+    private void ReadFromFile<T>(string fileName, object obj)
     {
         string path = GetFilePath(fileName);
         try {
@@ -23,14 +25,13 @@ public class MenuManager : MonoBehaviour
 
             while ((line = sr.ReadLine()) != null)
             {
-                user = JsonUtility.FromJson<User>(line);
+                obj = JsonUtility.FromJson<T>(line);
             }
         }
         catch (Exception) {
             return;
         }
         
-        Debug.Log(user.Username);
     }
 
 
