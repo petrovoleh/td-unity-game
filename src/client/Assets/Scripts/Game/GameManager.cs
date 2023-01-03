@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.IO;
+using SharedLibrary;
 
 public delegate void CurrencyChanged();
 
@@ -14,6 +16,9 @@ public class GameManager : Singleton<GameManager>, ISaveable
     [SerializeField]
     private float spawnpointY;
     public float SpawnpointY { get { return spawnpointY; }  }
+
+    public static int mapID;
+    private PlayerProgress progress;
 
     public event CurrencyChanged Changed;
 
@@ -304,7 +309,38 @@ public class GameManager : Singleton<GameManager>, ISaveable
         activeMonsters.Add(enemy);
         yield return new WaitForSeconds(0.5f);
     }
+    private void ReadFromFile<T>(string fileName, object obj)
+    {
+        string path = GetFilePath(fileName);
+        try {
+            using FileStream fs = File.OpenRead(path);
+            using var sr = new StreamReader(fs);
+            string line;
 
+            while ((line = sr.ReadLine()) != null)
+            {
+                obj = JsonUtility.FromJson<T>(line);
+            }
+        }
+        catch (Exception) {
+            Debug.Log("file does not exist");
+            return;
+        }
+        
+    }
+
+
+    private string GetFilePath(string fileName)
+    {
+        return Application.persistentDataPath + "/" + fileName;
+    }
+    private void SaveMap(){
+        ReadFromFile<PlayerProgress>("progress.json", progress);
+        //UserData.progress.maps contains mapID;
+        if(progress.maps.Any(maps => maps.ID == mapID)){
+            Debug.Log("exists");
+        }
+    }
     public void RemoveMonster(Enemy enemy)
     {
         activeMonsters.Remove(enemy);
@@ -316,6 +352,7 @@ public class GameManager : Singleton<GameManager>, ISaveable
                 Time.timeScale = 0f;
                 PauseMenu.GameIsPaused = true;
                 WinningTheGameScreen.SetActive(true);
+                SaveMap();
             }
             else 
             {
