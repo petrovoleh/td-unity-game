@@ -2,12 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System;
 
 public class TileScript : MonoBehaviour
 {
     public Point GridPosition { get; private set; }
 
-    public bool IsEmpty { get; set; }
+    SpecificObject specificObject;
+
+    [SerializeField]
+    private bool isEmpty;
+    public bool IsEmpty 
+    {
+        get
+        {
+            return isEmpty;
+        }
+        set
+        {
+            this.isEmpty = value;
+        }
+    }
 
     public enum TileType { Tile, Path};
     [SerializeField]
@@ -86,22 +101,112 @@ public class TileScript : MonoBehaviour
 
             GameObject tower = (GameObject)Instantiate(GameManager.Instance.ClickedBtn.TowerPrefab, transform.position, Quaternion.identity);
 
-            //tower.transform.SetParent(transform);
+            tower.transform.SetParent(transform);
 
             this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();
 
-            IsEmpty = false;
+        if(myTower.TowerType == "FireWizard")
+        {
+            specificObject = GetComponent<SpecificObject>();
+            specificObject.ObjectType = "FireGrass";
+        }
+        if (myTower.TowerType == "ElectricWizard")
+        {
+            specificObject = GetComponent<SpecificObject>();
+            specificObject.ObjectType = "ElectricGrass";
+        }
+        if (myTower.TowerType == "RocketWizard")
+        {
+            specificObject = GetComponent<SpecificObject>();
+            specificObject.ObjectType = "RocketGrass";
+        }
+        if (myTower.TowerType == "GooWizard")
+        {
+            specificObject = GetComponent<SpecificObject>();
+            specificObject.ObjectType = "GooGrass";
+        }
+        if (myTower.TowerType == "IceWizard")
+        {
+            specificObject = GetComponent<SpecificObject>();
+            specificObject.ObjectType = "IceGrass";
+        }
 
+        IsEmpty = false;
+            
             myTower.Price = GameManager.Instance.ClickedBtn.Price;
 
-            ColorTile(Color.white);
+        //Destroy(this.gameObject); 
+        ColorTile(Color.white);
 
             GameManager.Instance.BuyTower();
 
     }
 
+    public void SavePlaceTower(string towerType)
+    {
+        if(towerType == "FireGrass")
+        {
+            specificObject = GetComponent<SpecificObject>();
+            specificObject.ObjectType = "FireGrass";
+
+            GameObject tower = Instantiate(Resources.Load("Tower1") as GameObject);
+            tower.transform.SetParent(transform);
+            tower.transform.localPosition = Vector2.zero;
+            this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();
+            myTower.Price = 55;
+        }
+        if (towerType == "ElectricGrass")
+        {
+            specificObject = GetComponent<SpecificObject>();
+            specificObject.ObjectType = "ElectricGrass";
+
+            GameObject tower = Instantiate(Resources.Load("Tower2") as GameObject);
+            tower.transform.SetParent(transform);
+            tower.transform.localPosition = Vector2.zero;
+            this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();
+            myTower.Price = 60;
+        }
+        if (towerType == "RocketGrass")
+        {
+            specificObject = GetComponent<SpecificObject>();
+            specificObject.ObjectType = "RocketGrass";
+
+            GameObject tower = Instantiate(Resources.Load("Tower3") as GameObject);
+            tower.transform.SetParent(transform);
+            tower.transform.localPosition = Vector2.zero;
+            this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();
+            myTower.Price = 70;
+        }
+        if (towerType == "GooGrass")
+        {
+            specificObject = GetComponent<SpecificObject>();
+            specificObject.ObjectType = "GooGrass";
+
+            GameObject tower = Instantiate(Resources.Load("Tower4") as GameObject);
+            tower.transform.SetParent(transform);
+            tower.transform.localPosition = Vector2.zero;
+            this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();
+            myTower.Price = 65;
+        }
+        if (towerType == "IceGrass")
+        {
+            specificObject = GetComponent<SpecificObject>();
+            specificObject.ObjectType = "IceGrass";
+
+            GameObject tower = Instantiate(Resources.Load("Tower5") as GameObject);
+            tower.transform.SetParent(transform);
+            tower.transform.localPosition = Vector2.zero;
+            this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();
+            myTower.Price = 90;
+        }
+
+    }
+
+
+
     private void ColorTile(Color newColor)
     {
         spriteRenderer.color = newColor;
     }
+
 }

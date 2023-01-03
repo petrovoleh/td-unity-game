@@ -115,7 +115,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackType: Normal
+  towerType: FireWizard
+  towerTargetType: 0
   mySpriteRenderer: {fileID: 1485178802}
+  myRangeRenderer: {fileID: 0}
   attackRangeType: Ranged
   projectileType: FireBolt
   projectileSpeed: 500
@@ -123,6 +126,7 @@ MonoBehaviour:
   debuffDuration: 0
   splashRange: 0
   attackCooldown: 1.25
+  attackRadius: {fileID: 0}
   tickTime: 1
   tickDamage: 0
 --- !u!1 &2706758977530459666

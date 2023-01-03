@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpecificObject : MonoBehaviour
+public class SpecificObject : SaveableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    public override void Save(int id)
     {
-        
+        base.Save(id);
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Load(string[] values)
     {
-        
+        base.Load(values);
     }
 }

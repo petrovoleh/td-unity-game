@@ -27,7 +27,6 @@ public class MenuManager : MonoBehaviour
             }
         }
         catch (Exception) {
-            Debug.Log("file does not exist");
             return;
         }
         

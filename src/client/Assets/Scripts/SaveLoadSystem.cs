@@ -8,8 +8,23 @@ public class SaveLoadSystem : MonoBehaviour
 {
     public string SavePath => $"{Application.persistentDataPath}/save.txt";
 
+    private static SaveLoadSystem instance;
+
+    public static SaveLoadSystem Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = GameObject.FindObjectOfType<SaveLoadSystem>();
+            }
+            return instance;
+        }
+
+    }
+
     [ContextMenu("Save")]
-    void Save()
+    public void Save()
     {
         var state = LoadFile();
         SaveState(state);
@@ -17,7 +32,7 @@ public class SaveLoadSystem : MonoBehaviour
     }
 
     [ContextMenu("Load")]
-    void Load()
+    public void Load()
     {
         var state = LoadFile();
         LoadState(state);

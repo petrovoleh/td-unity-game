@@ -2,14 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum ObjectType { FireTower, Grass, Sand, Waypoints, GameManager}
+/*enum ObjectType
+{
+    FireTower,
+    Grass,
+    Sand,
+    GrassFireTower,
+    Waypoints,
+    GameManager
+}*/
 public abstract class SaveableObject : MonoBehaviour
 {
     protected string save;
 
 
     [SerializeField]
-    private ObjectType objectType;
+    private string objectType;
+
+    public string ObjectType
+    {
+        get
+        {
+            return objectType;
+        }
+        set
+        {
+            objectType = value;
+        }
+    }
+
+    [SerializeField]
+    private string towerPlaced;
+
+    public string TowerPlaced
+    {
+        get
+        {
+            return towerPlaced;
+        }
+        set
+        {
+            towerPlaced = value;
+        }
+    }
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -26,7 +62,8 @@ public abstract class SaveableObject : MonoBehaviour
     }
     public void DestroySaveable()
     {
-
+        SaveGameManager.Instance.SaveableObjects.Remove(this);
+        Destroy(gameObject);
     }
 
 }

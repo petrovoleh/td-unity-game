@@ -15,9 +15,22 @@ public class SceneChanger : MonoBehaviour
         }*/
    
     public string sceneName;
+
+    public void Start()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        string sceneName = currentScene.name;
+    }
+
     public void ChangeScene()
     {
         SceneManager.LoadScene(sceneName);
+
+        if (sceneName == "Map1" || sceneName == "Map2")
+        {
+            PlayerPrefs.DeleteKey("ObjectCount");
+        }
     }
     public void QuitGame()
     {

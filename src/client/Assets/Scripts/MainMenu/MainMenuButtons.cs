@@ -21,6 +21,26 @@ public class MainMenuButtons : MonoBehaviour
     public GameObject registerMenu;
     public GameObject loginMenu;
     public GameObject loggedUser;
+
+    [SerializeField]
+    private GameObject LoadGameButton;
+    public void Start()
+    {
+        if (PlayerPrefs.HasKey("ObjectCount"))
+        {
+            LoadGameButton.SetActive(true);
+        }
+        else
+        {
+            LoadGameButton.SetActive(false);
+        }
+    }
+    public void LoadGame()
+    {
+        SceneManager.LoadScene("LoadMap");
+        
+    }
+
     public void ChangeScene()
     {
         SceneManager.LoadScene(sceneName);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class SaveableEntity : SaveableObject
+public class SaveableEntity : MonoBehaviour
 {
     [SerializeField] private string id;
 
@@ -49,13 +49,5 @@ public class SaveableEntity : SaveableObject
         }
     }
 
-    public override void Save(int id)
-    {
-        base.Save(id);
-    }
-
-    public override void Load(string[] values)
-    {
-        base.Load(values);
-    }
+    
 }

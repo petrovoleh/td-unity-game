@@ -579,15 +579,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 95816361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Map2
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &163425215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,15 +1306,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 373788947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &393409264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,15 +1512,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 468868480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &525150623
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,15 +2170,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 672174519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &728696749
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,15 +2220,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 728696749}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &773035657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,15 +2270,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 773035657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &821563546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2393,15 +2363,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 831493091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Map1
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &909069491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,15 +2413,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 909069491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &928796818
 GameObject:
   m_ObjectHideFlags: 0
@@ -2769,15 +2729,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1002469750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &1009887004
 GameObject:
   m_ObjectHideFlags: 0
@@ -3223,15 +3178,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069684323}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &1070526524
 GameObject:
   m_ObjectHideFlags: 0
@@ -3434,15 +3384,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1141456921}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &1169667758
 GameObject:
   m_ObjectHideFlags: 0
@@ -4028,15 +3973,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1343213334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &1443622384
 GameObject:
   m_ObjectHideFlags: 0
@@ -4189,7 +4129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1507389631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4536,8 +4476,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.124298096, y: 0.074043274}
-  m_SizeDelta: {x: 218.7345, y: 40}
+  m_AnchoredPosition: {x: -0.00080073, y: 0.000095308}
+  m_SizeDelta: {x: 223.68, y: 42.012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530041552
 MonoBehaviour:
@@ -4796,7 +4736,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 95816363}
-        m_TargetAssemblyTypeName: MainMenuButtons, Assembly-CSharp
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
         m_Arguments:
@@ -5125,15 +5065,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1655358712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &1691561744
 GameObject:
   m_ObjectHideFlags: 0
@@ -5512,15 +5447,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1770397440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &1809266677
 GameObject:
   m_ObjectHideFlags: 0
@@ -5604,7 +5534,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1141456923}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
@@ -5833,15 +5763,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1849670102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &1857565336
 GameObject:
   m_ObjectHideFlags: 0
@@ -5888,15 +5813,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1857565336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &1871199081
 GameObject:
   m_ObjectHideFlags: 0
@@ -5980,7 +5900,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 909069493}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1
@@ -6646,15 +6566,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2031308495}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}
 --- !u!1 &2047979678
 GameObject:
   m_ObjectHideFlags: 0
@@ -6834,12 +6749,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2085320175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c93a3ffcc0c04c547a6a235737a1956a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 
-  optionsUI: {fileID: 0}
-  loginUI: {fileID: 0}
-  registerMenu: {fileID: 0}
-  loginMenu: {fileID: 0}
-  loggedUser: {fileID: 0}

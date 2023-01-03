@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SaveGameManager : MonoBehaviour
 {
+    
+    private TileScript myTile;
 
     private static SaveGameManager instance;
 
@@ -26,6 +28,7 @@ public class SaveGameManager : MonoBehaviour
     {
         SaveableObjects = new List<SaveableObject>();
     }
+    [ContextMenu("Save")]
     public void Save()
     {
         PlayerPrefs.SetInt("ObjectCount", SaveableObjects.Count);
@@ -34,47 +37,76 @@ public class SaveGameManager : MonoBehaviour
             SaveableObjects[i].Save(i);
         }
     }
+    [ContextMenu("Load")]
     public void Load()
     {
-        foreach(SaveableObject obj in SaveableObjects)
+        if (PlayerPrefs.HasKey("ObjectCount"))
         {
-            if(obj != null)
+            foreach (SaveableObject obj in SaveableObjects)
             {
-                Destroy(obj.gameObject);
+                if (obj != null)
+                {
+                    Destroy(obj.gameObject);
+                }
+            }
+
+            SaveableObjects.Clear();
+
+            int objectCount = PlayerPrefs.GetInt("ObjectCount");
+
+            for (int i = 0; i < objectCount; i++)
+            {
+                string[] value = PlayerPrefs.GetString(i.ToString()).Split('_');
+                GameObject tmp = null;
+                switch (value[0])
+                {
+                    case "Grass":
+                        tmp = Instantiate(Resources.Load("Grass(Clone)") as GameObject);
+                        break;
+                    case "Sand":
+                        tmp = Instantiate(Resources.Load("Sand(Clone)") as GameObject);
+                        break;
+                    case "FireGrass":
+                        tmp = Instantiate(Resources.Load("GrassEmp(Clone)") as GameObject);
+                        myTile = tmp.transform.GetComponent<TileScript>();
+                        myTile.SavePlaceTower(value[0]);
+                        break;
+                    case "ElectricGrass":
+                        tmp = Instantiate(Resources.Load("GrassEmp(Clone)") as GameObject);
+                        myTile = tmp.transform.GetComponent<TileScript>();
+                        myTile.SavePlaceTower(value[0]);
+                        break;
+                    case "RocketGrass":
+                        tmp = Instantiate(Resources.Load("GrassEmp(Clone)") as GameObject);
+                        myTile = tmp.transform.GetComponent<TileScript>();
+                        myTile.SavePlaceTower(value[0]);
+                        break;
+                    case "GooGrass":
+                        tmp = Instantiate(Resources.Load("GrassEmp(Clone)") as GameObject);
+                        myTile = tmp.transform.GetComponent<TileScript>();
+                        myTile.SavePlaceTower(value[0]);
+                        break;
+                    case "IceGrass":
+                        tmp = Instantiate(Resources.Load("GrassEmp(Clone)") as GameObject);
+                        myTile = tmp.transform.GetComponent<TileScript>();
+                        myTile.SavePlaceTower(value[0]);
+                        break;
+
+
+                }
+
+                if (tmp != null)
+                {
+                    tmp.GetComponent<SaveableObject>().Load(value);
+                }
+
             }
         }
-
-        SaveableObjects.Clear();
-
-        int objectCount = PlayerPrefs.GetInt("ObjectCount");
-
-        for(int i = 0; i < objectCount; i++)
+        else
         {
-            string[] value = PlayerPrefs.GetString(i.ToString()).Split('_');
-            GameObject tmp = null;
-            switch (value[0])
-            {
-                case "FireTower":
-                    tmp = Instantiate(Resources.Load("Tower1(Clone)") as GameObject);
-                    break;
-                case "Grass":
-                    tmp = Instantiate(Resources.Load("Grass(Clone)") as GameObject);
-                    break;
-                case "Sand":
-                    tmp = Instantiate(Resources.Load("Sand(Clone)") as GameObject);
-                    break;
-                case "GameManager":
-                    tmp = Instantiate(Resources.Load("GameManager") as GameObject);
-                    break;
-
-            }
-
-            if(tmp != null)
-            {
-                tmp.GetComponent<SaveableObject>().Load(value);
-            }
-
+            Debug.Log("File Doesnt Exist Yet");
         }
+            
     }
 
     public Vector3 StringToVector(string value)

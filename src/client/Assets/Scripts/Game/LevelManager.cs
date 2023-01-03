@@ -7,8 +7,8 @@ public class LevelManager : Singleton<LevelManager>
     [SerializeField]
     private GameObject[] tilePrefabs;
 
-    [SerializeField]
-    private GameObject waypointPrefabs;
+    //[SerializeField]
+    //private GameObject waypointPrefabs;
 
     [SerializeField]
     private string mapNumber;
@@ -45,29 +45,37 @@ public class LevelManager : Singleton<LevelManager>
 
     private void CreateLevel()
     {
-        Tiles = new Dictionary<Point, TileScript>();
-
-        string[] mapData = ReadLevelText();
-
-        //calculates the map x size
-        int mapX = mapData[0].ToCharArray().Length;
-
-        //calculates the map y size
-        int mapY = mapData.Length;
-
-        //Calculates the world start point, this is the top left corner of screen
-        Vector3 worldStart = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height - 40));
-
-        for (int y = 0; y < mapY; y++) //y position of tiles
+        if(mapNumber == "-")
         {
-            char[] newTiles = mapData[y].ToCharArray(); //gets the tile type
+            
+        }
+        else
+        {
+            Tiles = new Dictionary<Point, TileScript>();
 
-            for (int x = 0; x < mapX; x++)//x possition of tiles
+            string[] mapData = ReadLevelText();
+
+            //calculates the map x size
+            int mapX = mapData[0].ToCharArray().Length;
+
+            //calculates the map y size
+            int mapY = mapData.Length;
+
+            //Calculates the world start point, this is the top left corner of screen
+            Vector3 worldStart = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height - 40));
+
+            for (int y = 0; y < mapY; y++) //y position of tiles
             {
-                PlaceTile(newTiles[x].ToString(), x, y, worldStart);
+                char[] newTiles = mapData[y].ToCharArray(); //gets the tile type
 
+                for (int x = 0; x < mapX; x++)//x possition of tiles
+                {
+                    PlaceTile(newTiles[x].ToString(), x, y, worldStart);
+
+                }
             }
         }
+        
     }
 
 
@@ -95,11 +103,19 @@ public class LevelManager : Singleton<LevelManager>
 
     private string[] ReadLevelText()
     {
-        TextAsset bindData = Resources.Load(mapNumber) as TextAsset;
+        if (mapNumber == "-")
+        {
+            return null;
+        }
+        else
+        {
+            TextAsset bindData = Resources.Load(mapNumber) as TextAsset;
 
-        string data = bindData.text.Replace(Environment.NewLine, string.Empty);
+            string data = bindData.text.Replace(Environment.NewLine, string.Empty);
 
-        return data.Split("-");
+            return data.Split("-");
+        }
+        
     }
 
    

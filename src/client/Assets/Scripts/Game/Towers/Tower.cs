@@ -16,6 +16,16 @@ public abstract class Tower : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private string towerType;
+    public string TowerType
+    {
+        get
+        {
+            return towerType;
+        }
+    }
+
     public enum TowerTargetType
     {
         First, Last, Strongest, Weakest, Closest
