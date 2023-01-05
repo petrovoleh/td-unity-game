@@ -5,7 +5,7 @@ using UnityEngine;
 using SharedLibrary;
 using System;
 
-public class MenuManager : MonoBehaviour
+public class UserData : MonoBehaviour
 {
     public static User user;
     //public static PlayerProgress progress;
@@ -25,11 +25,13 @@ public class MenuManager : MonoBehaviour
 
             while ((line = sr.ReadLine()) != null)
             {
-                obj = JsonUtility.FromJson<T>(line);
+                user = JsonUtility.FromJson<User>(line);
             }
+            Debug.Log(string.Format("File {0} exists", fileName));
         }
         catch (Exception) {
             return;
+            Debug.Log(string.Format("File {0} does not exist", fileName));
         }
         
     }

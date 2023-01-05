@@ -35,6 +35,10 @@ public class LevelManager : Singleton<LevelManager>
     void Start()
     {
         CreateLevel();
+        GetLevelID();
+    }
+    private void GetLevelID(){
+        GameManager.mapID= Int32.Parse(mapNumber.Remove(0,3));
     }
 
     // Update is called once per frame
