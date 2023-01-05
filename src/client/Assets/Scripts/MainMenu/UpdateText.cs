@@ -11,7 +11,7 @@ public class UpdateText : MonoBehaviour
         updateText();
     }
     public void updateText(){
-        text.text = "Welcome, "+ MenuManager.user.Username+ "!";
+        text.text = "Welcome, "+ UserData.user.Username+ "!";
     }
 
 }

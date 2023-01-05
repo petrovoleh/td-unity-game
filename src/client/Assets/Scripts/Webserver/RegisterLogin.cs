@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using SharedLibrary;
-public class Register : MonoBehaviour
+public class RegisterLogin : MonoBehaviour
 {
     public GameObject inputLogin;
     public GameObject inputPassword;
@@ -61,15 +61,15 @@ public class Register : MonoBehaviour
             return;
         }
 
-        MenuManager.user=user;
+        UserData.user=user;
         loginMenu.SetActive(false);
         loggedUser.GetComponent<UpdateText>().updateText();
         loggedUser.SetActive(true);
     }
 
     public async void register(){ 
-        string login =inputLogin.GetComponent<Text>().text;
-        string password =inputPassword.GetComponent<Text>().text;
+        string login = inputLogin.GetComponent<Text>().text;
+        string password = inputPassword.GetComponent<Text>().text;
         User user = new User();
         user.Password = password;
         user.Username = login;
@@ -106,7 +106,7 @@ public class Register : MonoBehaviour
         }
         
         Debug.Log("user registred");
-        MenuManager.user=user;
+        UserData.user=user;
 
         registerMenu.SetActive(false);
         loggedUser.GetComponent<UpdateText>().updateText();

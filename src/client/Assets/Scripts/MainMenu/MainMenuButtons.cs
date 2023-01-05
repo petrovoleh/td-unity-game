@@ -60,7 +60,7 @@ public class MainMenuButtons : MonoBehaviour
     }
     public void Login()
     {
-        if(MenuManager.user == null)
+        if(UserData.user == null)
             loginUI.SetActive(true);
         else
             loggedUser.SetActive(true);
@@ -73,7 +73,7 @@ public class MainMenuButtons : MonoBehaviour
         loggedUser.SetActive(false);
     }
     public void SignOut(){
-        MenuManager.user = null;
+        UserData.user = null;
         loggedUser.SetActive(false);
         File.Delete(Application.persistentDataPath + "/logindata.json");
         loginUI.SetActive(true);
