@@ -5,9 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class PageChanger : MonoBehaviour
 {
-    public GameObject nextPage;
-    public GameObject lastPage;
-    public GameObject page;
+    [SerializeField]
+    private GameObject nextPage;
+
+    [SerializeField]
+    private GameObject lastPage;
+
+    [SerializeField]
+    private GameObject page;
+
+    [SerializeField]
+    private GameObject ChallengePage;
+
+    [SerializeField]
+    private GameObject MapsPage;
+
     public void NextPage()
     {
         nextPage.SetActive(true);
@@ -18,8 +30,19 @@ public class PageChanger : MonoBehaviour
         lastPage.SetActive(true);
         page.SetActive(false);
     }
+    public void ChallengePageActivate()
+    {
+        ChallengePage.SetActive(true);
+        page.SetActive(false);
+    }
+    public void ChallengePageDeactivate()
+    {
+        MapsPage.SetActive(true);
+        ChallengePage.SetActive(false);
+    }
     public void ChangeScene()
     {
         SceneManager.LoadScene("MainMenu");
     }
+
 }

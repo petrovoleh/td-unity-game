@@ -335,6 +335,7 @@ public class GameManager : Singleton<GameManager>, ISaveable
             {
                 Currency += roundEndingCurrency;
                 waveBtn.SetActive(true);
+                PlayerPrefs.DeleteKey("ObjectCount");
                 SaveGameManager.Instance.Save();
                 SaveLoadSystem.Instance.Save();
             }
