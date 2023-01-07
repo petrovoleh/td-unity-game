@@ -44,11 +44,11 @@ public class RegisterLogin : MonoBehaviour
             return;
         }
         try{
-        User user_tmp = await HttpClient.Post<User>("http://193.219.91.103:5756/users/authenticate", user);
+        User user_tmp = await HttpClient.Post<User>("users/authenticate", user);
 
         Debug.Log("user logged in");
         user.Token = user_tmp.Token;
-        string loginLink = "http://193.219.91.103:5756/playermaps/"+user.Username;
+        string loginLink = "playermaps/"+user.Username;
         PlayerProgress maps = await HttpClient.Get<PlayerProgress>(loginLink,user.Token);
         
         save(maps,"progress.json");
@@ -95,7 +95,7 @@ public class RegisterLogin : MonoBehaviour
         }
 
         try{
-            User user_tmp = await HttpClient.Post<User>("http://193.219.91.103:5756/users/register", user);
+            User user_tmp = await HttpClient.Post<User>("users/register", user);
             user.Token = user_tmp.Token;
             save(user,"logindata.json");
         }
@@ -147,6 +147,7 @@ public class RegisterLogin : MonoBehaviour
 
     private string getFilePath(string fileName)
     {
+        Debug.Log(Application.persistentDataPath + "/" + fileName);
         return Application.persistentDataPath + "/" + fileName;
     }
 }
