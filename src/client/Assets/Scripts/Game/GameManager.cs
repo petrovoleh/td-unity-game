@@ -4,10 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
-using System.IO;
-using SharedLibrary;
-using System.Linq;
-using _Scripts;
+
+
 
 public delegate void CurrencyChanged();
 
@@ -19,10 +17,6 @@ public class GameManager : Singleton<GameManager>, ISaveable
     [SerializeField]
     private float spawnpointY;
     public float SpawnpointY { get { return spawnpointY; }  }
-
-    public static int mapID;
-    private PlayerProgress progress;
-
     public event CurrencyChanged Changed;
 
     private bool fastForward = false;
@@ -176,8 +170,7 @@ public class GameManager : Singleton<GameManager>, ISaveable
 
             waveBtn.SetActive(false);
         }
-        SaveMap();
-        
+        this.gameObject.GetComponent<SaveProgress>().SaveMap();
     }
 
     
@@ -326,64 +319,6 @@ public class GameManager : Singleton<GameManager>, ISaveable
         activeMonsters.Add(enemy);
         yield return new WaitForSeconds(0.5f);
     }
-    private PlayerProgress ReadFromFile(string fileName)
-    {
-        string path = getFilePath(fileName);
-        try {
-            using FileStream fs = File.OpenRead(path);
-            using var sr = new StreamReader(fs);
-            string line;
-
-            while ((line = sr.ReadLine()) != null)
-            {
-                return JsonUtility.FromJson<PlayerProgress>(line);
-            }
-        }
-        catch (Exception) {
-            Debug.Log("file does not exist"); 
-        }
-        return new PlayerProgress();
-    }
-    public void saveToFile(object obj, string fileName)
-    {
-        string json = JsonUtility.ToJson(obj);
-        writeToFile(fileName, json);
-    }
-
-
-    private void writeToFile(string fileName, string json)
-    {
-        string path = getFilePath(fileName);
-        FileStream fileStream = new FileStream(path, FileMode.Create);
-
-        using (StreamWriter writer = new StreamWriter(fileStream))
-        {
-            writer.Write(json);
-        }
-    }
-
-    private string getFilePath(string fileName)
-    {
-        return Application.persistentDataPath + "/" + fileName;
-    }
-    private void SaveMap(){
-        progress = new PlayerProgress();
-        progress.maps = new List<Map>();
-        progress = ReadFromFile("progress.json");
-        //UserData.progress.maps contains mapID;
-        Debug.Log(mapID);
-        var map = progress.maps.FirstOrDefault(maps => maps.Map_id == mapID);
-        if (map != null){
-            Debug.Log("exists");
-        }
-        else{
-            Map newmap = new Map();
-            newmap.Map_id = mapID;
-            newmap.Difficulty = 1;
-            progress.maps.Add(newmap);
-            saveToFile(progress,"progress.json");
-        }
-    }
 
 
     public void RemoveMonster(Enemy enemy)
@@ -397,7 +332,7 @@ public class GameManager : Singleton<GameManager>, ISaveable
                 Time.timeScale = 0f;
                 PauseMenu.GameIsPaused = true;
                 WinningTheGameScreen.SetActive(true);
-                SaveMap();
+
             }
             else 
             {

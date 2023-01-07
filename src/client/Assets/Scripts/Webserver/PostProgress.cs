@@ -12,7 +12,7 @@ public class PostProgress : MonoBehaviour
         PlayerProgress progress = await readFile<PlayerProgress>("progress.json");
         User user = await readFile<User>("logindata.json");
         progress.username = user.Username;
-        progress = await HttpClient.Post<PlayerProgress>("http://193.219.91.103:5756/playermaps", progress, user.Token);
+        progress = await HttpClient.Post<PlayerProgress>("playermaps", progress, user.Token);
 
     }
 

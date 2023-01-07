@@ -16,10 +16,10 @@ public class PlayerMapsController : ControllerBase
     
     [Authorize]
     [HttpPost]
-    public int Post(PlayerProgress maps)
+    public async Task<PlayerProgress> Post(PlayerProgress maps)
     {
         PostData.PostProgress(maps);
         Console.WriteLine("Player progress was posted");
-        return 1;
+        return maps;
     }
 }

@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 46055684}
   - component: {fileID: 46055683}
   - component: {fileID: 46055685}
+  - component: {fileID: 46055686}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -184,21 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71eb4bec5b7a34f42bd567b830a508ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fastForwardSprites:
-  - {fileID: 21300000, guid: decd42846a97e6a48bb4e77254b9c0ec, type: 3}
-  - {fileID: 21300000, guid: a1de2529d80cad14e878a42910c77127, type: 3}
-  fastForwardButton: {fileID: 2077966241}
-  WinningTheGameScreen: {fileID: 1136816419}
-  currency: 100
-  roundEndingCurrency: 10
-  currencyTxt: {fileID: 655562718}
-  playerHP: 20
-  waveTxt: {fileID: 459207271}
-  enemyCount: 0
-  waveBtn: {fileID: 242794439}
-  upgradePanel: {fileID: 1584543475}
-  sellText: {fileID: 231762861}
-  activeMonsters: []
 --- !u!4 &46055684
 Transform:
   m_ObjectHideFlags: 0
@@ -243,6 +229,18 @@ MonoBehaviour:
   - {fileID: 7856268330988663536, guid: 7d257b220f7be774c8239d1f0fc62333, type: 3}
   - {fileID: 7357226475103662370, guid: c3e82ab1ac92ac24c80bfadb3c5857ae, type: 3}
   - {fileID: 6240488373868265596, guid: 5a66cadfcc5deba44bd85d39a3dc2684, type: 3}
+--- !u!114 &46055686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46055682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c1df6a7d90fe94696d4d07f1521e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &51524147
 GameObject:
   m_ObjectHideFlags: 0
@@ -7021,11 +7019,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d20fff15adf44d46b664707a869e2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefabs:
-  - {fileID: 3058864630683052840, guid: 5e14767ce2bd91c40bd53a24cc8207be, type: 3}
-  - {fileID: 3304755994919624723, guid: c4c16bd4750c3614997cd02e938eebba, type: 3}
-  mapNumber: Map1
-  background: {fileID: 820363686}
 --- !u!1 &2067001353
 GameObject:
   m_ObjectHideFlags: 0
