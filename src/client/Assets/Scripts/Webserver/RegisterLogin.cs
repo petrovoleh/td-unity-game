@@ -101,7 +101,7 @@ public class RegisterLogin : MonoBehaviour
         }
         catch (Exception){
             Debug.Log("user has not been registred");
-            registerText.text = "no internet connection";
+            registerText.text = "no internet connection or username already exists";
             return;
         }
         
@@ -147,7 +147,6 @@ public class RegisterLogin : MonoBehaviour
 
     private string getFilePath(string fileName)
     {
-        Debug.Log(Application.persistentDataPath + "/" + fileName);
         return Application.persistentDataPath + "/" + fileName;
     }
 }

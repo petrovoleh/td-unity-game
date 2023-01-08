@@ -77,7 +77,12 @@ public class SaveProgress : MonoBehaviour
         //open user token
         //if usr token is not availible do nothing
         //else post
-        Debug.Log(progress.maps[3].Map_id);
-        //progress = await HttpClient.Post<PlayerProgress>("playermaps", progress, user.Token);
+        if (user != null)
+            try{
+                progress = await HttpClient.Post<PlayerProgress>("playermaps", progress, user.Token);
+            }
+            catch (Exception){
+                Debug.Log("no internet connection");
+            }
     }
 }
