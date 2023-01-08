@@ -170,7 +170,7 @@ public class GameManager : Singleton<GameManager>, ISaveable
 
             waveBtn.SetActive(false);
         }
-        this.gameObject.GetComponent<SaveProgress>().SaveMap();
+        
     }
 
     
@@ -332,7 +332,7 @@ public class GameManager : Singleton<GameManager>, ISaveable
                 Time.timeScale = 0f;
                 PauseMenu.GameIsPaused = true;
                 WinningTheGameScreen.SetActive(true);
-
+                this.gameObject.GetComponent<SaveProgress>().SaveMap();
             }
             else 
             {

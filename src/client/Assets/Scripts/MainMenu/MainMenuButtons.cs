@@ -73,10 +73,12 @@ public class MainMenuButtons : MonoBehaviour
         loggedUser.SetActive(false);
     }
     public void SignOut(){
+        this.gameObject.GetComponent<PostProgress>().postProgress();
         UserData.user = null;
         loggedUser.SetActive(false);
         File.Delete(Application.persistentDataPath + "/logindata.json");
         loginUI.SetActive(true);
+        
     }
 
     public void LoginMenu()
