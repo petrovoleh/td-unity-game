@@ -28,7 +28,6 @@ namespace _Scripts {
         }
 
         private static UnityWebRequest CreateRequest(string path, RequestType type = RequestType.GET, object data = null){
-            
             path="http://193.219.91.103:5756/"+path;
             var request = new UnityWebRequest(path, type.ToString());
             request.certificateHandler = new CertificateWhore();

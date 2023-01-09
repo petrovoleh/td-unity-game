@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maps/LoadMap.unity
     guid: babd4111b77b8274e989c7e6f1a2266b
+  - enabled: 1
+    path: Assets/Scenes/Sandbox.unity
+    guid: 06f2afe7483069644afa8afe309502b9
   m_configObjects: {}
