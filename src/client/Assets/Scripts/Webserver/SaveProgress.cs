@@ -12,6 +12,7 @@ public class SaveProgress : MonoBehaviour
     private PlayerProgress progress;
     
     public static int mapID;
+    public static int challengeID;
     private User user;
         private void ReadFromFile(string fileName)
     {
@@ -62,21 +63,34 @@ public class SaveProgress : MonoBehaviour
         ReadFromFile("progress.json");
         ReadFromFile("logindata.json");
         //UserData.progress.maps contains mapID;
-        Debug.Log(mapID);
-        var map = progress.maps.FirstOrDefault(maps => maps.Map_id == mapID);
-        if (map != null){
-            Debug.Log("exists");
+        if (mapID != null){
+            var map = progress.maps.FirstOrDefault(maps => maps.Map_id == mapID);
+            if (map != null){
+                Debug.Log("exists");
+            }
+            else{
+                Map newmap = new Map();
+                newmap.Map_id = mapID;
+                newmap.Difficulty = 1;
+                progress.maps.Add(newmap);
+                saveToFile(progress,"progress.json");
+            }
         }
         else{
-            Map newmap = new Map();
-            newmap.Map_id = mapID;
-            newmap.Difficulty = 1;
-            progress.maps.Add(newmap);
-            saveToFile(progress,"progress.json");
+            var challenge = progress.challenges.FirstOrDefault(c => c.Challenge_id == challengeID);
+            if (challenge != null){
+                Debug.Log("exists");
+            }
+            else{
+                Challenge newchall = new Challenge();
+                newchall.Challenge_id = challengeID;
+                newchall.Difficulty = 1;
+                progress.challenges.Add(newchall);
+                saveToFile(progress,"progress.json");
+            }
         }
-        //open user token
-        //if usr token is not availible do nothing
-        //else post
+
+
         if (user != null)
             try{
                 progress = await HttpClient.Post<PlayerProgress>("playermaps", progress, user.Token);
