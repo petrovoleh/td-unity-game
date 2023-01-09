@@ -101,7 +101,7 @@ public class GameManager : Singleton<GameManager>, ISaveable
         }
     }
 
-    private int wave = 0;
+    public int wave = 0;
 
     [SerializeField]
     private Text waveTxt;
@@ -150,7 +150,10 @@ public class GameManager : Singleton<GameManager>, ISaveable
     void Update()
     {
         HandleEscape();
-        waveTxt.text = string.Format("Wave: {0}/20", wave);
+        if (SceneManager.GetActiveScene().name != "Sandbox")
+            waveTxt.text = string.Format("Wave: {0}/20", wave);
+        else
+            waveTxt.text = string.Format("Wave: {0}", wave);
         currencyTxt.text = currency.ToString();
     }
 
@@ -165,7 +168,10 @@ public class GameManager : Singleton<GameManager>, ISaveable
         {
             wave++;
 
-            waveTxt.text = string.Format("Wave: {0}/20", wave);
+             if (SceneManager.GetActiveScene().name != "Sandbox")
+                waveTxt.text = string.Format("Wave: {0}/20", wave);
+            else
+                waveTxt.text = string.Format("Wave: {0}", wave);
             StartCoroutine(SpawnWave());
 
             waveBtn.SetActive(false);
@@ -391,7 +397,7 @@ public class GameManager : Singleton<GameManager>, ISaveable
         public int currency;
     }
 
-    private IEnumerator WaveGenerator(int count, string[] names, float delay)
+    public IEnumerator WaveGenerator(int count, string[] names, float delay)
     {
         for (int e = 0; e < count / names.Length; e++)
         {

@@ -1393,6 +1393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 440492630}
   - component: {fileID: 440492631}
+  - component: {fileID: 440492632}
   m_Layer: 0
   m_Name: PlayGameScript
   m_TagString: Untagged
@@ -1428,6 +1429,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Maps
+--- !u!114 &440492632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440492628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d27c2b36cabfb54ca1773b9c5cc5eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Sandbox
 --- !u!1 &443727031
 GameObject:
   m_ObjectHideFlags: 0
@@ -4137,7 +4151,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 440492631}
+      - m_Target: {fileID: 440492632}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: ChangeScene
         m_Mode: 1

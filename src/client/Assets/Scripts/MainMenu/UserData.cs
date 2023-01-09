@@ -30,12 +30,10 @@ public class UserData : MonoBehaviour
             Debug.Log(string.Format("File {0} exists", fileName));
         }
         catch (Exception) {
-            return;
             Debug.Log(string.Format("File {0} does not exist", fileName));
         }
         
     }
-
 
     private string GetFilePath(string fileName)
     {
