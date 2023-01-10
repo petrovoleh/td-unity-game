@@ -64,7 +64,7 @@ public class LevelManager : Singleton<LevelManager>
             int mapY = mapData.Length;
 
             //Calculates the world start point, this is the top left corner of screen
-            Vector3 worldStart = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height - 40));
+            Vector3 worldStart = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height-(Screen.height/13) ));
 
             for (int y = 0; y < mapY; y++) //y position of tiles
             {

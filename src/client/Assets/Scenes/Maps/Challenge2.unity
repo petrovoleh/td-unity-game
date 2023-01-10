@@ -197,6 +197,7 @@ MonoBehaviour:
   roundEndingCurrency: 10
   currencyTxt: {fileID: 655562718}
   playerHP: 20
+  wave: 0
   waveTxt: {fileID: 459207271}
   enemyCount: 0
   waveBtn: {fileID: 242794439}
@@ -627,7 +628,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2107346605}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1533,7 +1534,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257462679}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1541,12 +1542,12 @@ RectTransform:
   - {fileID: 2070062813}
   - {fileID: 956005959}
   - {fileID: 382371272}
-  m_Father: {fileID: 2107346605}
+  m_Father: {fileID: 302263735}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 38.8}
+  m_AnchoredPosition: {x: -5, y: 9}
   m_SizeDelta: {x: 99.2, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &257462681
@@ -1642,6 +1643,7 @@ RectTransform:
   - {fileID: 1886069533}
   - {fileID: 1812421517}
   - {fileID: 1888569548}
+  - {fileID: 257462680}
   m_Father: {fileID: 1887946216}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3150,7 +3152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864979244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -265, y: -152, z: 0}
+  m_LocalPosition: {x: -265, y: -160, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3473,7 +3475,7 @@ MonoBehaviour:
   price: 50
   priceTxt: {fileID: 1432663153}
   sprite: {fileID: 21300000, guid: 768d5e22c4b4d174c98cbaf6f6f26908, type: 3}
-  towerPrefab: {fileID: 2808713284313184083, guid: 649cb80b5ceb28c42b988523b859127b, type: 3}
+  towerPrefab: {fileID: 2808713284313184083, guid: 1aa9293b29f014640844051ef0e271e8, type: 3}
 --- !u!114 &975079911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4962,7 +4964,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446350592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 280, y: 100, z: 0}
+  m_LocalPosition: {x: 280, y: 88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5588,7 +5590,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601090012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -265, y: 100, z: 0}
+  m_LocalPosition: {x: -265, y: 88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6353,7 +6355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1812421517
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6980,7 +6982,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934578090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 280, y: -150, z: 0}
+  m_LocalPosition: {x: 280, y: -160, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7527,7 +7529,6 @@ RectTransform:
   - {fileID: 551203555}
   - {fileID: 1710576745}
   - {fileID: 51524148}
-  - {fileID: 257462680}
   - {fileID: 92426822}
   m_Father: {fileID: 1887946216}
   m_RootOrder: 5
