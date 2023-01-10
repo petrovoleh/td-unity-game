@@ -4,23 +4,23 @@ using Npgsql;
 using SharedLibrary;
 public class DownloadData
 {
-    //private const string host = "Host=193.219.91.103;Port=7172;Username=webserver;Password=password123;Database=playersdata";
-    private const string host = "Host=10.0.0.186;Username=webserver;Password=password123;Database=playersdata";
+    private const string host = "Host=193.219.91.103;Port=7172;Username=webserver;Password=password123;Database=playersdata";
+    //private const string host = "Host=10.0.0.186;Username=webserver;Password=password123;Database=playersdata";
 
     public static async Task<PlayerProgress> GetPlayerProgress(string username)
     {
-        var maps = new PlayerProgress();
+        var progress = new PlayerProgress();
         string command = $"SELECT * FROM beaten_map WHERE username = '{username}'";
         await using var dataSource = NpgsqlDataSource.Create(host);
         await using (var cmd = dataSource.CreateCommand(command))
         await using (var reader = await cmd.ExecuteReaderAsync())
         {
-            maps.maps = new List<Map>();
+            progress.maps = new List<Map>();
 
             int count = 0;
             while (await reader.ReadAsync())
             {
-                maps.maps.Add(new Map(){Map_id = reader.GetInt32(1),Difficulty = reader.GetInt32(2)});
+                progress.maps.Add(new Map(){Map_id = reader.GetInt32(1),Difficulty = reader.GetInt32(2)});
                 count++;
             }
         }
@@ -29,16 +29,16 @@ public class DownloadData
         await using (var cmd = dataSource.CreateCommand(command))
         await using (var reader = await cmd.ExecuteReaderAsync())
         {
-            maps.challenges = new List<Challenge>();
+            progress.challenges = new List<Challenge>();
 
             int count = 0;
             while (await reader.ReadAsync())
             {
-                maps.challenges.Add(new Challenge(){Challenge_id = reader.GetInt32(1),Difficulty = reader.GetInt32(2)});
+                progress.challenges.Add(new Challenge(){Challenge_id = reader.GetInt32(1),Difficulty = reader.GetInt32(2)});
                 count++;
             }
         }
-        return maps;
+        return progress;
     }
     public static async Task<List<User>> GetUserData()
     {
