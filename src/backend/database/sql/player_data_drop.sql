@@ -1,2 +1,5 @@
 DROP TABLE Player;
-DROP TABLE Completed_map;
+DROP TABLE Map;
+DROP TABLE Beaten_map;
+DROP TABLE Challenge;
+DROP TABLE Completed_challenge;
