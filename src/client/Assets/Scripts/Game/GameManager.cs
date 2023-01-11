@@ -24,6 +24,18 @@ public class GameManager : Singleton<GameManager>, ISaveable
     private Sprite[] fastForwardSprites;
     [SerializeField]
     private Image fastForwardButton;
+    private float fastForwardSpeed;
+    public float FastForwardSpeed
+    {
+        get 
+        { 
+            return fastForwardSpeed;
+        }
+        set 
+        { 
+            fastForwardSpeed = value; 
+        }
+    }
  
     public ObjectPool Pool { get; set; }
 
@@ -128,7 +140,16 @@ public class GameManager : Singleton<GameManager>, ISaveable
     }
     public List<Enemy> activeMonsters = new List<Enemy>();
 
-   
+    private string sceneName;
+    public string SceneName
+    {
+        get
+        {
+            return sceneName;
+        }
+    }
+
+
     public void LoadMap()
     {
         SaveGameManager.Instance.Load();
@@ -138,7 +159,7 @@ public class GameManager : Singleton<GameManager>, ISaveable
     {
         Scene currentScene = SceneManager.GetActiveScene();
 
-        string sceneName = currentScene.name;
+        sceneName = currentScene.name;
 
         if(PlayerPrefs.GetString("Loaded") == "Yes")
         {
@@ -153,10 +174,14 @@ public class GameManager : Singleton<GameManager>, ISaveable
     void Update()
     {
         HandleEscape();
-        if (SceneManager.GetActiveScene().name != "Sandbox")
+        if (SceneManager.GetActiveScene().name != "Endless" && SceneManager.GetActiveScene().name != "Sandbox")
+        {
             waveTxt.text = string.Format("Wave: {0}/20", wave);
+        }
         else
+        {
             waveTxt.text = string.Format("Wave: {0}", wave);
+        }
         currencyTxt.text = currency.ToString();
     }
 
@@ -171,10 +196,14 @@ public class GameManager : Singleton<GameManager>, ISaveable
         {
             wave++;
 
-             if (SceneManager.GetActiveScene().name != "Sandbox")
+            if (SceneManager.GetActiveScene().name != "Endless" && SceneManager.GetActiveScene().name != "Sandbox")
+            {
                 waveTxt.text = string.Format("Wave: {0}/20", wave);
+            }
             else
+            {
                 waveTxt.text = string.Format("Wave: {0}", wave);
+            }
             StartCoroutine(SpawnWave());
 
             waveBtn.SetActive(false);
@@ -249,13 +278,22 @@ public class GameManager : Singleton<GameManager>, ISaveable
     {
         if (PauseMenu.GameIsPaused == false)
         {
-            if (Currency >= ClickedBtn.Price)
+            if (sceneName == "Sandbox")
             {
-                Currency -= ClickedBtn.Price;
-
                 Hover.Instance.Deactivate();
                 CancelBtn.SetActive(false);
             }
+            else
+            {
+                if (Currency >= ClickedBtn.Price)
+                {
+                    Currency -= ClickedBtn.Price;
+
+                    Hover.Instance.Deactivate();
+                    CancelBtn.SetActive(false);
+                }
+            }   
+
         }
 
     }
@@ -336,7 +374,7 @@ public class GameManager : Singleton<GameManager>, ISaveable
 
         if(!WaveActive && enemyCount <= 0 && activeMonsters.Count == 0)
         {
-            if(wave == 20)
+            if (wave == 20 && SceneManager.GetActiveScene().name != "Endless")
             {
                 Time.timeScale = 0f;
                 PauseMenu.GameIsPaused = true;
@@ -361,12 +399,14 @@ public class GameManager : Singleton<GameManager>, ISaveable
         {
             fastForwardButton.sprite = fastForwardSprites[1];
             Time.timeScale = 2f;
+            FastForwardSpeed = 2f;
             fastForward = true;
         }
         else if (fastForward == true)
         {
             fastForwardButton.sprite = fastForwardSprites[0];
             Time.timeScale = 1f;
+            FastForwardSpeed = 1f;
             fastForward = false;
         }
 

@@ -18,7 +18,9 @@ public class ChangePlayerHP : MonoBehaviour
     void Update()
     {
         if (GameManager.Instance.PlayerHP <= 0)
-           Defeat();
+        {
+            Defeat();
+        }
         hp.text = GameManager.Instance.PlayerHP.ToString();
     }
     

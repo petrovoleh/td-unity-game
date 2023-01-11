@@ -15,23 +15,24 @@ public class SandboxWaveGenerator : MonoBehaviour
         {"Skeleton", 2},
         {"Zombie", 3},
         {"BlueSlime", 4},
-        {"GreenSlime", 5},
-        {"YellowSlime", 6},
-        {"Murloc", 7},
-        {"Ghost", 8},
-        {"Golem", 9},
-        {"Wolf", 10},
-        {"Goblin", 11},
-        {"HobGoblin", 12},
-        {"PurpleSlime", 13},
-        {"Spider", 14},
-        {"OrangeSlime", 15},
-        {"Ogre", 20},
-        {"SlimeKing", 30},
-        {"GolemLord", 40},
-        {"Dragon", 50},
-        {"Dracula", 60},
+        {"GreenSlime", 8},
+        {"YellowSlime", 16},
+        {"Murloc", 12},
+        {"Ghost", 20},
+        {"Golem", 20},
+        {"Wolf", 12},
+        {"Goblin", 20},
+        {"HobGoblin", 30},
+        {"PurpleSlime", 30},
+        {"Spider", 25},
+        {"OrangeSlime", 40},
+        {"Ogre", 80},
+        {"SlimeKing", 80},
         {"GoblinKing", 90},
+        {"GolemLord", 150},
+        {"Dracula", 150},
+        {"Dragon", 200},
+        
     };
     
 
@@ -42,7 +43,7 @@ public class SandboxWaveGenerator : MonoBehaviour
         StartCoroutine(this.gameObject.GetComponent<GameManager>().WaveGenerator(5, mobs, 1f));
     }
     private int calculateAmount(){
-        difficulty+=10;
+        difficulty+=2;
         if (previusHP>GameManager.Instance.PlayerHP)
             difficulty -= previusHP-GameManager.Instance.PlayerHP;
         else
@@ -53,14 +54,18 @@ public class SandboxWaveGenerator : MonoBehaviour
     }
     public void spawnWave()
     {
-        waveBtn.SetActive(false);
-        this.gameObject.GetComponent<GameManager>().wave +=1;
-        wave +=1;
-        if (this.gameObject.GetComponent<GameManager>().wave == 1)
-            firstWave();
-        else
-            StartCoroutine(GenerateWave());
-        previusHP=GameManager.Instance.PlayerHP;
+        if (PauseMenu.GameIsPaused == false)
+        {
+            waveBtn.SetActive(false);
+            this.gameObject.GetComponent<GameManager>().wave += 1;
+            wave += 1;
+            if (this.gameObject.GetComponent<GameManager>().wave == 1)
+                firstWave();
+            else
+                StartCoroutine(GenerateWave());
+            previusHP = GameManager.Instance.PlayerHP;
+        }
+
     }
     private IEnumerator GenerateWave(){
         List<string> listEnemies = new List<string>{};

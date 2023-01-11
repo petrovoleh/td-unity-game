@@ -76,8 +76,10 @@ public class Enemy : MonoBehaviour
     {
         GameManager.Instance.enemyCount--;
         GameManager.Instance.RemoveMonster(this);
-        if (GameManager.Instance.PlayerHP > 0)
+        if (GameManager.Instance.PlayerHP > 0 && GameManager.Instance.SceneName != "Sandbox")
+        {
             GameManager.Instance.PlayerHP -= health;
+        }
         Destroy(gameObject);
     }
     void Update()
