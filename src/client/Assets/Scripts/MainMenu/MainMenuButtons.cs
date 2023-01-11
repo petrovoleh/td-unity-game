@@ -37,8 +37,8 @@ public class MainMenuButtons : MonoBehaviour
     }
     public void LoadGame()
     {
-        SceneManager.LoadScene("LoadMap");
-        
+        PlayerPrefs.SetString("Loaded", "Yes");
+        SceneManager.LoadScene(PlayerPrefs.GetString("MapName"));
     }
 
     public void ChangeScene()

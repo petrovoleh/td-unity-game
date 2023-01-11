@@ -129,19 +129,22 @@ public class GameManager : Singleton<GameManager>, ISaveable
     public List<Enemy> activeMonsters = new List<Enemy>();
 
    
-
+    public void LoadMap()
+    {
+        SaveGameManager.Instance.Load();
+        SaveLoadSystem.Instance.Load();
+    }
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
 
         string sceneName = currentScene.name;
 
-        if(sceneName == "LoadMap")
+        if(PlayerPrefs.GetString("Loaded") == "Yes")
         {
-            SaveGameManager.Instance.Load();
-            SaveLoadSystem.Instance.Load();
+            LoadMap();
+            PlayerPrefs.DeleteKey("Loaded");
         }
-        
         Time.timeScale = 1f;
         PauseMenu.GameIsPaused = false;
         Currency = currency;

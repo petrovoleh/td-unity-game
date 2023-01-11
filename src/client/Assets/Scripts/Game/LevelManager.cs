@@ -19,6 +19,10 @@ public class LevelManager : Singleton<LevelManager>
         {
             return mapNumber;
         }
+        set
+        {
+            mapNumber = value;
+        }
     }
 
     [SerializeField]
@@ -88,14 +92,6 @@ public class LevelManager : Singleton<LevelManager>
 
         //Creates a new tile and makes reference to that tile in the newTile variable
         TileScript newTile = Instantiate(tilePrefabs[tileIndex]).GetComponent<TileScript>();
-
-        /* //failed atempt at making waypoints automatic
-        if (tileIndex == 2)
-        {
-            Vector3 waypointSpawnPosition = new Vector3(25, -30, 0);
-            GameObject newObject = Instantiate(waypointPrefabs, waypointSpawnPosition, Quaternion.identity, newTile.transform);
-            Waypoints.Instance.AddWaypoints(newObject);
-        }*/
 
         //Uses the new tile variable to change the position of the tile
         newTile.Setup(new Point(x, y), new Vector3(worldStart.x + (TileSize * x), worldStart.y - (TileSize * y), 0), background);

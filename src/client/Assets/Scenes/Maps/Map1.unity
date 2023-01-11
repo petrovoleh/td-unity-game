@@ -1560,7 +1560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5, y: 14}
+  m_AnchoredPosition: {x: -8.2, y: 14}
   m_SizeDelta: {x: 99.2, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &257462681
@@ -5318,7 +5318,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1887946217}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: PauseGame
+        m_MethodName: Pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

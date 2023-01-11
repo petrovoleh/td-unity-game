@@ -3475,7 +3475,7 @@ MonoBehaviour:
   price: 65
   priceTxt: {fileID: 1432663153}
   sprite: {fileID: 21300000, guid: 768d5e22c4b4d174c98cbaf6f6f26908, type: 3}
-  towerPrefab: {fileID: 2808713284313184083, guid: 649cb80b5ceb28c42b988523b859127b, type: 3}
+  towerPrefab: {fileID: 2808713284313184083, guid: 1aa9293b29f014640844051ef0e271e8, type: 3}
 --- !u!114 &975079911
 MonoBehaviour:
   m_ObjectHideFlags: 0

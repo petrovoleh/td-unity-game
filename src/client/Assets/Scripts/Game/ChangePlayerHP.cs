@@ -12,6 +12,7 @@ public class ChangePlayerHP : MonoBehaviour
         Time.timeScale = 0f;
         PauseMenu.GameIsPaused = true;
         LoseTheGameScreen.SetActive(true);
+        PlayerPrefs.DeleteKey("ObjectCount");
     }
     // Update is called once per frame
     void Update()

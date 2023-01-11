@@ -32,7 +32,8 @@ public class SaveGameManager : MonoBehaviour
     public void Save()
     {
         PlayerPrefs.SetInt("ObjectCount", SaveableObjects.Count);
-        for(int i = 0; i < SaveableObjects.Count; i++)
+        PlayerPrefs.SetString("MapName", LevelManager.Instance.MapNumber);
+        for (int i = 0; i < SaveableObjects.Count; i++)
         {
             SaveableObjects[i].Save(i);
         }
@@ -92,9 +93,8 @@ public class SaveGameManager : MonoBehaviour
                         myTile.SavePlaceTower(value[0]);
                         break;
 
-
                 }
-
+                LevelManager.Instance.MapNumber = PlayerPrefs.GetString("MapName");
                 if (tmp != null)
                 {
                     tmp.GetComponent<SaveableObject>().Load(value);
