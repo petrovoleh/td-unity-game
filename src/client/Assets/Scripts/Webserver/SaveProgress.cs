@@ -14,7 +14,7 @@ public class SaveProgress : MonoBehaviour
     public static int mapID;
     public static int challengeID;
     private User user;
-        private void ReadFromFile(string fileName)
+    private void ReadFromFile(string fileName)
     {
         string path = getFilePath(fileName);
         try {
@@ -63,7 +63,7 @@ public class SaveProgress : MonoBehaviour
         ReadFromFile("progress.json");
         ReadFromFile("logindata.json");
         //UserData.progress.maps contains mapID;
-        if (mapID != null){
+        if (mapID != 0){
             var map = progress.maps.FirstOrDefault(maps => maps.Map_id == mapID);
             if (map != null){
                 Debug.Log("exists");

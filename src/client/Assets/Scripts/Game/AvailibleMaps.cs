@@ -36,10 +36,16 @@ public class AvailibleMaps : MonoBehaviour
     void Start()
     {
         ReadFromFile("progress.json");
+        try{
         var map = progress.maps.FirstOrDefault(maps => maps.Map_id == 1);
         Debug.Log(getFilePath("progress.json"));
         if (map != null)
-        Debug.Log("2");
+            Debug.Log("2");
             map2.SetActive(false);
+        }
+        catch (Exception) {
+            Debug.Log("no progress"); 
+        }
+       
     }
 }
