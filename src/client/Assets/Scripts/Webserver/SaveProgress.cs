@@ -60,6 +60,7 @@ public class SaveProgress : MonoBehaviour
     public async void SaveMap(){
         progress = new PlayerProgress();
         progress.maps = new List<Map>();
+        progress.challenges = new List<Challenge>();
         ReadFromFile("progress.json");
         ReadFromFile("logindata.json");
         //UserData.progress.maps contains mapID;
@@ -77,14 +78,7 @@ public class SaveProgress : MonoBehaviour
             }
         }
         else{
-            var challenge = new Challenge();
-            try{
-                challenge = progress.challenges.FirstOrDefault(c => c.Challenge_id == challengeID);
-            }
-            catch (Exception) {
-                Debug.Log("no progress"); 
-            }
-
+            var challenge = progress.challenges.FirstOrDefault(c => c.Challenge_id == challengeID);
             if (challenge != null){
                 Debug.Log("exists");
             }
