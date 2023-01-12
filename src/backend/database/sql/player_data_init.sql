@@ -21,8 +21,6 @@ CREATE TABLE Beaten_map
 CREATE TABLE Challenge
 (
     challenge_id INTEGER UNIQUE PRIMARY KEY,
-    map_id INTEGER,
-    FOREIGN KEY (map_id) REFERENCES Map(map_id)
 );
 
 
