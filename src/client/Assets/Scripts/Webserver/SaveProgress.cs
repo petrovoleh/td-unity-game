@@ -77,7 +77,14 @@ public class SaveProgress : MonoBehaviour
             }
         }
         else{
-            var challenge = progress.challenges.FirstOrDefault(c => c.Challenge_id == challengeID);
+            var challenge = new Challenge();
+            try{
+                challenge = progress.challenges.FirstOrDefault(c => c.Challenge_id == challengeID);
+            }
+            catch (Exception) {
+                Debug.Log("no progress"); 
+            }
+
             if (challenge != null){
                 Debug.Log("exists");
             }

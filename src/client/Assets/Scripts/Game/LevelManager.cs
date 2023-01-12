@@ -41,7 +41,7 @@ public class LevelManager : Singleton<LevelManager>
     private void GetLevelID(){
         if (mapNumber[0]=='M')
             SaveProgress.mapID = Int32.Parse(mapNumber.Remove(0,3));
-        else
+        else if (mapNumber[0]=='C')
             SaveProgress.challengeID = Int32.Parse(mapNumber.Remove(0,9));
     }
 
