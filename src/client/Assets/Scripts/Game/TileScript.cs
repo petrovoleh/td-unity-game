@@ -41,12 +41,6 @@ public class TileScript : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Setup(Point gridPos, Vector3 worldPos, Transform parent)
     {
         IsEmpty = true;
@@ -133,12 +127,11 @@ public class TileScript : MonoBehaviour
 
         IsEmpty = false;
             
-            myTower.Price = GameManager.Instance.ClickedBtn.Price;
-
-        //Destroy(this.gameObject); 
+        myTower.Price = GameManager.Instance.ClickedBtn.Price;
+ 
         ColorTile(Color.white);
 
-            GameManager.Instance.BuyTower();
+        GameManager.Instance.BuyTower();
 
     }
 

@@ -7,9 +7,6 @@ public class LevelManager : Singleton<LevelManager>
     [SerializeField]
     private GameObject[] tilePrefabs;
 
-    //[SerializeField]
-    //private GameObject waypointPrefabs;
-
     [SerializeField]
     private string mapNumber;
 

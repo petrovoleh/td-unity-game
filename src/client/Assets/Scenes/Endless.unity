@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnpointX: 450
-  spawnpointY: 90
+  spawnpointY: 95
   fastForwardSprites:
   - {fileID: 21300000, guid: decd42846a97e6a48bb4e77254b9c0ec, type: 3}
   - {fileID: 21300000, guid: a1de2529d80cad14e878a42910c77127, type: 3}
@@ -6657,7 +6657,7 @@ MonoBehaviour:
   tilePrefabs:
   - {fileID: 3058864630683052840, guid: 5e14767ce2bd91c40bd53a24cc8207be, type: 3}
   - {fileID: 3304755994919624723, guid: c4c16bd4750c3614997cd02e938eebba, type: 3}
-  mapNumber: Map1
+  mapNumber: Endless
   background: {fileID: 0}
 --- !u!1 &2067001353
 GameObject:

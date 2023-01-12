@@ -17,19 +17,6 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
-    public void PauseGame()
-    {
-        /*
-        if (GameIsPaused)
-        {
-            Resume();
-        }
-        else
-        {
-            Pause();
-        }*/
-    }
-
     public void Resume()
     {
         pauseMenuUI.SetActive(false);

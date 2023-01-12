@@ -317,7 +317,6 @@ public class GameManager : Singleton<GameManager>, ISaveable
                 selectedTower.GetComponentInParent<TileScript>().IsEmpty = true;
 
                 selectedTower.GetComponentInParent<SpecificObject>().ObjectType = "Grass";
-                //Destroy(selectedTower.transform.parent.gameObject);
 
                 Destroy(selectedTower.transform.parent.gameObject);
 
