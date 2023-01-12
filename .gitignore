@@ -6,7 +6,7 @@
 /src/client/[Tt]emp/
 /src/client/[Oo]bj/
 /src/client/[Bb]uild/
-/src/client/[Bb]uilds/
+#/src/client/[Bb]uilds/
 /src/client/[Ll]ogs/
 /src/client/[Mm]emoryCaptures/
 ./src/v 0.0/Library/
