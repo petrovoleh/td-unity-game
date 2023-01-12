@@ -55,3 +55,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+src/backend/webserver/Server/bin/Debug/net6.0/appsettings.json

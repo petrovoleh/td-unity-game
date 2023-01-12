@@ -22,7 +22,7 @@ CREATE TABLE Challenge
 (
     challenge_id INTEGER UNIQUE PRIMARY KEY,
     map_id INTEGER,
-    FOREIGN KEY (username) REFERENCES Map(map_id)
+    FOREIGN KEY (map_id) REFERENCES Map(map_id)
 );
 
 
@@ -33,6 +33,7 @@ CREATE TABLE Completed_challenge
     difficulty INTEGER,
     beat_id VARCHAR(35)UNIQUE PRIMARY KEY,
     FOREIGN KEY (username) REFERENCES Player(username)
+    FOREIGN KEY (challenge_id) REFERENCES Map(challenge_id)
 );
 
 
