@@ -9,22 +9,6 @@ public class SaveableEntity : MonoBehaviour
 
     public string Id => id;
 
-    /*
-    void Start()
-    {
-        GenerateId();
-    }*/
-    void Update()
-    {
-        //GameObject gm = null;
-        //gm.GetComponent<SaveGameManager>().Save();
-    }
-    [ContextMenu("Generate Id")]
-    private void GenerateId()
-    {
-        id = Guid.NewGuid().ToString();
-    }
-    
     // find all Isaveable components on gameobject
     public object SaveState()
     {

@@ -147,6 +147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 0
-  movespeed: 100
+  movespeed: 120
   worth: 2
   health: 2

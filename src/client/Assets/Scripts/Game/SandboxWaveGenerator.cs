@@ -45,9 +45,17 @@ public class SandboxWaveGenerator : MonoBehaviour
     private int calculateAmount(){
         difficulty+=2;
         if (previusHP>GameManager.Instance.PlayerHP)
-            difficulty -= previusHP-GameManager.Instance.PlayerHP;
+        {
+            difficulty -= previusHP - GameManager.Instance.PlayerHP;
+        }
         else
+        {
             difficulty += wave;
+        }
+        if(difficulty <= 0)
+        {
+            difficulty = 2;
+        }
         Debug.Log (difficulty);
         return  difficulty;
 
