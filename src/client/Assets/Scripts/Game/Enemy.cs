@@ -11,10 +11,6 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float movespeed;
 
-    [SerializeField]
-    private int worth;
-
-    public float MaxSpeed { get; set; }
     public float Movespeed
     {
         get
@@ -27,6 +23,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    private int worth;
+
+    public float MaxSpeed { get; set; }
+    
     private Waypoints Wpoints;
 
     [SerializeField]

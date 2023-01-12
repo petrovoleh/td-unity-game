@@ -49,6 +49,12 @@ public abstract class Tower : MonoBehaviour
     [SerializeField]
     private float projectileSpeed;
 
+
+    public float ProjectileSpeed
+    {
+        get { return projectileSpeed; }
+    }
+
     //Tower/Projectile Damage
     [SerializeField]
     private int damage;
@@ -96,13 +102,6 @@ public abstract class Tower : MonoBehaviour
         }
     }
 
-    public float ProjectileSpeed
-    {
-        get { return projectileSpeed; }
-    }
-
-    public TowerUpgrade[] Upgrades { get; protected set; }
-
     private Enemy target;
 
     public Enemy Target
@@ -120,12 +119,8 @@ public abstract class Tower : MonoBehaviour
     private float attackCooldown;
 
 
-
-
     [SerializeField]
     private CircleCollider2D attackRadius;
-
-
 
 
     // Start is called before the first frame update

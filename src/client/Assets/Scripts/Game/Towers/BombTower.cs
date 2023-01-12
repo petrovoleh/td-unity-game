@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class BombTower : Tower
 {
-    
-    private void Start()
-    {
-        
-    }
+
     public override Debuff GetDebuff()
     {
         return new NoDebuff(Target);

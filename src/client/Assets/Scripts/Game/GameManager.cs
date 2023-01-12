@@ -51,12 +51,6 @@ public class GameManager : Singleton<GameManager>, ISaveable
     [SerializeField]
     private int currency;
 
-    [SerializeField]
-    private int roundEndingCurrency;
-
-    [SerializeField]
-    private Text currencyTxt;
-
     public int Currency
     {
         get
@@ -71,6 +65,14 @@ public class GameManager : Singleton<GameManager>, ISaveable
             OnCurrencyChanged();
         }
     }
+
+    [SerializeField]
+    private int roundEndingCurrency;
+
+    [SerializeField]
+    private Text currencyTxt;
+
+    
 
     //Player Health Variables
     [SerializeField]

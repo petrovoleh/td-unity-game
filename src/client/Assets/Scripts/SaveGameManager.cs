@@ -9,20 +9,20 @@ public class SaveGameManager : MonoBehaviour
 
     private static SaveGameManager instance;
 
-    public List<SaveableObject> SaveableObjects { get; private set; }
-
     public static SaveGameManager Instance
     {
         get
         {
-            if(instance == null)
+            if (instance == null)
             {
                 instance = GameObject.FindObjectOfType<SaveGameManager>();
             }
             return instance;
         }
-       
+
     }
+
+    public List<SaveableObject> SaveableObjects { get; private set; }
 
     void Awake()
     {

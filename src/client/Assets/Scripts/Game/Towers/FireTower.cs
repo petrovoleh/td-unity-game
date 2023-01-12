@@ -34,10 +34,7 @@ public class FireTower : Tower
             this.tickDamage = value;
         }
     }
-    private void Start()
-    {
-        
-    }
+
     public override Debuff GetDebuff()
     {
         return new FireDebuff(TickDamage, TickTime, DebuffDuration, Target);
