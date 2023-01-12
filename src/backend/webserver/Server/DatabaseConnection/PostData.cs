@@ -1,10 +1,26 @@
+using System.Text;
+using Microsoft.Extensions.Options;
+
 namespace Server.DatabaseConnection;
 using Npgsql;
 using SharedLibrary;
 public class PostData
 {
-    private const string host = "Host=193.219.91.103;Port=7172;Username=webserver;Password=password123;Database=playersdata";
-    //private const string host = "Host=10.0.0.186;Username=webserver;Password=password123;Database=playersdata";
+    private static AppSettings _appSettings;
+    private static string ip;
+    private static string port;
+    private static string password;
+    private static string db;
+    private static readonly string host = $"Host={ip};Username=webserver;Password={password};Database={db}";
+
+    public PostData(IOptions<AppSettings> appSettings)
+    {
+        _appSettings = appSettings.Value;
+        ip = Encoding.ASCII.GetBytes(_appSettings.Secret).ToString();
+        port = Encoding.ASCII.GetBytes(_appSettings.Secret).ToString();
+        password = Encoding.ASCII.GetBytes(_appSettings.Secret).ToString();
+        db = Encoding.ASCII.GetBytes(_appSettings.Secret).ToString();
+    }
     public static async Task PostUserData(User user)
     {
         await using var conn = new NpgsqlConnection(host);
