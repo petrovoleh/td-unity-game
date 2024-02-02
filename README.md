@@ -1,6 +1,6 @@
 # Tower Defense 2D Game
 
-[FUll documentation you can see here]([URL](https://github.com/petrovoleh/td-unity-game/blob/master/doc/Final%20report%20team%20Otojus.pdf))
+[Full documentation you can see here](https://github.com/petrovoleh/td-unity-game/blob/master/doc/Final%20report%20team%20Otojus.pdf)
 ## Table of Contents
 - [Abstract](#abstract)
 - [Introduction](#introduction)
