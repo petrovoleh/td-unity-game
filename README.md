@@ -1,7 +1,7 @@
 # Tower Defense 2D Game
 
 ## Table of Contents
-- [Abstrat](#abstrat)
+- [Abstract](#abstract)
 - [Introduction](#introduction)
 - [Preface](#preface)
 - [Preliminary Design](#preliminary-design)
@@ -36,7 +36,7 @@
 - [Competitive Analysis](#competitive-analysis)
   - [Analysis](#analysis)
     - ["Bloons TD 6" by Ninja Kiwi](#bloons-td-6-by-ninja-kiwi)
-- [onclusions and Recommendations](#conclusions-and-recommendations)
+- [Conclusions and Recommendations](#conclusions-and-recommendations)
 
 
 ## Abstract
