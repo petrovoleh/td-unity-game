@@ -39,6 +39,7 @@
 ## Introduction
 
 This repository contains the source code for a Tower Defense 2D game with strategy and AI features. The game is developed using Unity Game Engine and C# programming language. This README provides an overview of the project structure, design choices, and functionality.
+The video game is a top-down 2D Tower Defense game. Made for Windows desktop devices. The theme of our game is magic. The enemies of the player are fantasy monsters, whereas the towers are magical wizards. The Video game consists of many waves, the player loses the game if the monsters reach the end of the level, as one monster damages a specified amount of Health Points and if it reaches 0 the game ends. The enemies and wizards all have special abilities that either help the player or do not. 
 
 ## Preface
 
@@ -171,6 +172,23 @@ Acceptance tests ensure that the game meets specified requirements and is ready 
 **Disadvantages:**
 - Steep learning curve for new players.
 - In-app purchases for additional content.
+
+## Conclusions and Recommendations
+
+To conclude this report, it needs to be said that it’s very important to have a final design in mind
+and to communicate with the team about the projects future development so that new ideas don’t
+pile on top, hindering the production of said project. That could be done by making a preliminary
+design and talking about all the features with great detail. While also deviding the team to work on
+different parts of the project to increase efficiency, but also starting at the basic parts of the project,
+which will be needed to construct the ideas from ground up rather then starting at something
+difficult that would make it harder to integrate the basic parts to the project.
+Being able to finish most of the funtionalities satisfies the functional requirement priorities, there
+are still parts that need to be improved and functionalities that still need to be made to contest
+the more popular games of the same gienre. Functionalities like smarter targeting to help with
+the towers letting through enemies, tower upgrades for more intresting gameplay for the user and
+many quality of life content to help the new player understand the game, with tutorials or tooltips.
+All of these ideas could improve the user enjoyment from the application.
+
 
 ## License
 
