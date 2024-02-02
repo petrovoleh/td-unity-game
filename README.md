@@ -1,6 +1,7 @@
 # Tower Defense 2D Game
 
 ## Table of Contents
+- [Abstrat](#abstrat)
 - [Introduction](#introduction)
 - [Preface](#preface)
 - [Preliminary Design](#preliminary-design)
@@ -35,6 +36,26 @@
 - [Competitive Analysis](#competitive-analysis)
   - [Analysis](#analysis)
     - ["Bloons TD 6" by Ninja Kiwi](#bloons-td-6-by-ninja-kiwi)
+- [onclusions and Recommendations](#conclusions-and-recommendations)
+
+
+## Abstract
+The poster presents "Monsters and Mages" - fantasy themed 2D tower defense game. Tower de-
+fense is a popular game genre of real-time strategy which requires difficulty balancing and content
+for replayability to make a fun player experience. First the famous “Bloons TD” games were
+analyzed for inspiration on gamemodes, enemies and game mechanics. A game development en-
+gine "Unity" will be used to make the 2D Tower defense game using C# Language for Windows
+platforms. The Game will have PostgreSQL database to store player progress and a webserver to
+connect this database with the game client. The expected result is to have a player vs AI game
+where enemies walk in a given path and player has to use currency to defend against a horde of
+enemy waves. There will be playable maps with many towers and enemy variations. You will
+be allowed to pick a "Challenge" gamemode where you will be placed in a map with conditions,
+where you can only use certain towers. Also a "Sandbox" gamemode where you will be allowed to
+place as many towers as you want and and fight a ever increasing difficulty of monsters, just like
+in the "Endless" gamemode, where you need to hold out as long as you can. There will be boss
+monster that have special abilities like other, more weak monsters. Users will be able to save data
+by creating an account and transferring data by logging in into another device. So player don’t
+need to worry about losing their data.
 
 ## Introduction
 
@@ -43,8 +64,10 @@ The video game is a top-down 2D Tower Defense game. Made for Windows desktop dev
 
 ## Preface
 
-The `preface.tex` file contains configurations for the report, such as the language (Lithuanian or English) and the need for a preface. Additionally, the `macros.tex` file includes custom macros used throughout the project.
-
+This project was done during the 3rd semester of the study programme Information Technologies
+in the specialization of Innovative studies. We have chosen the topic Tower Defense. 2D game
+with strategy and AI features. suggested during the project market on the first lecture of the subject
+"Problem-Based Project". The topic seemed very interesting.
 ## Preliminary Design
 
 ### Menu
